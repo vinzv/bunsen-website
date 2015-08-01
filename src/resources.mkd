@@ -24,6 +24,7 @@ The list of currently maintained packages is as follows:
 |bunsen-images (*artwork for logos, icons, avatars, backgrounds*) | [VCS](https://github.com/bunsenlabs/bunsen-images)            | [Tracker](https://github.com/BunsenLabs/bunsen-images/issues)           |
 |bunsen-os-release (*provides lsb-release and os-release data*)   | [VCS](https://github.com/bunsenlabs/bunsen-os-release)        | [Tracker](https://github.com/BunsenLabs/bunsen-os-release/issues)       |
 |bunsen-pipemenus (*Openbox pipemenus*)                           | [VCS](https://github.com/bunsenlabs/bunsen-pipemenus)         | [Tracker](https://github.com/BunsenLabs/bunsen-pipemenus/issues)        |
+|bunsen-themes (*GTK theme collection*)                           | [VCS](https://github.com/bunsenlabs/bunsen-themes)            | [Tracker](https://github.com/BunsenLabs/bunsen-themes/issues)           |
 |bunsen-utilities (*utility scripts*)                             | [VCS](https://github.com/bunsenlabs/bunsen-utilities)         | [Tracker](https://github.com/BunsenLabs/bunsen-utilities/issues)        |
 |bunsen-welcome (*initial user- and system setup*)                | [VCS](https://github.com/bunsenlabs/bunsen-welcome)           | [Tracker](https://github.com/BunsenLabs/bunsen-welcome/issues)          |
 
