@@ -265,14 +265,11 @@ td, th /* Table cells and table header cells */
 
 table.plain {
   border: none;
-  margin: auto;
-  width: 100%;
 }
 
-table.plain tbody tr td {
-  vertical-align: center!important;
+table.plain td, table.plain th {
+  vertical-align: middle;
 }
-
 
 /* Removes padding on left and right of table for a tight look. Good if thead has no background color*/
 /*

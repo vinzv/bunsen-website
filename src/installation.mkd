@@ -31,8 +31,8 @@ both 32bit and 64bit systems:
 
 Depending on the applications and feature set you decide to use
 (especially if you do not run a graphical desktop), the system may run
-fine with less resources. An installation of the live system from the
-live ISOs uses approximately 2.1G of space on the hard drive.
+fine with less resources. An installation from the live ISOs uses
+approximately 2.1G of space on the hard drive.
 
 ## Live CD/DVD/USB key method
 
