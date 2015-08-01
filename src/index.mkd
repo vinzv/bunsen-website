@@ -12,9 +12,9 @@ Debian Jessie. The project is the community continuation of [CrunchBang
 <div id="item-1" class="control-operator"></div>
 <div id="item-2" class="control-operator"></div>
 <div id="item-3" class="control-operator"></div>
-<figure class="item"><img style="width:100%;" src="img/hydrogena2-0.png"></figure>
-<figure class="item"><img style="width:100%;" src="img/hydrogena2-1.png"></figure>
-<figure class="item"><img style="width:100%;" src="img/hydrogena2-2.png"></figure>
+<figure class="item"><img style="width:100%;" src="img/frontpage-gallery/hydrogena2-0.png"></figure>
+<figure class="item"><img style="width:100%;" src="img/frontpage-gallery/hydrogena2-1.png"></figure>
+<figure class="item"><img style="width:100%;" src="img/frontpage-gallery/hydrogena2-2.png"></figure>
 <div class="controls">
 <a href="#item-1" class="control-button">•</a>
 <a href="#item-2" class="control-button">•</a>
