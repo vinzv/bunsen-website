@@ -1,3 +1,4 @@
+# vim: set expandtab
 src/index.mkd.title = BunsenLabs
 src/repository.mkd.title = BunsenLabs :: Repository
 src/installation.mkd.title = BunsenLabs :: Installation

@@ -1,4 +1,5 @@
-#
+# vim: set expandtab
+
 # Make the BunsenLabs Website
 # Written by 2ion <dev@2ion.de>
 #
@@ -21,14 +22,14 @@ NAVIGATION_HTML=src/include/navigation.html
 STYLE=css/plain.css
 
 # Pandoc arguments
-ARGV=--email-obfuscation=javascript \
-		 --smart \
-		 --template=$(TEMPLATE) \
-		 -f markdown+footnotes+fenced_code_attributes+auto_identifiers \
-		 -s \
-		 -c $(STYLE) \
-		 --highlight-style monochrome \
-		 --include-before-body=$(NAVIGATION_HTML)
+ARGV=	--email-obfuscation=javascript \
+			--smart \
+			--template=$(TEMPLATE) \
+			-f markdown+footnotes+fenced_code_attributes+auto_identifiers \
+			-s \
+			-c $(STYLE) \
+			--highlight-style monochrome \
+			--include-before-body=$(NAVIGATION_HTML)
 
 # Pandoc variables set for all documents; expanded at build time!
 PANDOC_VARS=-M pagetitle="$($<.title)" \
@@ -59,7 +60,7 @@ checkout: all
 	mkdir -p $(DESTDIR)
 	@rsync -au --human-readable $(ASSETS) $(DESTDIR)
 
-all: $(TARGETS) 
+all: $(TARGETS)
 
 clean:
 	rm -f src/*.html
