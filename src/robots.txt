@@ -1,2 +1,3 @@
 User-Agent: *
+Disallow: /imprint.html
 Disallow: /

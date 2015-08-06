@@ -39,7 +39,7 @@ existing Debian installation.
 <hr>
 
 <div class="center">
-Copyright © 2015 The BunsenLabs Linux Project | [Content License](license.html) | [Imprint](impressum.html)
+Copyright © 2015 The BunsenLabs Linux Project | [Legal remarks](legal.html) | [Imprint](imprint.html)
 </div>
 
 <table class="plain">
