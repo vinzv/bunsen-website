@@ -44,8 +44,8 @@ trackers.
 
 ## Development team
 
-The core development team does currently compromise the following
-people (alphabetically sorted):
+The core development team currently compromises the following people
+(alphabetically sorted):
 
 | Handle                           | Github profile                             | #! forums profile                                               |
 |:---------------------------------|:-------------------------------------------|:----------------------------------------------------------------|
