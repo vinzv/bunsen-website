@@ -2,7 +2,7 @@ BunsenLabs is being developed [on Github](https://github.com/BunsenLabs)
 where we make all our code and packages available, along with its
 history.
 
-## Packages and bug reports
+## Core packages and bug reports
 
 If you have a bug to report, you may do so either [on the
 forums](http://crunchbang.org/forums) or, in the ideal case, to the right
@@ -30,7 +30,7 @@ The list of currently maintained packages is as follows:
 
 Click [here](gitlog.html) in order to see an overview over recent development activity.
 
-## Foreign packages
+## Third-party packages
 
 We are shipping the following packages (or builds) in our repository the
 development of which is not being done by the BunsenLabs team. Please
@@ -42,7 +42,7 @@ trackers.
 |mpv-bash-completion      |[Link](https://2ion.github.io/mpv-bash-completion)                         |
 |ttf-ubuntu-font-family   |[Link](http://packages.ubuntu.com/source/vivid/ubuntu-font-family-sources) |
 
-## Developers
+## Development team
 
 The core development team does currently compromise the following
 people (alphabetically sorted):

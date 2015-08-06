@@ -72,21 +72,36 @@ deploy: rebuild
 ### PAGE BUILD TARGETS ###
 
 %.html: %.mkd $(TEMPLATE)
-	$(info -----)
+	$(info ---------------------------------------------------------------)
+	$(info  Using common build target for $< 															)
+	$(info ---------------------------------------------------------------)
 	pandoc $(ARGV) $(PANDOC_VARS) -o $@ $<
 	./postproc $@
 
 src/index.html: src/index.mkd $(TEMPLATE)
-	$(info ****)
+	$(info ---------------------------------------------------------------)
+	$(info  Using specialized build target for $< 												)
+	$(info ---------------------------------------------------------------)
 	pandoc $(ARGV) $(PANDOC_VARS) \
 		-H src/include/index_header.html \
+		-o $@ $<
+	./postproc $@
+
+src/resources.html: src/resources.mkd $(TEMPLATE)
+	$(info ---------------------------------------------------------------)
+	$(info  Using specialized build target for $< 											 	)
+	$(info ---------------------------------------------------------------)
+	pandoc $(ARGV) $(PANDOC_VARS) \
+		--toc \
 		-o $@ $<
 	./postproc $@
 
 # For the gitlog page, include a header with CSS/JS links and a footer
 # to post-load the query JS code.
 src/gitlog.html: src/gitlog.mkd $(TEMPLATE)
-	$(info *****)
+	$(info ---------------------------------------------------------------)
+	$(info  Using specialized build target for $< 											 	)
+	$(info ---------------------------------------------------------------)
 	pandoc $(ARGV) $(PANDOC_VARS) \
 		-A src/include/gitlog_afterbody.html \
 		-H src/include/gitlog_header.html \
