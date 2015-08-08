@@ -128,5 +128,8 @@ src/gitlog.html: src/gitlog.mkd $(TEMPLATE)
 		-o $@ $<
 	./postproc $@
 
+# Generate thumbnails for the frontpage gallery. It is possible that
+# with different resize operators, imagemagick produces even more high-quality
+# preview images. Documentation: http://www.imagemagick.org/Usage/resize/
 %.thumb.png: %.png
 	convert $< -adaptive-resize $(THUMB_DIM) $@
