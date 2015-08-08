@@ -2,6 +2,8 @@
 
 set -x
 
+readonly ABSPATH=$(readlink -f "$1")
+
 for PROC in ./postproc.d/*.sh ; do
-  "$PROC" "$(readlink -f "$1")"
+  "$PROC" "$ABSPATH"
 done

@@ -5,8 +5,8 @@
 
 BunsenLabs Linux is a light-weight distribution offering a lean but
 tweakable Openbox desktop. The current release is **Hydrogen**, built on
-Debian Jessie. The project is the community continuation of [CrunchBang
-#! Linux][cb].
+top of Debian Jessie. The project is the community continuation of
+[CrunchBang #! Linux][cb].
 
 <div class="gallery items-3">
 <div id="item-1" class="control-operator"></div>

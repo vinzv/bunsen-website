@@ -1,15 +1,14 @@
 # vim: set expandtab
 
-# Make the BunsenLabs Website
+# Makefile for the BunsenLabs website
 # Written by 2ion <dev@2ion.de>
-#
 
 SHELL=/bin/bash
 
 # Pandoc site template
 TEMPLATE=templates/default.html5
 
-# Determine HTML targets
+# Determine MKD<>HTML targets
 TARGETS=$(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
 
 # Files to deploy
@@ -44,6 +43,7 @@ DESTDIR=dst
 # Page root
 URL_PREFIX=http://bunsen-www.2ion.eu
 
+# Thumbnail image, og:image
 OPENGRAPH_IMG=img/opengraph-flame.png
 
 # Per-page pagetitles and descriptions
@@ -73,7 +73,7 @@ deploy: rebuild
 
 %.html: %.mkd $(TEMPLATE)
 	$(info ---------------------------------------------------------------)
-	$(info  Using common build target for $< 															)
+	$(info  Using common build target for $< )
 	$(info ---------------------------------------------------------------)
 	pandoc $(ARGV) $(PANDOC_VARS) -o $@ $<
 	./postproc $@
@@ -89,7 +89,7 @@ src/index.html: src/index.mkd $(TEMPLATE)
 
 src/resources.html: src/resources.mkd $(TEMPLATE)
 	$(info ---------------------------------------------------------------)
-	$(info  Using specialized build target for $< 											 	)
+	$(info  Using specialized build target for $< )
 	$(info ---------------------------------------------------------------)
 	pandoc $(ARGV) $(PANDOC_VARS) \
 		--toc \
@@ -100,7 +100,7 @@ src/resources.html: src/resources.mkd $(TEMPLATE)
 # to post-load the query JS code.
 src/gitlog.html: src/gitlog.mkd $(TEMPLATE)
 	$(info ---------------------------------------------------------------)
-	$(info  Using specialized build target for $< 											 	)
+	$(info  Using specialized build target for $< )
 	$(info ---------------------------------------------------------------)
 	pandoc $(ARGV) $(PANDOC_VARS) \
 		-A src/include/gitlog_afterbody.html \
