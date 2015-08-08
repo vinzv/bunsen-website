@@ -55,18 +55,33 @@ include config/pagedescriptions.mk
 .PHONY: rebuild checkout all clean deploy
 
 rebuild: clean checkout
+	$(info ---------------------------------------------------------------)
+	$(info  $@)
+	$(info ---------------------------------------------------------------)
 
 checkout: all
+	$(info ---------------------------------------------------------------)
+	$(info  $@)
+	$(info ---------------------------------------------------------------)
 	mkdir -p $(DESTDIR)
-	@rsync -au --human-readable $(ASSETS) $(DESTDIR)
+	rsync -au $(ASSETS) $(DESTDIR)
 
 all: $(TARGETS)
+	$(info ---------------------------------------------------------------)
+	$(info  $@)
+	$(info ---------------------------------------------------------------)
 
 clean:
+	$(info ---------------------------------------------------------------)
+	$(info  $@)
+	$(info ---------------------------------------------------------------)
 	rm -f src/*.html
 	rm -fr dst/*
 
 deploy: rebuild
+	$(info ---------------------------------------------------------------)
+	$(info  $@)
+	$(info ---------------------------------------------------------------)
 	rsync -au --progress --human-readable --delete --chmod=D0755,F0644 dst/ bunsen@bunsenpkg:/srv/www.bunsenlabs.org/
 
 ### PAGE BUILD TARGETS ###
