@@ -12,9 +12,9 @@ top of Debian Jessie. The project is the community continuation of
 <div id="item-1" class="control-operator"></div>
 <div id="item-2" class="control-operator"></div>
 <div id="item-3" class="control-operator"></div>
-<figure class="item"><img style="width:100%;" src="img/frontpage-gallery/hydrogena2-0.png"></figure>
-<figure class="item"><img style="width:100%;" src="img/frontpage-gallery/hydrogena2-1.png"></figure>
-<figure class="item"><img style="width:100%;" src="img/frontpage-gallery/hydrogena2-2.png"></figure>
+<figure class="item"><a href="img/frontpage-gallery/hydrogena2-0.png" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/hydrogena2-0.thumb.png"></a></figure>
+<figure class="item"><a href="img/frontpage-gallery/hydrogena2-1.png" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/hydrogena2-1.thumb.png"></a></figure>
+<figure class="item"><a href="img/frontpage-gallery/hydrogena2-2.png" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/hydrogena2-2.thumb.png"></a></figure>
 <div class="controls">
 <a href="#item-1" class="control-button">•</a>
 <a href="#item-2" class="control-button">•</a>

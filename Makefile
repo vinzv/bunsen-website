@@ -11,6 +11,11 @@ TEMPLATE=templates/default.html5
 # Determine MKD<>HTML targets
 TARGETS=$(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
 
+# Images with associated thumbnails
+GALLERY_ASSETS = $(wildcard src/img/frontpage-gallery/*.png) # already included in $(ASSETS)
+GALLERY_THUMB_TARGETS = $(patsubst %.png,%.thumb.png,$(GALLERY_ASSETS))
+THUMB_DIM = 638x
+
 # Files to deploy
 ASSETS=$(TARGETS) src/js src/img src/css src/robots.txt
 
@@ -66,7 +71,7 @@ checkout: all
 	mkdir -p $(DESTDIR)
 	rsync -au $(ASSETS) $(DESTDIR)
 
-all: $(TARGETS)
+all: $(TARGETS) $(GALLERY_THUMB_TARGETS)
 	$(info ---------------------------------------------------------------)
 	$(info  $@)
 	$(info ---------------------------------------------------------------)
@@ -75,7 +80,7 @@ clean:
 	$(info ---------------------------------------------------------------)
 	$(info  $@)
 	$(info ---------------------------------------------------------------)
-	rm -f src/*.html
+	rm -f src/*.html src/img/frontpage-gallery/*thumb*
 	rm -fr dst/*
 
 deploy: rebuild
@@ -122,3 +127,6 @@ src/gitlog.html: src/gitlog.mkd $(TEMPLATE)
 		-H src/include/gitlog_header.html \
 		-o $@ $<
 	./postproc $@
+
+%.thumb.png: %.png
+	convert $< -adaptive-resize $(THUMB_DIM) $@
