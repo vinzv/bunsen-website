@@ -5,15 +5,17 @@
 
 SHELL=/bin/bash
 
+SEP := ---------------------------------------------------------------
+
 # Pandoc site template
-TEMPLATE=templates/default.html5
+TEMPLATE := templates/default.html5
 
 # Determine MKD<>HTML targets
-TARGETS=$(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
+TARGETS := $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
 
 # Images with associated thumbnails
-GALLERY_ASSETS = $(wildcard src/img/frontpage-gallery/*.png) # already included in $(ASSETS)
-GALLERY_THUMB_TARGETS = $(patsubst %.png,%.thumb.png,$(GALLERY_ASSETS))
+THUMB_DIR = src/img/frontpage-gallery/thumbs
+THUMB_OBJ = $(subst frontpage-gallery/,frontpage-gallery/thumbs/,$(patsubst %.png,%.thumb.png,$(wildcard src/img/frontpage-gallery/*.png)))
 THUMB_DIM = 638x
 
 # Files to deploy
@@ -60,57 +62,50 @@ include config/pagedescriptions.mk
 .PHONY: rebuild checkout all clean deploy
 
 rebuild: clean checkout
-	$(info ---------------------------------------------------------------)
+	$(info $(SEP))
 	$(info  $@)
-	$(info ---------------------------------------------------------------)
 
 checkout: all
-	$(info ---------------------------------------------------------------)
+	$(info $(SEP))
 	$(info  $@)
-	$(info ---------------------------------------------------------------)
 	mkdir -p $(DESTDIR)
 	rsync -au $(ASSETS) $(DESTDIR)
 
-all: $(TARGETS) $(GALLERY_THUMB_TARGETS)
-	$(info ---------------------------------------------------------------)
-	$(info  $@)
-	$(info ---------------------------------------------------------------)
+all: $(TARGETS) thumbnails
+
+thumbnails: $(THUMB_OBJ)
+	@mkdir -p $(THUMB_DIR)
 
 clean:
-	$(info ---------------------------------------------------------------)
+	$(info $(SEP))
 	$(info  $@)
-	$(info ---------------------------------------------------------------)
-	rm -f src/*.html src/img/frontpage-gallery/*thumb*
+	rm -f src/*.html src/img/frontpage-gallery/thumbs/*
 	rm -fr dst/*
 
 deploy: rebuild
-	$(info ---------------------------------------------------------------)
+	$(info $(SEP))
 	$(info  $@)
-	$(info ---------------------------------------------------------------)
 	rsync -au --progress --human-readable --delete --chmod=D0755,F0644 dst/ bunsen@bunsenpkg:/srv/www.bunsenlabs.org/
 
 ### PAGE BUILD TARGETS ###
 
 %.html: %.mkd $(TEMPLATE)
-	$(info ---------------------------------------------------------------)
+	$(info $(SEP))
 	$(info  Using common build target for $< )
-	$(info ---------------------------------------------------------------)
 	pandoc $(ARGV) $(PANDOC_VARS) -o $@ $<
 	./postproc $@
 
 src/index.html: src/index.mkd $(TEMPLATE)
-	$(info ---------------------------------------------------------------)
+	$(info $(SEP))
 	$(info  Using specialized build target for $< 												)
-	$(info ---------------------------------------------------------------)
 	pandoc $(ARGV) $(PANDOC_VARS) \
 		-H src/include/index_header.html \
 		-o $@ $<
 	./postproc $@
 
 src/resources.html: src/resources.mkd $(TEMPLATE)
-	$(info ---------------------------------------------------------------)
+	$(info $(SEP))
 	$(info  Using specialized build target for $< )
-	$(info ---------------------------------------------------------------)
 	pandoc $(ARGV) $(PANDOC_VARS) \
 		--toc \
 		-o $@ $<
@@ -119,9 +114,8 @@ src/resources.html: src/resources.mkd $(TEMPLATE)
 # For the gitlog page, include a header with CSS/JS links and a footer
 # to post-load the query JS code.
 src/gitlog.html: src/gitlog.mkd $(TEMPLATE)
-	$(info ---------------------------------------------------------------)
+	$(info $(SEP))
 	$(info  Using specialized build target for $< )
-	$(info ---------------------------------------------------------------)
 	pandoc $(ARGV) $(PANDOC_VARS) \
 		-A src/include/gitlog_afterbody.html \
 		-H src/include/gitlog_header.html \
@@ -131,5 +125,7 @@ src/gitlog.html: src/gitlog.mkd $(TEMPLATE)
 # Generate thumbnails for the frontpage gallery. It is possible that
 # with different resize operators, imagemagick produces even more high-quality
 # preview images. Documentation: http://www.imagemagick.org/Usage/resize/
-%.thumb.png: %.png
+$(THUMB_DIR)/%.thumb.png: $(THUMB_DIR)/../%.png
+	$(info $(SEP))
+	$(info  Using thumbnail build target for $<)
 	convert $< -adaptive-resize $(THUMB_DIM) $@
