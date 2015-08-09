@@ -29,12 +29,15 @@ existing Debian installation.
 
 ## Defining features
 
-* Pre-configured [Openbox](http://openbox.org/wiki/Main_Page)-based
-  desktop with a [tint2](https://gitlab.com/o9000/tint2) panel and
+* Pre-configured [Openbox](http://openbox.org/wiki/Main_Page) window
+  manager with [tint2](https://gitlab.com/o9000/tint2) panel and
   [conky](http://conky.sourceforge.net/) system monitor
 * Assortment of harmonising GTK2/3 themes, wallpapers and conky
   configurations
-* Desktop-oriented configuration and helper utilities
+* Various configuration and application utilities to maintain this
+  system
+* Additional desktop-, multimedia- and hardware-related packages come
+  pre-installed as to offer a better "out-of-the-box" experience.
 
 <hr>
 
