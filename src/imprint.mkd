@@ -1,0 +1,21 @@
+*This site is hosted in Germany. The following information is mandated
+by [§55 RStV](http://revosax.sachsen.de/vorschrift/1236-Rundfunkstaatsvertrag#p55).*
+
+## Imprint
+
+Webmaster contact: [dev@2ion.de](mailto:dev@2ion.de)
+
+Postal mail for the BunsenLabs Linux Project is to be sent to the
+administrative contact of the `2ion.de` domain.
+
+## Rechtliche Hinweise
+
+Die Inhalte unserer Webseiten haben wir sorgfältig zusammen gestellt.
+Sollten sich dennoch fehlerhafte oder veraltete Daten eingeschlichen
+haben, können wir dafür keine Haftung und Garantie übernehmen.
+
+Diese Website enthält Links zu anderen Websites. Wir haben keinerlei
+Kontrollmöglichkeit über diese Websites und übernehmen daher keine
+Verantwortung für den Inhalt der Websites Dritter. Wir behalten uns das
+Recht vor, die auf dieser Website enthaltenen Informationen jederzeit zu
+verändern oder zu aktualisieren. 
