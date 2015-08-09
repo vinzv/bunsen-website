@@ -16,17 +16,17 @@ The list of currently maintained packages is as follows:
 
 | Package                                                         | VCS Browser                                                   | Issue Tracker                                                           | 
 |:----------------------------------------------------------------|:-------------------------------------------------------------:|:-----------------------------------------------------------------------:|
-|bunsen-common (*script libraries*)                               | [VCS](https://github.com/bunsenlabs/bunsen-common)            | [Tracker](https://github.com/BunsenLabs/bunsen-common/issues)           |
-|bunsen-configs (*application-related config files*)              | [VCS](https://github.com/bunsenlabs/bunsen-configs)           | [Tracker](https://github.com/BunsenLabs/bunsen-configs/issues)          |
-|bunsen-conky (*conky-related config files and scripts*)          | [VCS](https://github.com/bunsenlabs/bunsen-conky)             | [Tracker](https://github.com/BunsenLabs/bunsen-conky/issues)            |
-|bunsen-docs (*tool documentation*)                               | [VCS](https://github.com/bunsenlabs/bunsen-docs)              | [Tracker](https://github.com/BunsenLabs/bunsen-docs/issues)             |
-|bunsen-faenza-icon-theme (*default icon theme*)                  | [VCS](https://github.com/bunsenlabs/bunsen-faenza-icon-theme) | [Tracker](https://github.com/BunsenLabs/bunsen-faenza-icon-theme/issues)|
-|bunsen-images (*artwork for logos, icons, avatars, backgrounds*) | [VCS](https://github.com/bunsenlabs/bunsen-images)            | [Tracker](https://github.com/BunsenLabs/bunsen-images/issues)           |
-|bunsen-os-release (*provides lsb-release and os-release data*)   | [VCS](https://github.com/bunsenlabs/bunsen-os-release)        | [Tracker](https://github.com/BunsenLabs/bunsen-os-release/issues)       |
-|bunsen-pipemenus (*Openbox pipemenus*)                           | [VCS](https://github.com/bunsenlabs/bunsen-pipemenus)         | [Tracker](https://github.com/BunsenLabs/bunsen-pipemenus/issues)        |
-|bunsen-themes (*GTK theme collection*)                           | [VCS](https://github.com/bunsenlabs/bunsen-themes)            | [Tracker](https://github.com/BunsenLabs/bunsen-themes/issues)           |
-|bunsen-utilities (*utility scripts*)                             | [VCS](https://github.com/bunsenlabs/bunsen-utilities)         | [Tracker](https://github.com/BunsenLabs/bunsen-utilities/issues)        |
-|bunsen-welcome (*initial user- and system setup*)                | [VCS](https://github.com/bunsenlabs/bunsen-welcome)           | [Tracker](https://github.com/BunsenLabs/bunsen-welcome/issues)          |
+|bunsen-common *(script libraries)*                               | [VCS](https://github.com/bunsenlabs/bunsen-common)            | [Tracker](https://github.com/BunsenLabs/bunsen-common/issues)           |
+|bunsen-configs *(application-related config files)*              | [VCS](https://github.com/bunsenlabs/bunsen-configs)           | [Tracker](https://github.com/BunsenLabs/bunsen-configs/issues)          |
+|bunsen-conky *(conky-related config files and scripts)*          | [VCS](https://github.com/bunsenlabs/bunsen-conky)             | [Tracker](https://github.com/BunsenLabs/bunsen-conky/issues)            |
+|bunsen-docs *(tool documentation)*                               | [VCS](https://github.com/bunsenlabs/bunsen-docs)              | [Tracker](https://github.com/BunsenLabs/bunsen-docs/issues)             |
+|bunsen-faenza-icon-theme *(default icon theme)*                  | [VCS](https://github.com/bunsenlabs/bunsen-faenza-icon-theme) | [Tracker](https://github.com/BunsenLabs/bunsen-faenza-icon-theme/issues)|
+|bunsen-images *(artwork for logos, icons, avatars, backgrounds)* | [VCS](https://github.com/bunsenlabs/bunsen-images)            | [Tracker](https://github.com/BunsenLabs/bunsen-images/issues)           |
+|bunsen-os-release *(provides lsb-release and os-release data)*   | [VCS](https://github.com/bunsenlabs/bunsen-os-release)        | [Tracker](https://github.com/BunsenLabs/bunsen-os-release/issues)       |
+|bunsen-pipemenus *(Openbox pipemenus)*                           | [VCS](https://github.com/bunsenlabs/bunsen-pipemenus)         | [Tracker](https://github.com/BunsenLabs/bunsen-pipemenus/issues)        |
+|bunsen-themes *(GTK theme collection)*                           | [VCS](https://github.com/bunsenlabs/bunsen-themes)            | [Tracker](https://github.com/BunsenLabs/bunsen-themes/issues)           |
+|bunsen-utilities *(utility scripts)*                             | [VCS](https://github.com/bunsenlabs/bunsen-utilities)         | [Tracker](https://github.com/BunsenLabs/bunsen-utilities/issues)        |
+|bunsen-welcome *(initial user- and system setup)*                | [VCS](https://github.com/bunsenlabs/bunsen-welcome)           | [Tracker](https://github.com/BunsenLabs/bunsen-welcome/issues)          |
 
 Click [here](gitlog.html) in order to see an overview over recent development activity.
 
@@ -53,7 +53,7 @@ The core development team currently compromises the following people
 | Unia                             | [Unia](https://github.com/Unia)            | [Unia](http://crunchbang.org/forums/profile.php?id=6505)        |
 | damo                             | [capn-damo](https://github.com/capn-damo)  | [damo](http://crunchbang.org/forums/profile.php?id=12994)       |
 | hhh                              | [hhhorb](https://github.com/hhhorb)        | [hhh](http://crunchbang.org/forums/profile.php?id=6659)         |
-| johnraff                         | [johnraff](https://github.com/johnraff)    | [johnraff](http://crunchbanglinux.org/forums/profile.php?id=353)|
-| lcafiero                         | [lcafiero](https://github.com/lcafiero)    | [lcafiero](http://crunchbang.org/forums/profile.php?id=11295)   |
-| pvsage                           | [pvsage](https://github.com/pvsage)        | [pvsage](http://crunchbang.org/forums/profile.php?id=3596)      |
-| twoion                           | [2ion](https://github.com/2ion)            | [twoion](http://crunchbang.org/forums/profile.php?id=16384)     |
+| johnraff *(John Crawley)*        | [johnraff](https://github.com/johnraff)    | [johnraff](http://crunchbanglinux.org/forums/profile.php?id=353)|
+| lcafiero *(Larry Cafiero)*       | [lcafiero](https://github.com/lcafiero)    | [lcafiero](http://crunchbang.org/forums/profile.php?id=11295)   |
+| pvsage *(Peter Sage*)            | [pvsage](https://github.com/pvsage)        | [pvsage](http://crunchbang.org/forums/profile.php?id=3596)      |
+| twoion *(Jens John)*             | [2ion](https://github.com/2ion)            | [twoion](http://crunchbang.org/forums/profile.php?id=16384)     |

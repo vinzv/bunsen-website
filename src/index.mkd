@@ -3,10 +3,10 @@
 [bunsenintro]:<http://crunchbang.org/forums/viewtopic.php?id=39049>
 [cb]:         <http://crunchbang.org/>
 
-BunsenLabs Linux is a light-weight distribution offering a lean and
-easily customizable Openbox desktop. The current release is
-**Hydrogen**, built on top of Debian Jessie. The project is the
-community continuation of [CrunchBang #! Linux][cb].
+BunsenLabs Linux is a distribution offering a light-weight and easily
+customizable Openbox desktop. The current release is **Hydrogen**, built
+on top of Debian Jessie. The project is the community continuation of
+[CrunchBang #! Linux][cb].
 
 <div class="gallery items-3">
 <div id="item-1" class="control-operator"></div>
