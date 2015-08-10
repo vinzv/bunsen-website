@@ -22,12 +22,10 @@ on top of Debian Jessie. The project is the community continuation of
 </div>
 </div>
 
-The distribution consists of configuration and resource packages to be
-installed on top of Debian. While the preferred way to install the
-system is via a live ISO, the packages can be added on top of an
-existing Debian installation.
-
 ## Defining features
+
+The distribution consists of configuration and resource packages
+installed on top of Debian.
 
 * Pre-configured [Openbox](http://openbox.org/wiki/Main_Page) window
   manager with [tint2](https://gitlab.com/o9000/tint2) panel and
@@ -37,7 +35,7 @@ existing Debian installation.
 * Various configuration and application utilities to maintain this
   system
 * Additional desktop-, multimedia- and hardware-related packages come
-  pre-installed as to offer a better "out-of-the-box" experience.
+  pre-installed to offer a better "out-of-the-box" experience.
 
 <hr>
 

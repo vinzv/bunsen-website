@@ -5,12 +5,9 @@ history.
 ## Core packages and bug reports
 
 If you have a bug to report, you may do so either [on the
-forums](http://crunchbang.org/forums) or, in the ideal case, to the right
-package's issue tracker.
-
-If you would like to cherry-pick a configuration file, or artwork for
-example, use the VCS browser links provided below to browse the package
-sources.
+forums](http://crunchbang.org/forums) or, ideally, to the package's
+issue tracker.  Use the VCS browser links provided below to browse the
+package sources.
 
 The list of currently maintained packages is as follows:
 

@@ -62,12 +62,7 @@ downloads using the checksum file provided[^2]:
 | ISO file                                  | Size                | .torrent file              | .torrent magnet link     | DDL            | sha256           |
 |:------------------------------------------|:-------------------:|:--------------------------:|:------------------------:|:--------------:|:----------------:|
 | bl-hydrogen-rc1-amd64.hybrid.iso          | 600M                | [✱][TorrentFile64]         | [✱][TorrentMagnet64]     | [✱][DDL64]     | [✱][shasums64]   |
-| bl-hydrogen-rc1-i586+i686.hybrid.iso[^1]  | 700M                | [✱][TorrentFile32]         | [✱][TorrentMagnet32]     | [✱][DDL32]     | [✱][shasums32]   |
-
-[^1]: The 32bit ISO image contains two x86 kernels: An
-[i586](https://en.wikipedia.org/wiki/P5_%28microarchitecture%29) kernel without
-PAE and an [i686](https://en.wikipedia.org/wiki/P6_%28microarchitecture%29)
-PAE-enabled kernel.
+| bl-hydrogen-rc1-i586+i686.hybrid.iso      | 700M                | [✱][TorrentFile32]         | [✱][TorrentMagnet32]     | [✱][DDL32]     | [✱][shasums32]   |
 
 [^2]: Place the file containing the checksums in the same directory as
 your ISO file downloads, and then run in a terminal `sha256sum --check
@@ -86,4 +81,3 @@ systems. However, depending on the package, it may be possible to
 install on the Debian old-stable release
 [Wheezy](https://wiki.debian.org/DebianWheezy) and current
 [Ubuntu](http://releases.ubuntu.com/) releases.
-
