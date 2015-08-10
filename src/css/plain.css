@@ -8,7 +8,7 @@
  */
 
 @import url("opensans.css");
-@import url("ubuntumono.css");
+/* @import url("ubuntumono.css"); no code tags ATM */
 
 div.icons p img {
   width:48px;
