@@ -8,17 +8,20 @@ customizable Openbox desktop. The current release is **Hydrogen**, built
 on top of Debian Jessie. The project is the community continuation of
 [CrunchBang #! Linux][cb].
 
-<div class="gallery items-3">
+<div class="gallery items-4">
 <div id="item-1" class="control-operator"></div>
 <div id="item-2" class="control-operator"></div>
 <div id="item-3" class="control-operator"></div>
-<figure class="item"><a href="img/frontpage-gallery/hydrogena2-0.png" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogena2-0.thumb.png" alt="[Desktop preview]"></a></figure>
-<figure class="item"><a href="img/frontpage-gallery/hydrogena2-1.png" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogena2-1.thumb.png" alt="[Desktop preview]"></a></figure>
-<figure class="item"><a href="img/frontpage-gallery/hydrogena2-2.png" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogena2-2.thumb.png" alt="[Desktop preview]"></a></figure>
+<div id="item-4" class="control-operator"></div>
+<figure class="item"><a href="img/frontpage-gallery/hydrogen0.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogen0.thumb.jpg" alt="[Desktop preview]"></a></figure>
+<figure class="item"><a href="img/frontpage-gallery/hydrogen1.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogen1.thumb.jpg" alt="[Desktop preview]"></a></figure>
+<figure class="item"><a href="img/frontpage-gallery/hydrogen2.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogen2.thumb.jpg" alt="[Desktop preview]"></a></figure>
+<figure class="item"><a href="img/frontpage-gallery/hydrogen3.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogen3.thumb.jpg" alt="[Desktop preview]"></a></figure>
 <div class="controls">
 <a href="#item-1" class="control-button">•</a>
 <a href="#item-2" class="control-button">•</a>
 <a href="#item-3" class="control-button">•</a>
+<a href="#item-4" class="control-button">•</a>
 </div>
 </div>
 

@@ -15,7 +15,7 @@ TARGETS := $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
 
 # Images with associated thumbnails
 THUMB_DIR = src/img/frontpage-gallery/thumbs
-THUMB_OBJ = $(subst frontpage-gallery/,frontpage-gallery/thumbs/,$(patsubst %.png,%.thumb.png,$(wildcard src/img/frontpage-gallery/*.png)))
+THUMB_OBJ = $(subst frontpage-gallery/,frontpage-gallery/thumbs/,$(patsubst %.png,%.thumb.jpg,$(wildcard src/img/frontpage-gallery/*.png)))
 THUMB_DIM = 638x
 
 # Files to deploy
@@ -125,7 +125,8 @@ src/gitlog.html: src/gitlog.mkd $(TEMPLATE)
 # Generate thumbnails for the frontpage gallery. It is possible that
 # with different resize operators, imagemagick produces even more high-quality
 # preview images. Documentation: http://www.imagemagick.org/Usage/resize/
-$(THUMB_DIR)/%.thumb.png: $(THUMB_DIR)/../%.png
+$(THUMB_DIR)/%.thumb.jpg: $(THUMB_DIR)/../%.png
 	$(info $(SEP))
 	$(info  Using thumbnail build target for $<)
-	convert $< -adaptive-resize $(THUMB_DIM) $@
+	convert $< -adaptive-resize $(THUMB_DIM) -quality 90 $@
+	convert $< -quality 90 $(<:.png=.jpg)
