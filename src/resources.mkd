@@ -28,15 +28,15 @@ The list of currently maintained packages is as follows:
 |bunsen-pipemenus *(Openbox pipemenus)*                           | [VCS](https://github.com/bunsenlabs/bunsen-pipemenus)         | [Tracker](https://github.com/BunsenLabs/bunsen-pipemenus/issues)        |
 |bunsen-themes *(GTK theme collection)*                           | [VCS](https://github.com/bunsenlabs/bunsen-themes)            | [Tracker](https://github.com/BunsenLabs/bunsen-themes/issues)           |
 |bunsen-utilities *(utility scripts)*                             | [VCS](https://github.com/bunsenlabs/bunsen-utilities)         | [Tracker](https://github.com/BunsenLabs/bunsen-utilities/issues)        |
-|bunsen-welcome *(initial user- and system setup)*                | [VCS](https://github.com/bunsenlabs/bunsen-welcome)           | [Tracker](https://github.com/BunsenLabs/bunsen-welcome/issues)          |
+|bunsen-welcome *(initial user and system setup)*                 | [VCS](https://github.com/bunsenlabs/bunsen-welcome)           | [Tracker](https://github.com/BunsenLabs/bunsen-welcome/issues)          |
 
 Click [here](gitlog.html) in order to see an overview over recent development activity.
 
 ## Third-party packages
 
-We are shipping the following packages (or builds) in our repository the
-development of which is not being done by the BunsenLabs team. Please
-file functionality-related bug reports at the project's respective issue
+The following packages (or builds) are not developed by the BunsenLabs
+team, but are available from our repository. Please file
+functionality-related bug reports at the project's respective issue
 trackers.
 
 | Package                 | Homepage                                                                  |
