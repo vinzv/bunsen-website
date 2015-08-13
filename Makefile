@@ -79,7 +79,7 @@ thumbnails: $(THUMB_OBJ)
 clean:
 	$(info $(SEP))
 	$(info  $@)
-	rm -f src/*.html src/img/frontpage-gallery/thumbs/*
+	rm -f src/*.html src/img/frontpage-gallery/thumbs/* src/img/frontpage-gallery/*.jpg
 	rm -fr dst/*
 
 deploy: rebuild
