@@ -1,3 +1,2 @@
-* Use correct pictures in the frontpage gallery
 * Offer SSL encryption: Get a SSL cert for www.bunsenlabs.org and
   bunsenlabs.org from https://letsencrypt.org/ when it's ready.
