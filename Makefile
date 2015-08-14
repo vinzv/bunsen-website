@@ -17,6 +17,8 @@ TARGETS := $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
 THUMB_DIR = src/img/frontpage-gallery/thumbs
 THUMB_OBJ = $(subst frontpage-gallery/,frontpage-gallery/thumbs/,$(patsubst %.png,%.thumb.jpg,$(wildcard src/img/frontpage-gallery/*.png)))
 THUMB_DIM = 638x
+THUMB_JPEG_QUALITY = 75
+THUMB_FULLSIZE_JPEG_QUALITY = 90
 
 # Files to deploy
 ASSETS=$(TARGETS) src/js src/img src/css src/robots.txt
@@ -128,5 +130,5 @@ src/gitlog.html: src/gitlog.mkd $(TEMPLATE)
 $(THUMB_DIR)/%.thumb.jpg: $(THUMB_DIR)/../%.png
 	$(info $(SEP))
 	$(info  Using thumbnail build target for $<)
-	convert $< -adaptive-resize $(THUMB_DIM) -quality 90 $@
-	convert $< -quality 90 $(<:.png=.jpg)
+	convert $< -adaptive-resize $(THUMB_DIM) -quality $(THUMB_JPEG_QUALITY) $@
+	convert $< -quality $(THUMB_FULLSIZE_JPEG_QUALITY) $(<:.png=.jpg)
