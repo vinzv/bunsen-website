@@ -7,8 +7,9 @@
  * file: https://gist.github.com/ryangray/1882525
  */
 
-@import url("opensans.css");
-/* @import url("ubuntumono.css"); no code tags ATM */
+/* Fonts imports */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic);
+/* no code tags ATM @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400); */
 
 div.icons p img {
   width:48px;
