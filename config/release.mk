@@ -1,5 +1,10 @@
+#
+# DDL/Torrent links and filenames for the release links in
+# installation.mkd.
+#
+
 RELEASE_CODENAME = Hydrogen
-RELEASE_VERSION = RC1
+RELEASE_VERSION = rc1
 
 DDL_BASE_URL = http://ddl.bunsenlabs.org
 ISO_BASE_NAME = bl-$(RELEASE_CODENAME)-$(RELEASE_VERSION)
@@ -19,11 +24,13 @@ SHA256SUMS_URL_64 = $(DDL_URL_64).sha256sum.txt
 TORRENT_URL_32 = $(DDL_URL_32).torrent
 TORRENT_URL_64 = $(DDL_URL_64).torrent
 
-# Make sure to URLencode because of sed
+# Make sure to escape '&' in the URL because it's used as input to sed
 MAGNET_32_RAW = magnet:?xt=urn:btih:828e86180150213c10677495565baef6b232dbdd&dn=archlinux-2015.08.01-dual.iso&tr=udp://tracker.archlinux.org:6969&tr=http://tracker.archlinux.org:6969/announce
 MAGNET_64_RAW = magnet:?xt=urn:btih:828e86180150213c10677495565baef6b232dbdd&dn=archlinux-2015.08.01-dual.iso&tr=udp://tracker.archlinux.org:6969&tr=http://tracker.archlinux.org:6969/announce
 TORRENT_MAGNET_LINK_32 = $(shell echo "$(MAGNET_32_RAW)" | sed 's/&/\\&/g')
 TORRENT_MAGNET_LINK_64 = $(shell echo "$(MAGNET_32_RAW)" | sed 's/&/\\&/g')
+
+### REFERENCED IN Makefile ###
 
 RELEASE_SUBST :=\
 	DDL_URL_32 \
