@@ -1,16 +1,17 @@
-[DDL32]: <http://ddl.bunsenlabs.org/32.iso>
-[DDL64]: <http://ddl.bunsenlabs.org/64.iso>
 [HardwareRequirements]: <https://www.debian.org/releases/jessie/amd64/ch03s04.html.en>
 [LinuxFAQ]: <https://www.debian.org/CD/faq/#record-unix>
 [OSXFAQ]: <https://www.debian.org/CD/faq/#record-mac>
-[TorrentFile32]: <http://tracker.bunsenlabs.org/torrents/bl-hydrogen-rc1-i586_i686pae.hybrid.iso>
-[TorrentFile64]: <http://tracker.bunsenlabs.org/torrents/bl-hydrogen-rc1-amd64.hybrid.iso>
-[TorrentMagnet32]: <>
-[TorrentMagnet64]: <>
 [USBFAQ]: <https://www.debian.org/CD/faq/#write-usb>
 [WindowsFAQ]: <https://www.debian.org/CD/faq/#record-windows>
-[shasums32]: <>
-[shasums64]: <>
+
+[DDL32]: <@@DDL_URL_32@@>
+[DDL64]: <@@DDL_URL_64@@>
+[TorrentFile32]: <@@TORRENT_URL_32@@>
+[TorrentFile64]: <@@TORRENT_URL_64@@>
+[TorrentMagnet32]: <@@TORRENT_MAGNET_LINK_32@@>
+[TorrentMagnet64]: <@@TORRENT_MAGNET_LINK_64@@>
+[shasums32]: <@@SHA256SUMS_URL_32@@>
+[shasums64]: <@@SHA256SUMS_URL_64@@>
 
 There are two ways to install all or part of BunsenLabs Linux:
 
@@ -59,10 +60,10 @@ files for other users.
 Otherwise, use the direct download links. Do not forget to verify direct
 downloads using the checksum file provided[^2]:
 
-| ISO file                                  | Size                | .torrent file              | .torrent magnet link     | DDL            | sha256           |
-|:------------------------------------------|:-------------------:|:--------------------------:|:------------------------:|:--------------:|:----------------:|
-| bl-hydrogen-rc1-amd64.hybrid.iso          | 600M                | [✱][TorrentFile64]         | [✱][TorrentMagnet64]     | [✱][DDL64]     | [✱][shasums64]   |
-| bl-hydrogen-rc1-i586+i686.hybrid.iso      | 700M                | [✱][TorrentFile32]         | [✱][TorrentMagnet32]     | [✱][DDL32]     | [✱][shasums32]   |
+| ISO file          | Size                  | .torrent file              | .torrent magnet link     | DDL            | sha256           |
+|:------------------|:---------------------:|:--------------------------:|:------------------------:|:--------------:|:----------------:|
+| \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [✱][TorrentFile64]         | [✱][TorrentMagnet64]     | [✱][DDL64]     | [✱][shasums64]   |
+| \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [✱][TorrentFile32]         | [✱][TorrentMagnet32]     | [✱][DDL32]     | [✱][shasums32]   |
 
 [^2]: Place the file containing the checksums in the same directory as
 your ISO file downloads, and then run in a terminal `sha256sum --check

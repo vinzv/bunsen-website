@@ -59,9 +59,11 @@ OPENGRAPH_IMG=img/opengraph-flame.png
 include config/pagetitles.mk
 include config/pagedescriptions.mk
 
+include config/release.mk
+
 ### UTILITY TARGETS ###
 
-.PHONY: rebuild checkout all clean deploy
+.PHONY: rebuild checkout all clean deploy link-release
 
 rebuild: clean checkout
 	$(info $(SEP))
@@ -73,7 +75,7 @@ checkout: all
 	mkdir -p $(DESTDIR)
 	rsync -au $(ASSETS) $(DESTDIR)
 
-all: $(TARGETS) thumbnails
+all: $(TARGETS) thumbnails link-release
 
 thumbnails: $(THUMB_OBJ)
 	@mkdir -p $(THUMB_DIR)
@@ -112,6 +114,11 @@ src/resources.html: src/resources.mkd $(TEMPLATE)
 		--toc \
 		-o $@ $<
 	./postproc $@
+
+link-release: src/installation.html
+	$(info $(SEP))
+	$(info Setting release links in $<)
+	$(foreach VAR,$(RELEASE_SUBST),$(shell sed -i 's,@@$(VAR)@@,$($(VAR)),' $<))
 
 # For the gitlog page, include a header with CSS/JS links and a footer
 # to post-load the query JS code.
