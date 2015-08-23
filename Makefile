@@ -118,6 +118,7 @@ src/resources.html: src/resources.mkd $(TEMPLATE)
 link-release: src/installation.html
 	$(info $(SEP))
 	$(info Setting release links in $<)
+	$(foreach VAR,$(RELEASE_SUBST),$(info $(VAR) = $($(VAR))))
 	$(foreach VAR,$(RELEASE_SUBST),$(shell sed -i 's,@@$(VAR)@@,$($(VAR)),' $<))
 
 # For the gitlog page, include a header with CSS/JS links and a footer

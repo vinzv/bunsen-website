@@ -16,8 +16,8 @@ on top of Debian Jessie. The project is the community continuation of
 <div id="item-5" class="control-operator"></div>
 <div id="item-6" class="control-operator"></div>
 <figure class="item"><a href="img/frontpage-gallery/hydrogen0.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogen0.thumb.jpg" alt="[Desktop preview]"></a></figure>
-<figure class="item"><a href="img/frontpage-gallery/hydrogen1.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogen1.thumb.jpg" alt="[Desktop preview]"></a></figure>
 <figure class="item"><a href="img/frontpage-gallery/hydrogen2.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogen2.thumb.jpg" alt="[Desktop preview]"></a></figure>
+<figure class="item"><a href="img/frontpage-gallery/hydrogen1.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogen1.thumb.jpg" alt="[Desktop preview]"></a></figure>
 <figure class="item"><a href="img/frontpage-gallery/hydrogenteal0.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogenteal0.thumb.jpg" alt="[Desktop preview]"></a></figure>
 <figure class="item"><a href="img/frontpage-gallery/hydrogenteal1.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogenteal1.thumb.jpg" alt="[Desktop preview]"></a></figure>
 <div class="controls">
