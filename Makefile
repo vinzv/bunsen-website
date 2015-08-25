@@ -59,6 +59,7 @@ OPENGRAPH_IMG=img/opengraph-flame.png
 include config/pagetitles.mk
 include config/pagedescriptions.mk
 
+# Defines release-dependent links, names, version numbers etc
 include config/release.mk
 
 ### UTILITY TARGETS ###
@@ -101,7 +102,7 @@ deploy: rebuild
 
 src/index.html: src/index.mkd $(TEMPLATE)
 	$(info $(SEP))
-	$(info  Using specialized build target for $< 												)
+	$(info Using specialized build target for $< 												)
 	pandoc $(ARGV) $(PANDOC_VARS) \
 		-H src/include/index_header.html \
 		-o $@ $<
@@ -115,11 +116,10 @@ src/resources.html: src/resources.mkd $(TEMPLATE)
 		-o $@ $<
 	./postproc $@
 
-link-release: src/installation.html
+link-release: src/installation.html src/index.html
 	$(info $(SEP))
-	$(info Setting release links in $<)
-	$(foreach VAR,$(RELEASE_SUBST),$(info $(VAR) = $($(VAR))))
-	$(foreach VAR,$(RELEASE_SUBST),$(shell sed -i 's,@@$(VAR)@@,$($(VAR)),' $<))
+	$(info Setting release links in $^)
+	$(foreach VAR,$(RELEASE_SUBST),$(shell sed -i 's,@@$(VAR)@@,$($(VAR)),' $^ ))
 
 # For the gitlog page, include a header with CSS/JS links and a footer
 # to post-load the query JS code.
