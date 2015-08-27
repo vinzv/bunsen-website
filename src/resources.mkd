@@ -32,17 +32,19 @@ The list of currently maintained packages is as follows:
 
 Click [here](gitlog.html) in order to see an overview over recent development activity.
 
-## Third-party packages
+## Third-party and backported packages
 
 The following packages (or builds) are not developed by the BunsenLabs
 team, but are available from our repository. Please file
 functionality-related bug reports at the project's respective issue
 trackers.
 
-| Package                 | Homepage                                                                  |
-|:------------------------|:-------------------------------------------------------------------------:|
-|mpv-bash-completion      |[Link](https://2ion.github.io/mpv-bash-completion)                         |
-|ttf-ubuntu-font-family   |[Link](http://packages.ubuntu.com/source/vivid/ubuntu-font-family-sources) |
+| Package                 | Version               | Source                                                                                |
+|:------------------------|:----------------------|:-------------------------------------------------------------------------------------:|
+|dfc                      | 3.0.5-0.1             | [Link](https://packages.debian.org/source/sid/dfc)                                    |
+|mpv-bash-completion      | 1:0.6.2-2             | [Link](https://2ion.github.io/mpv-bash-completion)                                    |
+|ttf-ubuntu-font-family   | 0.80-0ubuntu6.1       | [Link](http://packages.ubuntu.com/source/vivid/ubuntu-font-family-sources)            |
+|xfce4-power-manager      | 1.4.4-4~bpo8+1        | [Link](https://packages.debian.org/source/stretch/xfce4-power-manager)                |
 
 ## Development team
 
