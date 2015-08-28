@@ -42,6 +42,7 @@ trackers.
 | Package                 | Version               | Source                                                                                |
 |:------------------------|:----------------------|:-------------------------------------------------------------------------------------:|
 |dfc                      | 3.0.5-0.1             | [Link](https://packages.debian.org/source/sid/dfc)                                    |
+|forecast                 | *VCS snapshots*       | [Link](https://github.com/2ion/forecast)                                              |
 |mpv-bash-completion      | 1:0.6.2-2             | [Link](https://2ion.github.io/mpv-bash-completion)                                    |
 |ttf-ubuntu-font-family   | 0.80-0ubuntu6.1       | [Link](http://packages.ubuntu.com/source/vivid/ubuntu-font-family-sources)            |
 |xfce4-power-manager      | 1.4.4-4~bpo8+1        | [Link](https://packages.debian.org/source/stretch/xfce4-power-manager)                |
