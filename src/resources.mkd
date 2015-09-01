@@ -9,6 +9,9 @@ history.
 
 ## Core packages and bug reports
 
+**Detailed package indices and content listings are available on the
+['repositories'](http://pkg.bunsenlabs.org) page.**
+
 If you have a bug to report, you may do so either [on the
 forums](http://crunchbang.org/forums) or, ideally, to the package's
 issue tracker.  Use the VCS browser links provided below to browse the
@@ -34,18 +37,10 @@ Click [here](gitlog.html) in order to see an overview over recent development ac
 
 ## Third-party and backported packages
 
-The following packages (or builds) are not developed by the BunsenLabs
-team, but are available from our repository. Please file
-functionality-related bug reports at the project's respective issue
-trackers.
-
-| Package                 | Version               | Source                                                                                |
-|:------------------------|:----------------------|:-------------------------------------------------------------------------------------:|
-|dfc                      | 3.0.5-0.1             | [Link](https://packages.debian.org/source/sid/dfc)                                    |
-|forecast                 | *VCS snapshots*       | [Link](https://github.com/2ion/forecast)                                              |
-|mpv-bash-completion      | 1:0.6.2-2             | [Link](https://2ion.github.io/mpv-bash-completion)                                    |
-|ttf-ubuntu-font-family   | 0.80-0ubuntu6.1       | [Link](http://packages.ubuntu.com/source/vivid/ubuntu-font-family-sources)            |
-|xfce4-power-manager      | 1.4.4-4~bpo8+1        | [Link](https://packages.debian.org/source/stretch/xfce4-power-manager)                |
+We maintain an auxiliary repository named **jessie-backports**
+containing packages backported from Debian testing and imported from
+Ubuntu. A list of packages is available
+[here](http://pkg.bunsenlabs.org/repoidx.html#distro-jessie-backports).
 
 ## Development team
 
