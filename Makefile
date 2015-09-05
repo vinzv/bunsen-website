@@ -44,13 +44,14 @@ PANDOC_VARS=-M pagetitle="$($<.title)" \
 						-M filename="$(@F)" \
 						-M url-prefix="$(URL_PREFIX)" \
 						-M opengraph-image="$(OPENGRAPH_IMG)" \
-						-M opengraph-description="$($<.description)"
+						-M opengraph-description="$($<.description)" \
+						-M google-analytics=1
 
 # Checkout directory which will be uploaded
 DESTDIR=dst
 
 # Page root
-URL_PREFIX=http://bunsen-www.2ion.eu
+URL_PREFIX=http://www.bunsenlabs.org
 
 # Thumbnail image, og:image
 OPENGRAPH_IMG=img/opengraph-flame.png

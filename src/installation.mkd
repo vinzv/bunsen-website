@@ -60,10 +60,10 @@ files for other users.
 Otherwise, use the direct download links. Do not forget to verify direct
 downloads using the checksum file provided[^2]:
 
-| ISO file          | Size                  | .torrent file              | .torrent magnet link     | DDL            | sha256           |
-|:------------------|:---------------------:|:--------------------------:|:------------------------:|:--------------:|:----------------:|
-| \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [✱][TorrentFile64]         | [✱][TorrentMagnet64]     | [✱][DDL64]     | [✱][shasums64]   |
-| \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [✱][TorrentFile32]         | [✱][TorrentMagnet32]     | [✱][DDL32]     | [✱][shasums32]   |
+| ISO file          | Size                  | .torrent                  | DDL            | sha256           |
+|:------------------|:---------------------:|:--------------------------:|:--------------:|:----------------:|
+| \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [✱][TorrentFile64]         | [✱][DDL64]     | [✱][shasums64]   |
+| \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [✱][TorrentFile32]         | [✱][DDL32]     | [✱][shasums32]   |
 
 [^2]: Place the file containing the checksums in the same directory as
 your ISO file downloads, and then run in a terminal `sha256sum --check
@@ -74,7 +74,7 @@ $CHECKSUM-FILE`.
 You may also choose to follow our repository set-up
 [instructions](http://pkg.bunsenlabs.org) and include our package
 repository into your existing system. This way, you can selectively
-install [packages from the BunsenLabs project](development.html) and use
+install [packages from the BunsenLabs project](resources.html#core-packages-and-bug-reports) and use
 only a subset of our configurations and assets.
 
 The packages are built and made to be installed on Debian Jessie
@@ -89,4 +89,5 @@ It is also possible to include the BunsenLabs system into a minimal
 [netinstall](https://www.debian.org/CD/netinst/) Debian installation
 using a special script. Please consult its
 [README](https://github.com/BunsenLabs/bunsen-netinstall) for detailed
-instructions.
+instructions. There is also a [forum thread](http://crunchbang.org/forums/viewtopic.php?id=39656)
+on this topic.
