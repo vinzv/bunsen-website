@@ -6,7 +6,7 @@
 BunsenLabs Linux is a distribution offering a light-weight and easily
 customizable Openbox desktop. The current release is
 **\@\@RELEASE\_CODENAME\@\@ (\@\@RELEASE\_VERSION\@\@)**, built on top of Debian Jessie. The project is
-the community continuation of [CrunchBang #! Linux][cb].
+a community continuation of [CrunchBang #! Linux][cb].
 
 <div class="gallery items-5">
 <div id="item-1" class="control-operator"></div>

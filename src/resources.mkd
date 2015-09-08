@@ -44,7 +44,7 @@ Ubuntu. A list of packages is available
 
 ## Development team
 
-The core development team currently compromises the following people
+The core development team is comprised of the following people
 (alphabetically sorted):
 
 | Handle                           | Github profile                             | #! forums profile                                               |

@@ -65,6 +65,12 @@ downloads using the checksum file provided[^2]:
 | \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [✱][TorrentFile64]         | [✱][DDL64]     | [✱][shasums64]   |
 | \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [✱][TorrentFile32]         | [✱][DDL32]     | [✱][shasums32]   |
 
+There are also threads on the forums
+[here](http://crunchbang.org/forums/viewtopic.php?id=39994) and
+[here](http://crunchbang.org/forums/viewtopic.php?id=40019) which deal
+with issues, bugs and comments related to the \@\@RELEASE\_VERSION\@\@
+release.
+
 [^2]: Place the file containing the checksums in the same directory as
 your ISO file downloads, and then run in a terminal `sha256sum --check
 $CHECKSUM-FILE`.
