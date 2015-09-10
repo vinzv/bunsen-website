@@ -65,9 +65,8 @@ downloads using the checksum file provided[^2]:
 | \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [✱][TorrentFile64]         | [✱][DDL64]     | [✱][shasums64]   |
 | \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [✱][TorrentFile32]         | [✱][DDL32]     | [✱][shasums32]   |
 
-There are also threads on the forums
-[here](http://crunchbang.org/forums/viewtopic.php?id=39994) and
-[here](http://crunchbang.org/forums/viewtopic.php?id=40019) which deal
+There is also a thread on the forums
+[here](http://crunchbang.org/forums/viewtopic.php?id=40602) which deals
 with issues, bugs and comments related to the \@\@RELEASE\_VERSION\@\@
 release.
 

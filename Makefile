@@ -91,7 +91,7 @@ clean:
 deploy: rebuild
 	$(info $(SEP))
 	$(info  $@)
-	rsync -au --progress --human-readable --delete --chmod=D0755,F0644 dst/ bunsen@bunsenpkg:/srv/www.bunsenlabs.org/
+	rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ bunsen@bunsenpkg:/srv/www.bunsenlabs.org/
 
 ### PAGE BUILD TARGETS ###
 
