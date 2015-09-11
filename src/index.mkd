@@ -19,7 +19,7 @@ a community continuation of [CrunchBang #! Linux][cb].
 <figure class="item"><a href="img/frontpage-gallery/hydrogen2.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogen2.thumb.jpg" alt="[Desktop preview]"></a></figure>
 <figure class="item"><a href="img/frontpage-gallery/hydrogen1.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogen1.thumb.jpg" alt="[Desktop preview]"></a></figure>
 <figure class="item"><a href="img/frontpage-gallery/hydrogenteal0.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogenteal0.thumb.jpg" alt="[Desktop preview]"></a></figure>
-<figure class="item"><a href="img/frontpage-gallery/hydrogenteal1.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/hydrogenteal1.thumb.jpg" alt="[Desktop preview]"></a></figure>
+<figure class="item"><a href="img/frontpage-gallery/rc1hydrogen.jpg" target="_blank"><img style="width:100%;" src="img/frontpage-gallery/thumbs/rc1hydrogen.thumb.jpg" alt="[Desktop preview]"></a></figure>
 <div class="controls">
 <a href="#item-1" class="control-button">•</a>
 <a href="#item-2" class="control-button">•</a>

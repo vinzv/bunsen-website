@@ -72,7 +72,8 @@ release.
 
 [^2]: Place the file containing the checksums in the same directory as
 your ISO file downloads, and then run in a terminal `sha256sum --check
-$CHECKSUM-FILE`.
+$CHECKSUM-FILE`. Make sure to pass the name of the `*.sha256sum.txt`
+file, and **not** the ISO file!
 
 ## Repository method
 

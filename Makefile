@@ -21,7 +21,7 @@ THUMB_JPEG_QUALITY = 75
 THUMB_FULLSIZE_JPEG_QUALITY = 90
 
 # Files to deploy
-ASSETS=$(TARGETS) src/js src/img src/css src/robots.txt
+ASSETS=$(TARGETS) src/js src/img src/css src/robots.txt src/zohoverify
 
 # Main navigation and page header
 NAVIGATION_HTML=src/include/navigation.html
