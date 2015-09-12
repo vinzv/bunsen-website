@@ -309,3 +309,14 @@ ul > li, ol > li {
   margin-top: 0px;
   line-height: 1.5;
 }
+
+.padlock {
+  position: relative;
+}
+
+.padlock img {
+  height:32px;
+  position: absolute;
+  top:0px;
+  right:0px;
+}

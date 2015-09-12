@@ -45,7 +45,8 @@ PANDOC_VARS=-M pagetitle="$($<.title)" \
 						-M url-prefix="$(URL_PREFIX)" \
 						-M opengraph-image="$(OPENGRAPH_IMG)" \
 						-M opengraph-description="$($<.description)" \
-						-M google-analytics=1
+						-M google-analytics=1 \
+						-M padlock=1
 
 # Checkout directory which will be uploaded
 DESTDIR=dst
