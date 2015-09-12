@@ -56,6 +56,7 @@ $endfor$
 </head>
 <body>
 $if(padlock)$
+<!-- No-SSL padlock -->
 <div class="padlock"></div>
 $endif$
 $for(include-before)$
@@ -85,7 +86,8 @@ $for(include-after)$
 $include-after$
 $endfor$
 $if(padlock)$
-<script src="js/lock.js"></script>
+<!-- No-SSL padlock -->
+<script src="/js/lock.js"></script>
 $endif$
 $if(google-analytics)$
 <script>
