@@ -5,17 +5,20 @@
  */
 
 function include_lock(anchor, image) {
+  if(window.location.protocol === 'https:') return;
+
   var node = document.querySelector(anchor);
   if(node===null) return;
-  if(window.location.protocol != 'https:') {
-    var a = document.createElement("a");
-    a.setAttribute("href", "https://"+window.location.host + window.location.pathname);
-    a.setAttribute("title", "Switch to a SSL-secured connection");
-    var img = document.createElement("img");
-    img.setAttribute("src", image);
-    a.appendChild(img);
-    node.appendChild(a);
-  }
+
+  var a = document.createElement("a");
+  a.setAttribute("href", "https://"+window.location.host + window.location.pathname);
+  a.setAttribute("title", "Switch to a SSL-secured connection");
+
+  var img = document.createElement("img");
+  img.setAttribute("src", image);
+
+  a.appendChild(img);
+  node.appendChild(a);
 };
 
 const PADLOCK_IMAGE = "/img/numix_lock.svg";
