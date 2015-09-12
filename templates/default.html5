@@ -28,9 +28,9 @@ $endif$
   <!-- Google -->
   <meta name="google" content="notranslate">
   <!-- Favicon -->
-  <link rel="icon" href="img/favicon16.png" sizes="16x16">
-  <link rel="icon" href="img/favicon32.png" sizes="32x32">
-  <link rel="icon" href="img/favicon48.png" sizes="48x48">
+  <link rel="icon" href="/img/favicon16.png" sizes="16x16">
+  <link rel="icon" href="/img/favicon32.png" sizes="32x32">
+  <link rel="icon" href="/img/favicon48.png" sizes="48x48">
   <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>

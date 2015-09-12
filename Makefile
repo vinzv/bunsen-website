@@ -27,7 +27,7 @@ ASSETS=$(TARGETS) src/js src/img src/css src/robots.txt src/zohoverify
 NAVIGATION_HTML=src/include/navigation.html
 
 # CSS include path, relative to pageroot
-STYLE=css/plain.css
+STYLE=/css/plain.css
 
 # Pandoc arguments
 ARGV=	--email-obfuscation=javascript \
