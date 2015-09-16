@@ -1,6 +1,5 @@
 #
-# DDL/Torrent links and filenames for the release links in
-# installation.mkd.
+# TEMPLATING SYSTEM
 #
 
 RELEASE_CODENAME = Hydrogen

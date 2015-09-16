@@ -61,12 +61,12 @@ OPENGRAPH_IMG=img/opengraph-flame.png
 include config/pagetitles.mk
 include config/pagedescriptions.mk
 
-# Defines release-dependent links, names, version numbers etc
-include config/release.mk
+# Templating system
+include config/variables.mk
 
 ### UTILITY TARGETS ###
 
-.PHONY: rebuild checkout all clean deploy link-release
+.PHONY: rebuild checkout all clean deploy variables
 
 rebuild: clean checkout
 	$(info $(SEP))
@@ -78,7 +78,7 @@ checkout: all
 	mkdir -p $(DESTDIR)
 	rsync -au $(ASSETS) $(DESTDIR)
 
-all: $(TARGETS) thumbnails link-release
+all: $(TARGETS) thumbnails variables
 
 thumbnails: $(THUMB_OBJ)
 	@mkdir -p $(THUMB_DIR)
@@ -118,7 +118,7 @@ src/resources.html: src/resources.mkd $(TEMPLATE)
 		-o $@ $<
 	./postproc $@
 
-link-release: src/installation.html src/index.html
+variables: src/installation.html src/index.html
 	$(info $(SEP))
 	$(info Setting release links in $^)
 	$(foreach VAR,$(RELEASE_SUBST),$(shell sed -i 's,@@$(VAR)@@,$($(VAR)),' $^ ))
