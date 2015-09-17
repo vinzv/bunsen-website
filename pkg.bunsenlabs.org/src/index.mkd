@@ -1,0 +1,96 @@
+[SigningKey]: <BunsenLabs-RELEASE.asc>
+
+## Repositories
+
+To use our repositories, follow the instructions below: Set up the APT
+configuration and import our signing key.
+
+### bunsen-hydrogen
+
+This is our main repository which contains our core packages.
+
+Set up a file at `/etc/apt/sources.list.d/bunsen.list` with the
+following [contents](templates/etc/apt/sources.list.d/bunsen.list):
+
+~~~
+deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen main
+~~~
+
+### jessie-backports
+
+This is an auxiliary repository containing packages backported from
+Debian testing and imported from Ubuntu.
+
+Set up `/etc/apt/sources.list.d/bunsen-jessie-backports.list` with the
+following
+[contents](templates/etc/apt/sources.list.d/bunsen-jessie-backports.list):
+
+~~~
+deb http://pkg.bunsenlabs.org/debian jessie-backports main
+~~~
+
+The backports repo's packages will have a pin priority of 100, so
+regular jessie packages will continue to take precedence until you
+explicitly install a backported package.
+
+To upgrade a package to its backports version, target the backports
+distribution as follows:
+
+~~~ { .bash }
+apt-get -t jessie-backports install ${PACKAGE_NAME}
+~~~
+
+Subsequent package upgrades will be installed from the backports repo or
+the regular repository, whichever package version is
+higher.
+
+### Source archives
+
+Package sources may be retrieved using the `apt-get source` command. To
+be able to do so, duplicate the lines in your `.list` files and
+change the archive type to [`deb-src`](https://wiki.debian.org/SourcesList#Archive_type).
+
+## Signing key
+
+Fetch and verify the repository's [signing key][SigningKey]:
+
+~~~ { .bash }
+wget https://pkg.bunsenlabs.org/BunsenLabs-RELEASE.asc
+gpg --with-fingerprint BunsenLabs-RELEASE.asc
+~~~
+
+The key's fingerprint as displayed by gpg should be identical with the
+following hexstring:
+
+~~~~~
+3172 4784 0522 7490 BBB7 43E6 A067 3F72 FE62 D9C5 
+~~~~~
+
+If that is not the case, you have got the wrong key. Use a safe,
+non-intercepted internet connection in order to retrieve the correct key
+file.
+
+Finally, add the key to APT and update the package index:
+
+~~~ { .bash }
+apt-key add BunsenLabs-RELEASE.asc
+apt-get update
+~~~
+
+You may now install <monospace>bunsen-\*</monospace> packages provided
+by the repository.
+
+## Directory index
+
+Browse the repository directory hierarchy [here](debian).
+
+<hr>
+
+<table>
+<tr>
+<td><a href="https://www.netcup.de"><img style="width:80px;" src="img/netcup-logo.png"></a></td>
+<td>Our distribution server is generously sponsored by the <a href="https://www.netcup.de">NetCup hosting company</a> from Karlsruhe, Germany.</td>
+</tr>
+</table>
+
+*The logo is Copyright © 2015 Rodrigo Moya ([Ututo](http://crunchbang.org/forums/profile.php?id=15094)) and licensed under the [CC-BY-NC-SA-4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/).*

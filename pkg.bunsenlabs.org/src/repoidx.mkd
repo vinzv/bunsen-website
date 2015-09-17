@@ -1,0 +1,11 @@
+<div class="info">
+<p>
+This feature is currently under development and has been confirmed to
+work in all recent Firefox releases (version 38 and greater). Other
+browsers are not supported at the moment but will be in the future.
+</p>
+</div>
+
+<div id="bl-repo-index-toc"></div>
+
+<div id="bl-repo-index"></div>
