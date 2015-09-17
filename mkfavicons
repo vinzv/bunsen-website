@@ -1,0 +1,19 @@
+#!/bin/bash
+
+readonly INFILE=$1
+readonly OUTDIR=$(dirname "$1");
+readonly GENFILE=$2
+
+shift 2
+
+{ 
+  for size in "$@"; do
+
+    printf "\t%03dpx favicon ... " $size >&2
+    rsvg-convert -f png -a -w $size -h $size "$INFILE" > "${OUTDIR}/favicon${size}.png"
+    echo "done." >&2
+
+    echo "<link rel='icon' href='/img/favicon${size}.png' sizes='${size}x${size}'>"
+
+  done
+} > "$GENFILE"

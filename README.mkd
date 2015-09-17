@@ -19,6 +19,7 @@ on Pandoc's markdown dialect.
 * bash
 * sed
 * imagemagick
+* rsvg-convert
 
 ## Build commands
 

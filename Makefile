@@ -10,6 +10,10 @@ SEP := ---------------------------------------------------------------
 # Pandoc site template
 TEMPLATE := templates/default.html5
 
+FAVICON_SOURCE = src/img/bl-flame-48px.svg
+FAVICON_SIZES = 48 64 128 256
+FAVICON_HEADER = src/include/favicons.html
+
 # Determine MKD<>HTML targets
 TARGETS := $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
 
@@ -43,6 +47,7 @@ ARGV=	--email-obfuscation=javascript \
 PANDOC_VARS=-M pagetitle="$($<.title)" \
 						-M filename="$(@F)" \
 						-M url-prefix="$(OPENGRAPH_URL_PREFIX)" \
+						-M favicons="$(shell cat $(FAVICON_HEADER))" \
 						-M opengraph-image="$(OPENGRAPH_IMG)" \
 						-M opengraph-description="$($<.description)" \
 						-M google-analytics=1 \
@@ -76,7 +81,7 @@ checkout: all
 	mkdir -p $(DESTDIR)
 	rsync -au $(ASSETS) $(DESTDIR)
 
-all: $(TARGETS) thumbnails variables
+all: favicon-series $(TARGETS) thumbnails variables
 
 thumbnails: $(THUMB_OBJ)
 	@mkdir -p $(THUMB_DIR)
@@ -85,6 +90,7 @@ clean:
 	$(info $(SEP))
 	$(info  $@)
 	rm -f src/*.html src/img/frontpage-gallery/thumbs/* src/img/frontpage-gallery/*.jpg
+	rm -f src/img/favicon*.png
 	rm -fr dst/*
 
 deploy: rebuild
@@ -140,3 +146,9 @@ $(THUMB_DIR)/%.thumb.jpg: $(THUMB_DIR)/../%.png
 	$(info  Using thumbnail build target for $<)
 	convert $< -adaptive-resize $(THUMB_DIM) -quality $(THUMB_JPEG_QUALITY) $@
 	convert $< -quality $(THUMB_FULLSIZE_JPEG_QUALITY) $(<:.png=.jpg)
+
+.PHONY: favicon-series
+favicon-series: $(FAVICON_SOURCE)
+	$(info $(SEP))
+	$(info Building favicons from $<)
+	@./mkfavicons $< $(FAVICON_HEADER) $(FAVICON_SIZES)
