@@ -42,7 +42,7 @@ ARGV=	--email-obfuscation=javascript \
 # Pandoc variables set for all documents; expanded at build time!
 PANDOC_VARS=-M pagetitle="$($<.title)" \
 						-M filename="$(@F)" \
-						-M url-prefix="$(URL_PREFIX)" \
+						-M url-prefix="$(OPENGRAPH_URL_PREFIX)" \
 						-M opengraph-image="$(OPENGRAPH_IMG)" \
 						-M opengraph-description="$($<.description)" \
 						-M google-analytics=1 \
@@ -51,10 +51,8 @@ PANDOC_VARS=-M pagetitle="$($<.title)" \
 # Checkout directory which will be uploaded
 DESTDIR=dst
 
-# Page root
-URL_PREFIX=http://www.bunsenlabs.org
-
-# Thumbnail image, og:image
+# Opengraph
+OPENGRAPH_URL_PREFIX=https://www.bunsenlabs.org
 OPENGRAPH_IMG=img/opengraph-flame.png
 
 # Per-page pagetitles and descriptions
