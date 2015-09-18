@@ -10,6 +10,9 @@ SEP := ---------------------------------------------------------------
 # Pandoc site template
 TEMPLATE := templates/default.html5
 
+FOOTER_GLOBAL := src/include/footer_copyright.html
+FOOTER_SPONSOR := src/include/footer_sponsor.html
+
 FAVICON_SOURCE = src/img/bl-flame-48px.svg
 FAVICON_SIZES = 48 64 128 256
 FAVICON_HEADER = src/include/favicons.html
@@ -41,7 +44,8 @@ ARGV=	--email-obfuscation=javascript \
 			-s \
 			-c $(STYLE) \
 			--highlight-style monochrome \
-			--include-before-body=$(NAVIGATION_HTML)
+			--include-before-body=$(NAVIGATION_HTML) \
+			--include-after-body=$(FOOTER_GLOBAL)
 
 # Pandoc variables set for all documents; expanded at build time!
 PANDOC_VARS=-M pagetitle="$($<.title)" \
@@ -111,6 +115,7 @@ src/index.html: src/index.mkd $(TEMPLATE)
 	$(info Using specialized build target for $< 												)
 	pandoc $(ARGV) $(PANDOC_VARS) \
 		-H src/include/index_header.html \
+		-A src/include/footer_sponsor.html \
 		-o $@ $<
 	./postproc $@
 
@@ -125,7 +130,7 @@ src/resources.html: src/resources.mkd $(TEMPLATE)
 variables: src/installation.html src/index.html
 	$(info $(SEP))
 	$(info Setting release links in $^)
-	$(foreach VAR,$(RELEASE_SUBST),$(shell sed -i 's,@@$(VAR)@@,$($(VAR)),' $^ ))
+	$(foreach VAR,$(RELEASE_SUBST),$(shell sed -i 's^@@$(VAR)@@^$($(VAR))^' $^ ))
 
 # For the gitlog page, include a header with CSS/JS links and a footer
 # to post-load the query JS code.

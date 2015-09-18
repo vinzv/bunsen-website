@@ -25,15 +25,3 @@ installed on top of Debian.
 * Additional desktop-, multimedia- and hardware-related packages come
   pre-installed to offer a better "out-of-the-box" experience.
 
-<hr>
-
-<div class="center">
-Copyright © 2015 The BunsenLabs Linux Project | [Legal remarks](legal.html) | [Imprint](imprint.html)
-</div>
-
-<table class="plain">
-<tr>
-<td><a href="https://www.netcup.de"><img style="height:48px;vertical-align:middle;" src="img/netcup-logo.png"></a></td>
-<td>Our server is generously sponsored by the <a href="https://www.netcup.de">NetCup hosting company</a> from Karlsruhe, Germany.</td>
-</tr>
-</table>
