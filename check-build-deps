@@ -1,0 +1,19 @@
+#!/bin/bash
+
+readonly BINARIES=(bash make pandoc rsync rsvg-convert sed convert ssh)
+
+check_dep()
+{
+  local c=$1
+  echo -n "$c "
+  if ! type "$c" &>/dev/null; then
+    echo -e "\\033[1;31mmissing\033[0m"
+  else
+    echo -e "\\033[1;32mfound\033[0m"
+  fi
+}
+
+for dep in ${BINARIES[@]}; do
+  check_dep "$dep"
+done | sort | column -t
+
