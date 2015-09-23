@@ -1,8 +1,11 @@
 # vim: set expandtab
-src/index.mkd.title = BunsenLabs
-src/repository.mkd.title = BunsenLabs :: Repository
-src/installation.mkd.title = BunsenLabs :: Installation
-src/resources.mkd.title = BunsenLabs :: Resources
-src/gitlog.mkd.title = BunsenLabs :: Activity Log
-src/imprint.mkd.title = BunsenLabs :: Imprint
-src/legal.mkd.title = BunsenLabs :: Legal Remarks
+#
+BASE_PAGE_TITLE = BunsenLabs Linux
+
+src/index.mkd.title 				= $(BASE_PAGE_TITLE)
+src/repository.mkd.title 		= $(BASE_PAGE_TITLE) :: Repository
+src/installation.mkd.title 	= $(BASE_PAGE_TITLE) :: Installation
+src/resources.mkd.title 		= $(BASE_PAGE_TITLE) :: Resources
+src/gitlog.mkd.title 				= $(BASE_PAGE_TITLE) :: Activity Log
+src/imprint.mkd.title 			= $(BASE_PAGE_TITLE) :: Imprint
+src/legal.mkd.title 				= $(BASE_PAGE_TITLE) :: Legal Remarks
