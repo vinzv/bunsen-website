@@ -87,8 +87,10 @@ checkout: all
 
 all: favicon-series $(TARGETS) thumbnails variables
 
-thumbnails: $(THUMB_OBJ)
-	@mkdir -p $(THUMB_DIR)
+thumbnails: $(THUMB_DIR) $(THUMB_OBJ)
+
+$(THUMB_DIR):
+	@mkdir -p $@
 
 clean:
 	$(info $(SEP))
