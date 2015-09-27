@@ -1,6 +1,4 @@
-BunsenLabs is being developed [on Github](https://github.com/BunsenLabs)
-where we make all our code and packages available, along with its
-history.
+BunsenLabs is being developed [on Github](https://github.com/BunsenLabs).
 
 ## Community and communication
 
@@ -10,7 +8,7 @@ history.
 ## Core packages and bug reports
 
 **Detailed package indices and content listings are available on the
-['repositories'](http://pkg.bunsenlabs.org) page.**
+['repositories'](https://pkg.bunsenlabs.org) page.**
 
 If you have a bug to report, you may do so either [on the
 forums](http://crunchbang.org/forums) or, ideally, to the package's
@@ -19,19 +17,20 @@ package sources.
 
 The list of currently maintained packages is as follows:
 
-| Package                                                         | VCS Browser                                                   | Issue Tracker                                                           |
-|:----------------------------------------------------------------|:-------------------------------------------------------------:|:-----------------------------------------------------------------------:|
-|bunsen-common *(script libraries)*                               | [VCS](https://github.com/bunsenlabs/bunsen-common)            | [Tracker](https://github.com/BunsenLabs/bunsen-common/issues)           |
-|bunsen-configs *(application-related config files)*              | [VCS](https://github.com/bunsenlabs/bunsen-configs)           | [Tracker](https://github.com/BunsenLabs/bunsen-configs/issues)          |
-|bunsen-conky *(conky-related config files and scripts)*          | [VCS](https://github.com/bunsenlabs/bunsen-conky)             | [Tracker](https://github.com/BunsenLabs/bunsen-conky/issues)            |
-|bunsen-docs *(tool documentation)*                               | [VCS](https://github.com/bunsenlabs/bunsen-docs)              | [Tracker](https://github.com/BunsenLabs/bunsen-docs/issues)             |
-|bunsen-faenza-icon-theme *(default icon theme)*                  | [VCS](https://github.com/bunsenlabs/bunsen-faenza-icon-theme) | [Tracker](https://github.com/BunsenLabs/bunsen-faenza-icon-theme/issues)|
-|bunsen-images *(artwork for logos, icons, avatars, backgrounds)* | [VCS](https://github.com/bunsenlabs/bunsen-images)            | [Tracker](https://github.com/BunsenLabs/bunsen-images/issues)           |
-|bunsen-os-release *(provides lsb-release and os-release data)*   | [VCS](https://github.com/bunsenlabs/bunsen-os-release)        | [Tracker](https://github.com/BunsenLabs/bunsen-os-release/issues)       |
-|bunsen-pipemenus *(Openbox pipemenus)*                           | [VCS](https://github.com/bunsenlabs/bunsen-pipemenus)         | [Tracker](https://github.com/BunsenLabs/bunsen-pipemenus/issues)        |
-|bunsen-themes *(GTK theme collection)*                           | [VCS](https://github.com/bunsenlabs/bunsen-themes)            | [Tracker](https://github.com/BunsenLabs/bunsen-themes/issues)           |
-|bunsen-utilities *(utility scripts)*                             | [VCS](https://github.com/bunsenlabs/bunsen-utilities)         | [Tracker](https://github.com/BunsenLabs/bunsen-utilities/issues)        |
-|bunsen-welcome *(initial user and system setup)*                 | [VCS](https://github.com/bunsenlabs/bunsen-welcome)           | [Tracker](https://github.com/BunsenLabs/bunsen-welcome/issues)          |
+| Package                                                           | VCS Browser                                                   | Issue Tracker                                                           |
+|:------------------------------------------------------------------|:-------------------------------------------------------------:|:-----------------------------------------------------------------------:|
+|bunsen-common *(script libraries)*                                 | [VCS](https://github.com/bunsenlabs/bunsen-common)            | [Tracker](https://github.com/BunsenLabs/bunsen-common/issues)           |
+|bunsen-configs *(application-related config files)*                | [VCS](https://github.com/bunsenlabs/bunsen-configs)           | [Tracker](https://github.com/BunsenLabs/bunsen-configs/issues)          |
+|bunsen-conky *(conky-related config files and scripts)*            | [VCS](https://github.com/bunsenlabs/bunsen-conky)             | [Tracker](https://github.com/BunsenLabs/bunsen-conky/issues)            |
+|bunsen-docs *(tool documentation)*                                 | [VCS](https://github.com/bunsenlabs/bunsen-docs)              | [Tracker](https://github.com/BunsenLabs/bunsen-docs/issues)             |
+|bunsen-faenza-icon-theme *(default icon theme)*                    | [VCS](https://github.com/bunsenlabs/bunsen-faenza-icon-theme) | [Tracker](https://github.com/BunsenLabs/bunsen-faenza-icon-theme/issues)|
+|bunsen-images *(artwork for logos, icons, avatars, backgrounds)*   | [VCS](https://github.com/bunsenlabs/bunsen-images)            | [Tracker](https://github.com/BunsenLabs/bunsen-images/issues)           |
+|bunsen-meta-\* *(meta packages for task-specific software bundles)*| [VCS](https://github.com/bunsenlabs/bunsen-welcome)           | [Tracker](https://github.com/BunsenLabs/bunsen-welcome/issues)          |
+|bunsen-os-release *(provides lsb-release and os-release data)*     | [VCS](https://github.com/bunsenlabs/bunsen-os-release)        | [Tracker](https://github.com/BunsenLabs/bunsen-os-release/issues)       |
+|bunsen-pipemenus *(Openbox pipemenus)*                             | [VCS](https://github.com/bunsenlabs/bunsen-pipemenus)         | [Tracker](https://github.com/BunsenLabs/bunsen-pipemenus/issues)        |
+|bunsen-themes *(GTK theme collection)*                             | [VCS](https://github.com/bunsenlabs/bunsen-themes)            | [Tracker](https://github.com/BunsenLabs/bunsen-themes/issues)           |
+|bunsen-utilities *(utility scripts)*                               | [VCS](https://github.com/bunsenlabs/bunsen-utilities)         | [Tracker](https://github.com/BunsenLabs/bunsen-utilities/issues)        |
+|bunsen-welcome *(initial user and system setup)*                   | [VCS](https://github.com/bunsenlabs/bunsen-welcome)           | [Tracker](https://github.com/BunsenLabs/bunsen-welcome/issues)          |
 
 Click [here](gitlog.html) in order to see an overview over recent development activity.
 
