@@ -2,8 +2,15 @@ BunsenLabs is being developed [on Github](https://github.com/BunsenLabs).
 
 ## Community and communication
 
+The following communication channels are considered ‘official’:
+
   * [Forums](http://crunchbang.org/forums)
   * IRC channel [#bunsenlabs@freenode](irc://chat.freenode.net:6697/#bunsenlabs)
+
+…though communities have also sprung up elsewhere:
+
+  * On Google+, there is [BunsenLabs en español](https://plus.google.com/communities/102155480089831191422)
+  * [DeviantArt group](http://bunsenlabs.deviantart.com/)
 
 ## Core packages and bug reports
 
@@ -54,5 +61,5 @@ The core development team is comprised of the following people
 | lcafiero *(Larry Cafiero)*                  | [lcafiero](https://github.com/lcafiero)    | [lcafiero](http://crunchbang.org/forums/profile.php?id=11295)   |
 | pvsage *(Peter Sage*)                       | [pvsage](https://github.com/pvsage)        | [pvsage](http://crunchbang.org/forums/profile.php?id=3596)      |
 | Sector11 *(Bruce M.)*                       | [Sector11](https://github.com/Sector11)    | [Sector11](http://crunchbang.org/forums/profile.php?id=5745)    |
-| [twoion *(Jens John)*](https://www.2ion.eu) | [2ion](https://github.com/2ion)            | [twoion](http://crunchbang.org/forums/profile.php?id=16384)     |
+| twoion *(Jens John)* [sysadmin]             | [2ion](https://github.com/2ion)            | [twoion](http://crunchbang.org/forums/profile.php?id=16384)     |
 | Unia *(Jente Hidskes)*                      | [Unia](https://github.com/Unia)            | [Unia](http://crunchbang.org/forums/profile.php?id=6505)        |
