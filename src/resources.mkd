@@ -4,10 +4,14 @@ BunsenLabs is being developed [on Github](https://github.com/BunsenLabs).
 
 The following communication channels are considered ‘official’:
 
-  * [Forums](http://crunchbang.org/forums)
+  * [Forums](https://forums.bunsenlabs.org)
   * IRC channel [#bunsenlabs@freenode](irc://chat.freenode.net:6697/#bunsenlabs)
+  
+As you may know, we had been using the [CrunchBang Linux forums](http://crunchbang.org/forums)
+in the beginning. Registrations over there are now closed, but there's
+much knowledge left for you to harvest.
 
-…though communities have also sprung up elsewhere:
+Communities have also sprung up elsewhere:
 
   * On Google+, there is [BunsenLabs en Español](https://plus.google.com/communities/102155480089831191422)
   * [DeviantArt group](http://bunsenlabs.deviantart.com/)
