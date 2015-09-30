@@ -34,11 +34,11 @@ body {
     font-weight: 400;
     margin-bottom: 2ex;
     color: #111;
+    text-rendering: optimizeLegibility;
 }
 
 body > p {
   line-height: 1.50;
-  text-rendering: optimizeLegibility;
 }
 
 
