@@ -60,10 +60,10 @@ files for other users.
 Otherwise, use the direct download links. Do not forget to verify direct
 downloads using the checksum file provided[^2]:
 
-| ISO file          | Size                  | .torrent                  | DDL            | sha256           |
+| ISO file          | Size                  | .torrent                   | DDL            | sha256           |
 |:------------------|:---------------------:|:--------------------------:|:--------------:|:----------------:|
-| \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [✱][TorrentFile64]         | [✱][DDL64]     | [✱][shasums64]   |
-| \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [✱][TorrentFile32]         | [✱][DDL32]     | [✱][shasums32]   |
+| \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [■][TorrentFile64]         | [■][DDL64]     | [■][shasums64]   |
+| \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [■][TorrentFile32]         | [■][DDL32]     | [■][shasums32]   |
 
 There is also a thread on the forums
 [here](http://crunchbang.org/forums/viewtopic.php?id=40602) which deals
