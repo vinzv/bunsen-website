@@ -24,6 +24,11 @@ TARGETS := $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
 THUMB_DIR = src/img/frontpage-gallery/thumbs
 THUMB_OBJ = $(subst frontpage-gallery/,frontpage-gallery/thumbs/,$(patsubst %.png,%.thumb.jpg,$(wildcard src/img/frontpage-gallery/*.png)))
 THUMB_DIM = 638x
+
+THUMB_GUIDE_DIR = src/img/installguide/thumbs
+THUMB_GUIDE_OBJ = $(subst installguide/,installguide/thumbs/,$(patsubst %.png,%.thumb.jpg,$(wildcard src/img/installguide/*.png)))
+THUMB_GUIDE_DIM = 400x
+
 THUMB_JPEG_QUALITY = 75
 THUMB_FULLSIZE_JPEG_QUALITY = 90
 
@@ -87,15 +92,19 @@ checkout: all
 
 all: favicon-series $(TARGETS) thumbnails variables
 
-thumbnails: $(THUMB_DIR) $(THUMB_OBJ)
+thumbnails: $(THUMB_GUIDE_OBJ) $(THUMB_GUIDE_DIR) $(THUMB_DIR) $(THUMB_OBJ)
 
 $(THUMB_DIR):
+	@mkdir -p $@
+
+$(THUMB_GUIDE_DIR):
 	@mkdir -p $@
 
 clean:
 	$(info $(SEP))
 	$(info  $@)
 	rm -f src/*.html src/img/frontpage-gallery/thumbs/* src/img/frontpage-gallery/*.jpg
+	rm -f src/img/installguide/*.jpg src/img/installguide/thumbs/*
 	rm -f src/img/favicon*.png
 	rm -fr dst/*
 
@@ -129,7 +138,7 @@ src/resources.html: src/resources.mkd $(TEMPLATE)
 		-o $@ $<
 	./postproc $@
 
-variables: src/installation.html src/index.html
+variables: src/installation.html src/index.html src/installguide.html
 	$(info $(SEP))
 	$(info Setting release links in $^)
 	$(foreach VAR,$(RELEASE_SUBST),$(shell sed -i 's^@@$(VAR)@@^$($(VAR))^' $^ ))
@@ -153,6 +162,11 @@ $(THUMB_DIR)/%.thumb.jpg: $(THUMB_DIR)/../%.png
 	$(info  Using thumbnail build target for $<)
 	convert $< -adaptive-resize $(THUMB_DIM) -quality $(THUMB_JPEG_QUALITY) $@
 	convert $< -quality $(THUMB_FULLSIZE_JPEG_QUALITY) $(<:.png=.jpg)
+
+$(THUMB_GUIDE_DIR)/%.thumb.jpg: $(THUMB_GUIDE_DIR)/../%.png
+	$(info $(SEP))
+	$(info Using thumbnail build target for $<)
+	convert $< -adaptive-resize $(THUMB_GUIDE_DIM) -quality $(THUMB_JPEG_QUALITY) $@
 
 .PHONY: favicon-series
 favicon-series: $(FAVICON_SOURCE)
