@@ -10,7 +10,9 @@ shift 2
   for size in "$@"; do
 
     printf "\t%03dpx favicon ... " $size >&2
-    rsvg-convert -f png -a -w $size -h $size "$INFILE" > "${OUTDIR}/favicon${size}.png"
+    #rsvg-convert -f png -a -w $size "$INFILE" > "${OUTDIR}/favicon${size}.png"
+    #convert "$INFILE" -density 500 -resize ${size}x${size}  "$OUTDIR/favicon${size}.png"
+    inkscape -h $size -w $size -C -e "$OUTDIR/favicon${size}.png" "$INFILE" &>/dev/null
     echo "done." >&2
 
     echo "<link rel='icon' href='/img/favicon${size}.png' sizes='${size}x${size}'>"

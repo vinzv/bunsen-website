@@ -22,9 +22,9 @@ Communities have also sprung up elsewhere:
 ['repositories'](https://pkg.bunsenlabs.org) page.**
 
 If you have a bug to report, you may do so either [on the
-forums](http://crunchbang.org/forums) or, ideally, to the package's
-issue tracker.  Use the VCS browser links provided below to browse the
-package sources.
+forums](https://forums.bunsenlabs.org/viewforum.php?id=14) or, ideally,
+to the package's issue tracker.  Use the VCS browser links provided
+below to browse the package sources.
 
 The list of currently maintained packages is as follows:
 

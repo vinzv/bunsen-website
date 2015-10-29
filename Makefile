@@ -14,7 +14,7 @@ FOOTER_GLOBAL := src/include/footer_copyright.html
 FOOTER_SPONSOR := src/include/footer_sponsor.html
 
 FAVICON_SOURCE = src/img/bl-flame-48px.svg
-FAVICON_SIZES = 48 64 128 256
+FAVICON_SIZES = 128 256
 FAVICON_HEADER = src/include/favicons.html
 
 # Determine MKD<>HTML targets
@@ -138,7 +138,7 @@ src/resources.html: src/resources.mkd $(TEMPLATE)
 		-o $@ $<
 	./postproc $@
 
-variables: src/installation.html src/index.html src/installguide.html
+variables: src/installation.html src/index.html
 	$(info $(SEP))
 	$(info Setting release links in $^)
 	$(foreach VAR,$(RELEASE_SUBST),$(shell sed -i 's^@@$(VAR)@@^$($(VAR))^' $^ ))
