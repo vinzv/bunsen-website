@@ -59,8 +59,7 @@ PANDOC_VARS=-M pagetitle="$($<.title)" \
 						-M favicons="$(shell cat $(FAVICON_HEADER))" \
 						-M opengraph-image="$(OPENGRAPH_IMG)" \
 						-M opengraph-description="$($<.description)" \
-						-M google-analytics=1 \
-						-M padlock=1
+						-M google-analytics=1
 
 # Checkout directory which will be uploaded
 DESTDIR=dst
