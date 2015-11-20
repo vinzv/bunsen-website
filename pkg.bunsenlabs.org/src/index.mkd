@@ -37,7 +37,7 @@ To upgrade a package to its backports version, target the backports
 distribution as follows:
 
 ~~~ { .bash }
-apt-get -t jessie-backports install ${PACKAGE_NAME}
+sudo apt-get -t jessie-backports install ${PACKAGE_NAME}
 ~~~
 
 Subsequent package upgrades will be installed from the backports repo or
@@ -73,8 +73,8 @@ file.
 Finally, add the key to APT and update the package index:
 
 ~~~ { .bash }
-apt-key add BunsenLabs-RELEASE.asc
-apt-get update
+sudo apt-key add BunsenLabs-RELEASE.asc
+sudo apt-get update
 ~~~
 
 You may now install <monospace>bunsen-\*</monospace> packages provided
