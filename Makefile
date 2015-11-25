@@ -33,7 +33,7 @@ THUMB_JPEG_QUALITY = 75
 THUMB_FULLSIZE_JPEG_QUALITY = 90
 
 # Files to deploy
-ASSETS=$(TARGETS) src/js src/img src/css src/robots.txt src/zohoverify
+ASSETS=$(TARGETS) src/js src/img src/css src/robots.txt 
 
 # Main navigation and page header
 NAVIGATION_HTML=src/include/navigation.html
@@ -110,7 +110,7 @@ clean:
 deploy: rebuild
 	$(info $(SEP))
 	$(info  $@)
-	rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ bunsen@bunsen:/srv/www.bunsenlabs.org/
+	rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ /srv/www.bunsenlabs.org/
 
 ### PAGE BUILD TARGETS ###
 

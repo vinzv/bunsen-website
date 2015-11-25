@@ -11,10 +11,11 @@ As you may know, we had been using the [CrunchBang Linux forums](http://crunchba
 in the beginning. Registrations over there are now closed, but there's
 much knowledge left for you to harvest.
 
-Communities have also sprung up elsewhere:
+Pages have also sprung up elsewhere:
 
-  * On Google+, there is [BunsenLabs en Español](https://plus.google.com/communities/102155480089831191422)
-  * [DeviantArt group](http://bunsenlabs.deviantart.com/)
+* User [Balloon](https://forums.bunsenlabs.org/viewtopic.php?pid=8855#p8855) has created an extensive resource in Japanese: [BunsenLabs Japan!・ブンゼンラボ ジャパン！](http://bunsenlabs-jp.jimdo.com/), including instructions and translations for a Japanese localization
+* On Google+, there is [BunsenLabs en Español](https://plus.google.com/communities/102155480089831191422)
+* [DeviantArt group](http://bunsenlabs.deviantart.com/)
 
 ## Core packages and bug reports
 
