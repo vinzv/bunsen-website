@@ -65,9 +65,9 @@ downloads using the checksum file provided[^2]:
 | \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [■][TorrentFile64]         | [■][DDL64]     | [■][shasums64]   |
 | \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [■][TorrentFile32]         | [■][DDL32]     | [■][shasums32]   |
 
-There is also a thread on the forums
-[here](http://crunchbang.org/forums/viewtopic.php?id=40602) which deals
-with issues, bugs and comments related to the \@\@RELEASE\_VERSION\@\@
+There is also a section on the forums
+[here](https://forums.bunsenlabs.org/viewforum.php?id=14) which deals
+with any issues, bugs and comments related to the \@\@RELEASE\_VERSION\@\@
 release.
 
 [^2]: Place the file containing the checksums in the same directory as
