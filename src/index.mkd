@@ -25,3 +25,10 @@ installed on top of Debian.
 * Additional desktop-, multimedia- and hardware-related packages come
   pre-installed to offer a better "out-of-the-box" experience.
 
+## In the press
+
+* 2015-12-07: Linux Insider: *[Hot New BunsenLabs Linux Eases Pain of Crunchbang Loss](http://www.linuxinsider.com/story/82837.html?rss=1)*
+* 2015-11-15: Sunday Morning Linux Review, Episode 167: *[BunsenLabs Linux](http://smlr.us/?p=4833/)*
+* 2015-09-21: DistroWatch Weekly, Issue 628: *[New Linux distributions](http://distrowatch.com/weekly.php?issue=20150921#waiting)*
+* 2015-06-21: entornos GNU/Linux: *[Un pasno por BunsenLabs GNU/Linux 8.1 (Hydrogen)](http://entornosgnulinux.com/2015/06/21/un-paseo-por-bunsenlabs-gnulinux-8-1-hydrogen/)*
+
