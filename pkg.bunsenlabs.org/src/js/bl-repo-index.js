@@ -14,10 +14,12 @@ const BASE_POOL_URL="/debian/";
 const BLDIST = {
   bunsen_hydrogen: [
     "/debian/dists/bunsen-hydrogen/main/binary-amd64/Packages",
-    "/debian/dists/bunsen-hydrogen/main/binary-i386/Packages"],
+    "/debian/dists/bunsen-hydrogen/main/binary-i386/Packages",
+    "/debian/dists/bunsen-hydrogen/main/binary-armhf/Packages"],
   jessie_backports: [
     "/debian/dists/jessie-backports/main/binary-amd64/Packages",
-    "/debian/dists/jessie-backports/main/binary-i386/Packages"]
+    "/debian/dists/jessie-backports/main/binary-i386/Packages",
+    "/debian/dists/jessie-backports/main/binary-armhf/Packages"]
 };
 
 var DIST_TOC_ENTRIES = {};            /* Global ToC DOM nodes */
