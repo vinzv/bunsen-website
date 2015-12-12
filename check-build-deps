@@ -1,7 +1,6 @@
 #!/bin/bash
 
-readonly BINARIES=(bash make pandoc rsync rsvg-convert sed convert ssh)
-
+readonly BINARIES=(bash make pandoc rsync inkscape sed convert ssh ./postproc ./mkfavicons) 
 check_dep()
 {
   local c=$1
@@ -15,5 +14,5 @@ check_dep()
 
 for dep in ${BINARIES[@]}; do
   check_dep "$dep"
-done | sort | column -t
+done | sort | sed 's^./^^' | column -t
 
