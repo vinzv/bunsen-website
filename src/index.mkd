@@ -18,12 +18,27 @@ installed on top of Debian.
 * Pre-configured [Openbox](http://openbox.org/wiki/Main_Page) window
   manager with [tint2](https://gitlab.com/o9000/tint2) panel and
   [conky](http://conky.sourceforge.net/) system monitor
-* Assortment of harmonising GTK2/3 themes, wallpapers and conky
-  configurations
+* Assortment of harmonising GTK2/3 themes, wallpapers and
+  [conky](https://github.com/brndnmtthws/conky) configurations
 * Various configuration and application utilities to maintain this
   system
 * Additional desktop-, multimedia- and hardware-related packages come
   pre-installed to offer a better "out-of-the-box" experience.
+
+There is no limit to customization: You can review desktop
+configurations in our forums' [Artwork &
+Screenshots](https://forums.bunsenlabs.org/viewforum.php?id=8) section,
+and we also host [several active
+threads](https://forums.bunsenlabs.org/viewforum.php?id=9) on conky
+configuration.
+
+## Forums
+
+In general, we recommend new users to [visit and sign up for  our
+forums](https://forums.bunsenlabs.org): It provides plenty of resources
+and assistance in dealing with every configuration aspect of the BL
+distribution, and is the main platform for user-to-user support as well
+as the place to voice suggestions and report bugs.
 
 ## In the press
 
