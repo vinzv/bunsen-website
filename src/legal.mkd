@@ -8,7 +8,7 @@ License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 </div>
 
 The BunsenLabs logo is Copyright © 2015 Rodrigo Moya (user
-[Ututo](http://crunchbang.org/forums/profile.php?id=15094)) and also
+[Ututo](https://forums.bunsenlabs.org/profile.php?id=67)) and also
 licensed under CC-BY-NC-SA 4.0.
 
 The [red lock icon](/img/numix_lock.svg) has been derived from the [KDE
