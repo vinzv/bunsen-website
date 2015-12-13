@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+  <!-- OpenGraph -->
+  <meta property="og:url" content="http://pkg.bunsenlabs.org/index.html"/>
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://pkg.bunsenlabs.org/img/opengraph-flame.png" />
+  <meta property="og:description" content="BunsenLabs Linux APT Repository" />
+
+  <!-- Google -->
+  <meta name="google" content="notranslate">
+
+  <link rel="icon" href="img/favicon16.png" sizes="16x16">
+  <link rel="icon" href="img/favicon32.png" sizes="32x32">
+  <link rel="icon" href="img/favicon48.png" sizes="48x48">
+  <title>BunsenLabs APT Repository</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode {  }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { font-weight: bold; } /* Keyword */
+code > span.dt { text-decoration: underline; } /* DataType */
+code > span.co { font-style: italic; } /* Comment */
+code > span.al { font-weight: bold; } /* Alert */
+code > span.er { font-weight: bold; } /* Error */
+code > span.wa { font-style: italic; } /* Warning */
+code > span.cf { font-weight: bold; } /* ControlFlow */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.do { font-style: italic; } /* Documentation */
+code > span.an { font-style: italic; } /* Annotation */
+code > span.cv { font-style: italic; } /* CommentVar */
+code > span.in { font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="css/plain-repo.css">
+</head>
+<body>
+<div class="padlock"></div>
+<div class="center marginbox">
+  <a href="http://bunsenlabs.org" title="About BunsenLabs Linux"><img class="logo" src="img/bunsenlabs-penguin-hydrogen.svg" alt="[BunsenLabs logo]"></a><br>
+  <a class="header" href="http://bunsenlabs.org">About BunsenLabs Linux</a> |
+  <span class="semibold"><a class="header" href="/index.html" title="APT repositories">Repositories</a></span> |
+  <a class="header" href="/repoidx.html" title="Repository Index">Repository Index</a> |
+  <a class="header" href="https://forums.bunsenlabs.org" title="Community and support">Forums</a>
+</div>
+<nav id="TOC">
+<ul>
+<li><a href="#repositories">Repositories</a><ul>
+<li><a href="#bunsen-hydrogen">bunsen-hydrogen</a></li>
+<li><a href="#jessie-backports">jessie-backports</a></li>
+<li><a href="#source-archives">Source archives</a></li>
+</ul></li>
+<li><a href="#signing-key">Signing key</a></li>
+<li><a href="#directory-index">Directory index</a></li>
+</ul>
+</nav>
+<h2 id="repositories">Repositories</h2>
+<p>To use our repositories, follow the instructions below: Set up the APT configuration and import our signing key.</p>
+<h3 id="bunsen-hydrogen">bunsen-hydrogen</h3>
+<p>This is our main repository which contains our core packages.</p>
+<p>Set up a file at <code>/etc/apt/sources.list.d/bunsen.list</code> with the following <a href="templates/etc/apt/sources.list.d/bunsen.list">contents</a>:</p>
+<pre><code>deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen main</code></pre>
+<h3 id="jessie-backports">jessie-backports</h3>
+<p>This is an auxiliary repository containing packages backported from Debian testing and imported from Ubuntu.</p>
+<p>Set up <code>/etc/apt/sources.list.d/bunsen-jessie-backports.list</code> with the following <a href="templates/etc/apt/sources.list.d/bunsen-jessie-backports.list">contents</a>:</p>
+<pre><code>deb http://pkg.bunsenlabs.org/debian jessie-backports main</code></pre>
+<p>The backports repo’s packages will have a pin priority of 100, so regular jessie packages will continue to take precedence until you explicitly install a backported package.</p>
+<p>To upgrade a package to its backports version, target the backports distribution as follows:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> apt-get -t jessie-backports install <span class="ot">${PACKAGE_NAME}</span></code></pre></div>
+<p>Subsequent package upgrades will be installed from the backports repo or the regular repository, whichever package version is higher.</p>
+<h3 id="source-archives">Source archives</h3>
+<p>Package sources may be retrieved using the <code>apt-get source</code> command. To be able to do so, duplicate the lines in your <code>.list</code> files and change the archive type to <a href="https://wiki.debian.org/SourcesList#Archive_type"><code>deb-src</code></a>.</p>
+<h2 id="signing-key">Signing key</h2>
+<p>Fetch and verify the repository’s <a href="BunsenLabs-RELEASE.asc">signing key</a>:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">wget</span> https://pkg.bunsenlabs.org/BunsenLabs-RELEASE.asc
+<span class="kw">gpg</span> --with-fingerprint BunsenLabs-RELEASE.asc</code></pre></div>
+<p>The key’s fingerprint as displayed by gpg should be identical with the following hexstring:</p>
+<pre><code>3172 4784 0522 7490 BBB7 43E6 A067 3F72 FE62 D9C5 </code></pre>
+<p>If that is not the case, you have got the wrong key. Use a safe, non-intercepted internet connection in order to retrieve the correct key file.</p>
+<p>Finally, add the key to APT and update the package index:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> apt-key add BunsenLabs-RELEASE.asc
+<span class="kw">sudo</span> apt-get update</code></pre></div>
+<p>You may now install <monospace>bunsen-*</monospace> packages provided by the repository.</p>
+<h2 id="directory-index">Directory index</h2>
+<p>Browse the repository directory hierarchy <a href="debian">here</a>.</p>
+<hr>
+<table>
+<tr>
+<td>
+<a href="https://www.netcup.de"><img style="width:80px;" src="img/netcup-logo.png"></a>
+</td>
+<td>
+Our distribution server is generously sponsored by the <a href="https://www.netcup.de">NetCup hosting company</a> from Karlsruhe, Germany.
+</td>
+</tr>
+</table>
+<p><em>The logo is Copyright © 2015 Rodrigo Moya (<a href="http://crunchbang.org/forums/profile.php?id=15094">Ututo</a>) and licensed under the <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA-4.0</a>.</em></p>
+<script src="js/lock.js"></script>
+</body>
+</html>
