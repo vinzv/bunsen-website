@@ -87,7 +87,7 @@ checkout: all
 	$(info $(SEP))
 	$(info  $@)
 	mkdir -p $(DESTDIR)
-	rsync -au $(ASSETS) $(DESTDIR)
+	rsync -auL $(ASSETS) $(DESTDIR)
 
 all: favicon-series $(TARGETS) thumbnails variables
 
