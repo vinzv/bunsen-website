@@ -187,7 +187,7 @@ function unify_package_maps(l) {
 }
 
 function link_debian_packages(str, node) {
-  let qurl = "https://packages.debian.org/search?suite=all&searchon=names&keywords=";
+  let qurl = "https://packages.debian.org/search?suite=all&searchon=names&exact=1&keywords=";
   let pkgs = str.split(',');
 
   let process_package_str = function (pkgstr) {
