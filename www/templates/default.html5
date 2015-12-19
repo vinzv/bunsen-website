@@ -47,8 +47,9 @@ $for(header-includes)$
   $header-includes$
 $endfor$
 $if(dns-prefetch)$
-  <link rel="dns-prefetch" href="//pkg.bunsenlabs.org">
+  <link rel="dns-prefetch" href="//ddl.bunsenlabs.org">
   <link rel="dns-prefetch" href="//forums.bunsenlabs.org">
+  <link rel="dns-prefetch" href="//pkg.bunsenlabs.org">
 $endif$
 </head>
 <body>
