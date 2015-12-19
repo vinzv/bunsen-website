@@ -4,8 +4,6 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-  <!-- OpenGraph -->
 $if(page-title)$
   <meta property="og:title" content="$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$" />
 $endif$
@@ -17,10 +15,7 @@ $endif$
 $if(opengraph-description)$
   <meta property="og:description" content="BunsenLabs Linux APT Repository" />
 $endif$
-
-  <!-- Google -->
   <meta name="google" content="notranslate">
-
 $for(author-meta)$
   <meta name="author" content="$author-meta$">
 $endfor$
