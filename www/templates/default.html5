@@ -92,7 +92,5 @@ $if(padlock)$
 <!-- No-SSL padlock -->
 <script src="/js/lock.js"></script>
 $endif$
-$if(google-analytics)$
-$endif$
 </body>
 </html>
