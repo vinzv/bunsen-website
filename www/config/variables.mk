@@ -6,7 +6,7 @@ RELEASE_CODENAME = Hydrogen
 RELEASE_CODENAME_LOWERCASE=$(shell echo $(RELEASE_CODENAME) | tr '[A-Z]' '[a-z]')
 RELEASE_VERSION = rc1
 
-DDL_BASE_URL = http://ddl.bunsenlabs.org
+DDL_BASE_URL = https://ddl.bunsenlabs.org
 ISO_BASE_NAME = bl-$(RELEASE_CODENAME)-$(RELEASE_VERSION)
 
 ISO_32 = $(ISO_BASE_NAME)-i386.iso
