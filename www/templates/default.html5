@@ -3,6 +3,7 @@
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
 $for(author-meta)$
   <meta name="author" content="$author-meta$">
 $endfor$
@@ -12,7 +13,6 @@ $endif$
 $if(opengraph-description)$
   <meta name="description" content="$opengraph-description$" />
 $endif$
-  <!-- OpenGraph -->
   <meta property="og:url" content="$url-prefix$/$filename$"/>
   <meta property="og:type" content="website" />
 $if(pagetitle)$
@@ -24,16 +24,10 @@ $endif$
 $if(opengraph-description)$
   <meta property="og:description" content="$opengraph-description$" />
 $endif$
-  <!-- Google -->
   <meta name="google" content="notranslate">
-  <!-- favicon.html -->
 $if(favicons)$
   $favicons$
 $endif$
-<!--[if lt IE 9]>
-<script src="/js/html5shiv.min.js"></script>
-<![endif]-->
-  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
   <style type="text/css">code{white-space: pre;}</style>
 $if(quotes)$
   <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
