@@ -31,7 +31,8 @@ PANDOC_VARS=-M pagetitle="$($<.title)" \
 						-M filename="$(@F)" \
 						-M url-prefix="$(URL_PREFIX)" \
 						-M opengraph-image="$(OPENGRAPH_IMG)" \
-						-M opengraph-description="$(OPENGRPAH_DESCRIPTION)"
+						-M opengraph-description="$(OPENGRPAH_DESCRIPTION)" \
+						-M dns-prefetch=1
 
 # Checkout directory which will be uploaded
 DESTDIR=dst

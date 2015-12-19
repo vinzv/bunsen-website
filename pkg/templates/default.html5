@@ -49,6 +49,10 @@ $endif$
 $for(header-includes)$
   $header-includes$
 $endfor$
+$if(dns-prefetch)$
+  <link rel="dns-prefetch" href="//www.bunsenlabs.org">
+  <link rel="dns-prefetch" href="//forums.bunsenlabs.org">
+$endif$
 </head>
 <body>
 <div class="padlock"></div>
