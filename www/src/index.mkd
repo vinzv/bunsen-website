@@ -13,7 +13,8 @@ a [community continuation][bunsenintro] of [CrunchBang #! Linux][cb].
 ## Defining features
 
 The distribution consists of configuration and resource packages
-installed on top of Debian.
+installed on top of Debian. There are no changes to the way the Debian
+base system is administrated.
 
 * Pre-configured [Openbox](http://openbox.org/wiki/Main_Page) window
   manager with [tint2](https://gitlab.com/o9000/tint2) panel and
