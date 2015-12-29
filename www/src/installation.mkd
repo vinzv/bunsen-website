@@ -51,6 +51,9 @@ Debian FAQ section:
   [Windows][WindowsFAQ] or [Mac OS X][OSXFAQ]?
 * [How to write a CD/DVD/BD image to a USB flash drive][USBFAQ]?
 
+To log in after booting the live session, use the username **user** and
+the password **live**.
+
 ### Downloads
 
 If you can use BitTorrent, please do so as to keep load off our server.

@@ -35,7 +35,7 @@ configuration.
 
 ### Architectures
 
-We currently offer combined [live-CD and installation
+We offer combined [live-CD and installation
 media](/installation.html#live-cddvdusb-key-method) for the Debian
 **i386** (i686) and **amd64** (x86-64) architectures.
 
