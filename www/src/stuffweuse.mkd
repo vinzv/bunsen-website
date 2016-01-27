@@ -1,0 +1,17 @@
+# 
+
+We use a number of open-source technologies for running this project. For
+the curious, here is a curated list:
+
+* [FluxBB](https://fluxbb.org/) as the forum software
+* [Grafana](http://grafana.org/) for building internal monitoring dashboards
+* [InfluxDB](https://influxdata.com/) for storing time-series data collected by collectd
+* [LXC](https://linuxcontainers.org/) for running multiple services well-separated from each other on the same server
+* [MySQL](https://www.mysql.com/) as the forum database
+* [collectd](https://collectd.org/) for collecting metrics from the system, forum database, webserver, etc
+* [git](https://git-scm.com/) for our VCS
+* [nginx](http://nginx.org/) is what we use for our webserver
+* [reprepro](https://mirrorer.alioth.debian.org/) manages our Debian package repository
+* [pbuilder](https://pbuilder.alioth.debian.org/) builds our packages for i386, amd64 and ARM architectures
+* [opentracker](https://erdgeist.org/arts/software/opentracker/) as our bittorrent tracker
+
