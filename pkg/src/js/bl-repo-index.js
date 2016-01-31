@@ -3,9 +3,6 @@
  * Written by 2ion for the BunsenLabs Project.
  *
  * FYI this is the first JS program I ever wrote. Expect nothing.
- *
- * FIXME:
- * - Do only 1 call distro.replace("_", "-");
  */
 
 'use strict';
@@ -33,16 +30,6 @@ var DIST_ALL_PKGS = {};
 String.prototype.cfl = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
 }
-
-/* Converts the contents of an ArrayBuffer into a string.
- * @param b Array buffer
- * @return The converted string.
- */
-function ab2str(b) {
-  let dv = new DataView(b);
-  let dc = new TextDecoder('utf-8');
-  return dc.decode(dv);
-};
 
 /* Extracts package information from a Debian distro's Packages file.
  * @param Packages String, representation of the file contents
@@ -108,13 +95,13 @@ function fetch(url, distro) {
       function(resolve, reject) {
         let r = new XMLHttpRequest();
         r.open('GET', url);
-        r.responseType = 'arraybuffer';
+        r.responseType = 'text';
         r.onload = function() {
           switch(r.status) {
             case 200:
               /* FIXME: So ugly. */
               DIST_MOD_DATE[distro] = new Date(r.getResponseHeader("Last-Modified"));
-              resolve(parse_Packages(ab2str(r.response), distro));
+              resolve(parse_Packages(r.response, distro));
               return;
             default:
               reject(Error("Failed to fetch package file: " + url));
