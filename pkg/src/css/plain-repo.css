@@ -35,16 +35,12 @@ html {
   border-top: 5px solid #3E3E3E;
 }
 
-img.logo {
-  margin-bottom: 20px;
-}
-
 @media all and (min-width: 800px) {
   body {
     width: 750px;
   }
   img.logo {
-    height: 256px;
+    height: 120px;
   }
 }
 
@@ -57,19 +53,20 @@ img.logo {
   }
 }
 
-/* Hide extra information on small(ish) screens */
-@media all and (max-width: 500px) {
-  span.pkg-version, span.pkg-count, span.distro-modification-date {
-    display: none!important;
-  }
-}
-
 @media all and (max-width: 799px) and (orientation: landscape) {
   body {
     width: 75%;
   }
   img.logo {
     width: 65%;
+  }
+}
+
+
+/* Hide extra information on small(ish) screens */
+@media all and (max-width: 500px) {
+  span.pkg-version, span.pkg-count, span.distro-modification-date {
+    display: none!important;
   }
 }
 
@@ -339,3 +336,11 @@ span.pkg-section::after {
   top:0px;
   right:0px;
 }
+
+hr.footer {
+  width: 100%;
+  color: #aaa;
+  background-color: #aaa;
+}
+
+

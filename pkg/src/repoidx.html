@@ -21,16 +21,21 @@
 <body>
 <div class="padlock"></div>
 <div class="center marginbox">
-  <a href="http://bunsenlabs.org" title="About BunsenLabs Linux"><img class="logo" src="img/bunsenlabs-penguin-hydrogen.svg" alt="[BunsenLabs logo]"></a><br>
+  <a href="http://bunsenlabs.org" title="About BunsenLabs Linux"><img class="logo" src="img/bunsenlabs-text-flame.svg" alt="[BunsenLabs logo]"></a><br>
   <a class="header" href="http://bunsenlabs.org">About BunsenLabs Linux</a> |
   <a class="header" href="/index.html" title="APT repositories">Repositories</a> |
   <span class="semibold"><a class="header" href="/repoidx.html" title="Repository Index">Repository Index</a></span> |
   <a class="header" href="https://forums.bunsenlabs.org" title="Community and support">Forums</a> |
   <a class="header" href="https://www.bunsenlabs.org/donations.html" title="Support BunsenLabs">Donations</a>
 </div>
-<div class="info">
+<div id="agent-chrome" class="info" style="display:none">
 <p>
-This feature is currently under development and has been confirmed to work in all recent Firefox releases (version 38 and greater). Other browsers are not supported at the moment but will be in the future.
+It looks like you are using Chromium or Chrome. This page will only work on version &gt;=48 with experimental JavaScript features (‘harmony’) enabled.
+</p>
+</div>
+<div id="agent-notchrome" class="info" style="display:none">
+<p>
+This page has been been verified to be functional only on Firefox &gt;=38 and Chrome/Chromium &gt;= 48 with experimental JS script features (‘harmony’) enabled. It may work for you or not.
 </p>
 </div>
 <div id="bl-repo-index-toc">
@@ -39,7 +44,22 @@ This feature is currently under development and has been confirmed to work in al
 <div id="bl-repo-index">
 
 </div>
+<div style="margin-bottom:20px">
+
+</div>
 <script type="text/javascript" src="js/bl-repo-index.js"></script>
+<script type="text/javascript">
+// From https://stackoverflow.com/questions/9847580. Why is the web so shitty?
+var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+var isFirefox = typeof InstallTrigger !== 'undefined';
+var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+var isIE = /*@cc_on!@*/false || !!document.documentMode;
+var isEdge = !isIE && !!window.StyleMedia;
+var isChrome = !!window.chrome && !!window.chrome.webstore;
+var isBlink = (isChrome || isOpera) && !!window.CSS;
+if(isOpera || isSafari || isIE || isEdge) document.getElementById("agent-notchrome").style.display = "block";
+if(isChrome) document.getElementById("agent-chrome").style.display = "block";
+</script>
 <noscript>
 <div class="warning">
 <p>

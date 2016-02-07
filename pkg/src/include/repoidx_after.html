@@ -1,4 +1,16 @@
 <script type="text/javascript" src="js/bl-repo-index.js"></script>
+<script type="text/javascript">
+// From https://stackoverflow.com/questions/9847580. Why is the web so shitty?
+var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+var isFirefox = typeof InstallTrigger !== 'undefined';
+var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+var isIE = /*@cc_on!@*/false || !!document.documentMode;
+var isEdge = !isIE && !!window.StyleMedia;
+var isChrome = !!window.chrome && !!window.chrome.webstore;
+var isBlink = (isChrome || isOpera) && !!window.CSS;
+if(isOpera || isSafari || isIE || isEdge) document.getElementById("agent-notchrome").style.display = "block";
+if(isChrome) document.getElementById("agent-chrome").style.display = "block";
+</script>
 <noscript>
 <div class="warning">
 <p>

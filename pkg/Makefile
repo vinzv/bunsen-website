@@ -11,6 +11,7 @@ ASSETS=$(TARGETS) src/img src/css src/robots.txt src/templates src/js
 
 # Main navigation and page header
 NAVIGATION_HTML=src/include/navigation.html
+COPYRIGHT=src/include/footer_copyright.html
 
 # CSS include path, relative to pageroot
 STYLE=css/plain-repo.css

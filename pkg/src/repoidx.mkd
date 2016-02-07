@@ -1,11 +1,12 @@
-<div class="info">
-<p>
-This feature is currently under development and has been confirmed to
-work in all recent Firefox releases (version 38 and greater). Other
-browsers are not supported at the moment but will be in the future.
-</p>
-</div>
+<div class="info" id="agent-chrome" style="display:none">
+<p>It looks like you are using Chromium or Chrome. This
+page will only work on version >=48 with experimental JavaScript
+features ('harmony') enabled.</p></div>
+<div class="info" id="agent-notchrome" style="display:none">
+<p>This page has been been verified to be functional only on Firefox >=38
+and Chrome/Chromium >= 48 with experimental JS script features
+('harmony') enabled. It may work for you or not.</p></div>
 
 <div id="bl-repo-index-toc"></div>
-
 <div id="bl-repo-index"></div>
+<div style="margin-bottom:20px"></div>
