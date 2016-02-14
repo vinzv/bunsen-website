@@ -85,7 +85,7 @@ $include-after$
 $endfor$
 $if(padlock)$
 <!-- No-SSL padlock -->
-<script src="/js/lock.js"></script>
+<script src="js/lock.js"></script>
 $endif$
 </body>
 </html>

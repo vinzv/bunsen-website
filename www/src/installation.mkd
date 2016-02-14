@@ -5,7 +5,9 @@
 [WindowsFAQ]: <https://www.debian.org/CD/faq/#record-windows>
 
 [DDL32]: <@@DDL_URL_32@@>
+[DDL32M]: <@@DDL_URL_32M@@>
 [DDL64]: <@@DDL_URL_64@@>
+[DDL64M]: <@@DDL_URL_64M@@>
 [TorrentFile32]: <@@TORRENT_URL_32@@>
 [TorrentFile64]: <@@TORRENT_URL_64@@>
 [TorrentMagnet32]: <@@TORRENT_MAGNET_LINK_32@@>
