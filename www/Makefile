@@ -4,6 +4,7 @@
 # Written by 2ion <dev@2ion.de>
 
 SHELL=/bin/bash
+TIMESTAMP = $(shell date +%Y-%m-%d-%H-%M)
 
 SEP := ---------------------------------------------------------------
 
@@ -175,3 +176,8 @@ favicon-series: $(FAVICON_SOURCE)
 	$(info $(SEP))
 	$(info Building favicons from $<)
 	@./mkfavicons $< $(FAVICON_HEADER) $(FAVICON_SIZES)
+
+.PHONY: archive-revision
+archive-revision: rebuild
+	mkdir -p ./archive/
+	tar -cJf ./archive/www-$(TIMESTAMP).tar.xz ./dst/
