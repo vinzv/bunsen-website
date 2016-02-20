@@ -70,10 +70,14 @@ downloads using the checksum file provided[^2]:
 | \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [■][TorrentFile64]         | [■][DDL64]     | [■][shasums64]   |
 | \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [■][TorrentFile32]         | [■][DDL32]     | [■][shasums32]   |
 
-There is also a section on the forums
+There is a section on the forums
 [here](https://forums.bunsenlabs.org/viewforum.php?id=14) which deals
-with any issues, bugs and comments related to the \@\@RELEASE\_VERSION\@\@
-release.
+with any issues, bugs and comments related to the
+\@\@RELEASE\_VERSION\@\@ release.
+
+The 32bit ISO contains only a PAE-enabled kernel. We will provide a
+CD-sized ISO with a non-PAE kernel for systems like those using the
+Pentium M in a little while.
 
 [^2]: Place the file containing the checksums in the same directory as
 your ISO file downloads, and then run in a terminal `sha256sum --check
