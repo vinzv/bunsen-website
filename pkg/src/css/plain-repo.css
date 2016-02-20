@@ -137,11 +137,11 @@ a /* All links */
     {
     /* Keep links clean. On screen, they are colored; in print, they do nothing anyway. */
     text-decoration: none;
-    color: #222d77;
+    color: #9b0c0c;
     }
 a:visited
     {
-    color: #222d77;
+    color: #9b0c0c;
     }
 @media screen
     {
@@ -204,14 +204,6 @@ span.semibold {
 
 .gha-header, .gha-push {
   display:none;
-}
-
-.gha-feed a, .gha-feed a:visited {
-    color: #002b7f ! important;
-}
-
-.gha-feed {
-  background-color: rgba(203, 207, 211, 0.1) ! important;
 }
 
 /* ---- Tables ---- */

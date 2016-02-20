@@ -142,11 +142,11 @@ a /* All links */
     {
     /* Keep links clean. On screen, they are colored; in print, they do nothing anyway. */
     text-decoration: none;
-    color: #222d77;
+    color: #9b0c0c;
     }
 a:visited
     {
-    color: #222d77;
+    color: #9b0c0c;
     }
 @media screen
     {
@@ -208,7 +208,7 @@ span.semibold {
 }
 
 .gha-feed a, .gha-feed a:visited {
-    color: #002b7f ! important;
+    color: #9b0c0c ! important;
 }
 
 .gha-feed {
