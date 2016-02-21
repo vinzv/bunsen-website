@@ -14,6 +14,9 @@
 [TorrentMagnet64]: <@@TORRENT_MAGNET_LINK_64@@>
 [shasums32]: <@@SHA256SUMS_URL_32@@>
 [shasums64]: <@@SHA256SUMS_URL_64@@>
+[pgp32]: <@@SIG_URL_32@@>
+[pgp64]: <@@SIG_URL_64@@>
+[releasekey]: <https://pkg.bunsenlabs.org/#signing-key>
 
 There are two ways to install all or part of BunsenLabs Linux:
 
@@ -63,12 +66,13 @@ If possible, please leave the client open for a while so you can seed the
 files for other users.
 
 Otherwise, use the direct download links. Do not forget to verify direct
-downloads using the checksum file provided[^2]:
+downloads using the checksum file provided[^2]. Use the provided OpenPGP
+signature to verify any download[^3].
 
-| ISO file          | Size                  | .torrent                   | DDL            | sha256           |
-|:------------------|:---------------------:|:--------------------------:|:--------------:|:----------------:|
-| \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [■][TorrentFile64]         | [■][DDL64]     | [■][shasums64]   |
-| \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [■][TorrentFile32]         | [■][DDL32]     | [■][shasums32]   |
+| ISO file          | Size                  | .torrent                    | DDL            | SHA-256          | PGP .sig        |
+|:------------------|:---------------------:|:--------------------------:|:--------------:|:----------------:|:----------------:|
+| \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [■][TorrentFile64]         | [■][DDL64]     | [■][shasums64]   | [■][pgp64]       |
+| \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [■][TorrentFile32]         | [■][DDL32]     | [■][shasums32]   | [■][pgp32]       |
 
 There is a section on the forums
 [here](https://forums.bunsenlabs.org/viewforum.php?id=14) which deals
@@ -81,8 +85,16 @@ Pentium M in a little while.
 
 [^2]: Place the file containing the checksums in the same directory as
 your ISO file downloads, and then run in a terminal `sha256sum --check
-$CHECKSUM-FILE`. Make sure to pass the name of the `*.sha256sum.txt`
+${CHECKSUM_FILE}`. Make sure to pass the name of the `*.sha256sum.txt`
 file, and **not** the ISO file!
+
+[^3]: We use our [release key][releasekey] for signing. Import the key
+into your local user's keyring by executing `gpg --import <(wget -qO-
+https://pkg.bunsenlabs.org/BunsenLabs-RELEASE.asc)`.  Verify the
+signature by downloading both the ISO file and the signature file to the
+same directory and invoking GnuPG as follows: `gpg --verify
+${SIGNATURE_FILE} ${ISO_FILE}`. GnuPG should tell you that you passed it
+a 'good signature'.
 
 ## Repository method
 
