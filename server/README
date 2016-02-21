@@ -1,2 +1,0 @@
-nginx configuration dump exluding SSL certificates+keys and password
-files for security reasons.
