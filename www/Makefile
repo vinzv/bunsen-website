@@ -6,7 +6,7 @@
 SHELL=/bin/bash
 TIMESTAMP = $(shell date +%Y-%m-%d-%H-%M)
 
-SEP := ---------------------------------------------------------------
+SEP = $(shell printf "\033[38;5;087m=============================================================================\033[0m")
 
 # Pandoc site template
 TEMPLATE := templates/default.html5
