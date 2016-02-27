@@ -77,7 +77,7 @@ include config/variables.mk
 
 .PHONY: rebuild checkout all clean deploy variables
 
-rebuild: clean checkout
+rebuild: checkout
 	$(call LOG_STATUS,REBUILD)
 
 checkout: all
