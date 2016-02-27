@@ -129,6 +129,7 @@ src/index.html: src/index.mkd $(TEMPLATE)
 	$(info Using specialized build target for $< 												)
 	pandoc $(ARGV) $(PANDOC_VARS) \
 		-H src/include/index_header.html \
+		-A src/include/index_after.html \
 		-A src/include/footer_sponsor.html \
 		-o $@ $<
 	./postproc $@
