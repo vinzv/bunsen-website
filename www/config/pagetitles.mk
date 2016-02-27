@@ -10,3 +10,4 @@ src/gitlog.mkd.title				= $(BASE_PAGE_TITLE) :: Activity Log
 src/imprint.mkd.title				= $(BASE_PAGE_TITLE) :: Imprint
 src/legal.mkd.title					= $(BASE_PAGE_TITLE) :: Legal Remarks
 src/donations.mkd.title			= $(BASE_PAGE_TITLE) :: Donations
+src/stuffweuse.mkd.title		= $(BASE_PAGE_TITLE) :: Stuff We Use

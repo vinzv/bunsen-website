@@ -1,17 +1,20 @@
-# 
+# Stuff we use
 
 We use a number of open-source technologies for running this project. For
 the curious, here is a curated list:
 
-* [FluxBB](https://fluxbb.org/) as the forum software
+* [Debian](https://debian.org) and [Ubuntu Server](http://www.ubuntu.com/server) are used as the OS on our servers
+* [FluxBB](https://fluxbb.org/) as the forum software, running on [php-fpm](http://php-fpm.org/)
+* [GnuPG](https://www.gnupg.org/) for signing packages and ISO images
 * [Grafana](http://grafana.org/) for building internal monitoring dashboards
 * [InfluxDB](https://influxdata.com/) for storing time-series data collected by collectd
 * [LXC](https://linuxcontainers.org/) for running multiple services well-separated from each other on the same server
-* [MySQL](https://www.mysql.com/) as the forum database
+* [MySQL](https://www.mysql.com/) as the forum database (but looking to switch to PostgreSQL)
+* [OpenSSH](http://www.openssh.com/) and [rsync](https://rsync.samba.org/) for shuffling data around
 * [collectd](https://collectd.org/) for collecting metrics from the system, forum database, webserver, etc
 * [git](https://git-scm.com/) for our VCS
-* [nginx](http://nginx.org/) is what we use for our webserver
-* [reprepro](https://mirrorer.alioth.debian.org/) manages our Debian package repository
+* [nginx](http://nginx.org/) is what we use for our webserver and web-facing load balancer. It also blocks spmamers using a blocklist provided by the [Stop-Forum-Spam](https://stopforumspam.com/) project.
+* [opentracker](https://erdgeist.org/arts/software/opentracker/) is our bittorrent tracker; the torrent files are generated using [buildtorrent](https://directory.fsf.org/wiki/Buildtorrent)
+* [pandoc](http://pandoc.org) generates our static main web site, supported by scripts using [ImageMagick](https://www.imagemagick.org/script/index.php) for bitmap and  [Inkscape](https://inkscape.org/en/) for vector graphics processing as well as text processing scripts using [GNU sed](https://www.gnu.org/software/sed/) and the [GNU coreutils](https://www.gnu.org/software/coreutils/coreutils.html). Building website resources is managed by [GNU make](https://www.gnu.org/software/coreutils/coreutils.html).
 * [pbuilder](https://pbuilder.alioth.debian.org/) builds our packages for i386, amd64 and ARM architectures
-* [opentracker](https://erdgeist.org/arts/software/opentracker/) as our bittorrent tracker
-
+* [reprepro](https://mirrorer.alioth.debian.org/) manages our Debian package repository

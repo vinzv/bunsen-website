@@ -71,4 +71,8 @@ containing packages backported from Debian testing and imported from
 Ubuntu. A list of packages is available
 [here](http://pkg.bunsenlabs.org/repoidx.html#distro-jessie-backports).
 
+## Miscellany
+
+* Here is a [list](stuffweuse.html) of (mostly free and) open-source
+  software we are using to run the BL project.
 
