@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 readonly ABSPATH=$(readlink -f "$1")
 
 for PROC in ./postproc.d/*.sh ; do

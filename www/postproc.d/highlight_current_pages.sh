@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 linkname=${1##*/}
 linkname=${linkname%.html}
 
