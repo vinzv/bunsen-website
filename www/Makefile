@@ -140,7 +140,7 @@ variables: src/installation.html src/index.html
 # For the gitlog page, include a header with CSS/JS links and a footer
 # to post-load the query JS code.
 src/gitlog.html: src/gitlog.mkd $(TEMPLATE)
-	$(call LOG_STATUS,PANDOC,$@)
+	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 		-A src/include/gitlog_afterbody.html \
 		-H src/include/gitlog_header.html \
