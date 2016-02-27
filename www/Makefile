@@ -24,7 +24,7 @@ TARGETS := $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
 # Images with associated thumbnails
 THUMB_DIR = src/img/frontpage-gallery/thumbs
 THUMB_OBJ = $(subst frontpage-gallery/,frontpage-gallery/thumbs/,$(patsubst %.png,%.thumb.jpg,$(wildcard src/img/frontpage-gallery/*.png)))
-THUMB_DIM = 638x
+THUMB_DIM = 960x
 
 THUMB_GUIDE_DIR = src/img/installguide/thumbs
 THUMB_GUIDE_OBJ = $(subst installguide/,installguide/thumbs/,$(patsubst %.png,%.thumb.jpg,$(wildcard src/img/installguide/*.png)))
