@@ -88,11 +88,11 @@ clean:
 	@rm -f src/img/favicon*.png
 	@rm -fr dst/*
 
-deploy: checkout
+deploy: build
 	$(call LOG_STATUS,DEPLOY,BUNSEN)
 	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ bunsen@bunsen:/srv/www.bunsenlabs.org/
 
-deploy-kelaino: checkout
+deploy-kelaino: build
 	$(call LOG_STATUS,DEPLOY,KELAINO)
 	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/www/
 
