@@ -1,0 +1,12 @@
+### Build dependencies
+
+* GNU make
+* bash
+* coreutils
+* findutils
+* git
+* imagemagick
+* inkscape
+* pandoc
+* sed
+* yuicompressor
