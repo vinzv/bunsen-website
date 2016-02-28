@@ -104,11 +104,11 @@ clean:
 
 deploy: rebuild
 	$(call LOG_STATUS,DEPLOY,BUNSEN)
-	@rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ bunsen@bunsen:/srv/www.bunsenlabs.org/
+	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ bunsen@bunsen:/srv/www.bunsenlabs.org/
 
 deploy-kelaino: rebuild
 	$(call LOG_STATUS,DEPLOY,KELAINO)
-	@rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/www/
+	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/www/
 
 ### PAGE BUILD TARGETS ###
 
