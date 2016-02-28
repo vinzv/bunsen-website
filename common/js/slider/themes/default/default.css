@@ -9,8 +9,19 @@
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: 32px 32px;
-  width: 70%;
   border: 1px solid #9b0c0c;
+}
+
+@media all and (min-width: 800px) {
+  .ideal-image-slider {
+    width:70%;
+  }
+}
+
+@media all and (max-width: 799px) {
+  .ideal-image-slider {
+    width:100%;
+  }
 }
 
 /* Navigation */
@@ -86,6 +97,16 @@
 .iis-bullet-nav a:hover { background: #fff; }
 .ideal-image-slider:hover .iis-bullet-nav { opacity: 0.7; }
 .ideal-image-slider:hover .iis-bullet-nav:hover { opacity: 1.0; }
+
+
+
+@media all and (max-width: 799px) {
+  .iis-bullet-nav a  {
+    width:5px;
+    height:5px;
+    border-radius:5px;
+  }
+}
 
 /* Captions */
 .iis-has-captions .iis-slide { text-indent: 0; }
