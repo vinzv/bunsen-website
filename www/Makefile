@@ -55,13 +55,17 @@ PANDOC_VARS=                                                                    
 .PHONY:            \
 	all              \
 	archive-revision \
+	build            \
 	checkout         \
 	clean            \
 	deploy-kelaino   \
 	deploy           \
 	favicon-series   \
 	html-pages       \
+	minify           \
 	thumbnails
+
+build: minify
 
 checkout: all
 	$(call LOG_STATUS,CHECKOUT)
@@ -104,6 +108,10 @@ archive-revision: checkout
 variables: src/installation.html src/index.html
 	$(call LOG_STATUS,VARIABLES,$(notdir $^))
 	$(foreach VAR,$(RELEASE_SUBST),$(shell sed -i 's^@@$(VAR)@@^$($(VAR))^' $^ ))
+
+minify: checkout
+	$(call LOG_STATUS,MINIFY)
+	@find "$(DESTDIR)"/ -name '*.css' -type f -exec ./compress {} \;
 
 ###############################################################################
 

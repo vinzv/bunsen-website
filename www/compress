@@ -1,0 +1,17 @@
+#!/bin/bash
+
+readonly FILE=$1
+
+[[ -r $FILE ]] || { echo "Could not access $FILE" >&2; exit 1; }
+
+readonly TMP=$(mktemp)
+
+if yuicompressor "$FILE" >"$TMP" 2>/dev/null; then
+  mv "$TMP" "$FILE"
+else
+  rm -f "$TMP"
+  echo "Failed to process $FILE" >&2
+  exit 1
+fi
+
+exit 0
