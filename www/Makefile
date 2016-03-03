@@ -120,7 +120,7 @@ minify: checkout
 	@pandoc $(ARGV) $(PANDOC_VARS) -o $@ $<
 	@./postproc $@
 
-src/index.html: src/index.mkd $(TEMPLATE)
+src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 		-H src/include/index_header.html \
