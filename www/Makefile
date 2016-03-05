@@ -139,7 +139,7 @@ src/resources.html: src/resources.mkd $(TEMPLATE)
 
 # For the gitlog page, include a header with CSS/JS links and a footer
 # to post-load the query JS code.
-src/gitlog.html: src/gitlog.mkd $(TEMPLATE)
+src/gitlog.html: src/gitlog.mkd $(wildcard src/include/gitlog*) $(TEMPLATE)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 		-A src/include/gitlog_afterbody.html \
