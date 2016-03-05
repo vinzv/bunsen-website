@@ -62,7 +62,6 @@ The list of currently maintained packages is as follows:
 |bunsen-utilities *(utility scripts)*                               | [■](https://github.com/bunsenlabs/bunsen-utilities)           | [■](https://github.com/BunsenLabs/bunsen-utilities/issues)              |
 |bunsen-welcome *(initial user and system setup)*                   | [■](https://github.com/bunsenlabs/bunsen-welcome)             | [■](https://github.com/BunsenLabs/bunsen-welcome/issues)                |
 
-Click [here](gitlog.html) in order to see an overview over recent development activity.
 
 ### Third-party and backported packages
 
@@ -71,8 +70,10 @@ containing packages backported from Debian testing and imported from
 Ubuntu. A list of packages is available
 [here](http://pkg.bunsenlabs.org/repoidx.html#distro-jessie-backports).
 
+
 ## Miscellany
 
+* See the [commit log](gitlog.html) for an overview over recent development activity.
 * Here is a [list](stuffweuse.html) of (mostly free and) open-source
   software we are using to run the BL project.
 
