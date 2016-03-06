@@ -18,7 +18,7 @@ OPENGRAPH_URL_PREFIX        = https://www.bunsenlabs.org
 OPENGRAPH_IMG               = img/opengraph-flame.png
 
 FAVICON_HEADER              = src/include/favicons.html
-FAVICON_SIZES               = 128 256
+FAVICON_SIZES               = 256 128
 FAVICON_SOURCE              = src/img/bl-flame-48px.svg
 
 TARGETS                     = $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
