@@ -111,7 +111,8 @@ variables: src/installation.html src/index.html
 
 minify: checkout
 	$(call LOG_STATUS,MINIFY)
-	@find "$(DESTDIR)"/ -name '*.css' -o -name '*.js' -type f -exec ./compress {} \;
+	@find "$(DESTDIR)"/ -name '*.css' -o -name '*.js' -type f -print0 \
+		| xargs -0 -P 4 -n 1 -- ./compress
 
 ###############################################################################
 
