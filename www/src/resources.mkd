@@ -1,5 +1,3 @@
-BunsenLabs is being developed [on Github](https://github.com/BunsenLabs).
-
 ## Community and communication
 
 The following communication channels are considered ‘official’:
@@ -17,7 +15,9 @@ Pages have also sprung up elsewhere:
 * On Google+, there is [BunsenLabs en Español](https://plus.google.com/communities/102155480089831191422)
 * [DeviantArt group](http://bunsenlabs.deviantart.com/)
 
-## Development team
+## Development
+
+BunsenLabs is being developed [on Github](https://github.com/BunsenLabs).
 
 The core development team is comprised of the following people. All
 members are also forum moderators.
@@ -35,7 +35,7 @@ members are also forum moderators.
 | Unia *(Jente Hidskes)*                      | [■](https://forums.bunsenlabs.org/profile.php?id=12)  | [■](https://github.com/Unia)                                |
 | xaos52                                      | [■](https://forums.bunsenlabs.org/profile.php?id=159) |                                                             |
 
-## Packages and bug reports
+### Packages and bug reports
 
 **Detailed package indices and content listings are available on the
 ['repositories'](https://pkg.bunsenlabs.org) page.**
