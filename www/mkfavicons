@@ -15,7 +15,7 @@ shift 2
     inkscape -h $size -w $size -C -e "$OUTDIR/favicon${size}.png" "$INFILE" &>/dev/null
     echo "done." >&2
 
-    echo "<link rel='icon' href='/img/favicon${size}.png' sizes='${size}x${size}'>"
+    echo "<link rel='icon' href='img/favicon${size}.png' sizes='${size}x${size}'>"
 
   done
 } > "$GENFILE"

@@ -39,13 +39,13 @@ ARGV=                                                                           
 	-c $(STYLE)                                                                    \
 	--highlight-style monochrome                                                   \
 	--include-before-body=$(NAVIGATION_HTML)                                       \
-	--include-after-body=$(FOOTER_GLOBAL)
+	--include-after-body=$(FOOTER_GLOBAL)                                          \
+	-H $(FAVICON_HEADER)
 
 PANDOC_VARS=                                                                     \
 	-M pagetitle="$($<.title)"                                                     \
 	-M filename="$(@F)"                                                            \
 	-M url-prefix="$(OPENGRAPH_URL_PREFIX)"                                        \
-	-M favicons="$(shell cat $(FAVICON_HEADER))"                                   \
 	-M opengraph-image="$(OPENGRAPH_IMG)"                                          \
 	-M opengraph-description="$($<.description)"                                   \
 	-M dns-prefetch=1
@@ -60,7 +60,6 @@ PANDOC_VARS=                                                                    
 	clean            \
 	deploy-kelaino   \
 	deploy           \
-	favicon-series   \
 	html-pages       \
 	minify           \
 	thumbnails
@@ -72,7 +71,7 @@ checkout: all
 	@mkdir -p $(DESTDIR)
 	@rsync -auL $(ASSETS) $(DESTDIR)
 
-all: favicon-series html-pages thumbnails variables
+all: html-pages thumbnails variables
 
 html-pages: $(TARGETS)
 
@@ -86,6 +85,7 @@ clean:
 	@rm -f src/*.html src/img/frontpage-gallery/thumbs/* src/img/frontpage-gallery/*.jpg
 	@rm -f src/img/installguide/*.jpg src/img/installguide/thumbs/*
 	@rm -f src/img/favicon*.png
+	@rm -f $(FAVICON_HEADER)
 	@rm -fr dst/*
 
 deploy: build
@@ -96,7 +96,7 @@ deploy-kelaino: build
 	$(call LOG_STATUS,DEPLOY,KELAINO)
 	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/www/
 
-favicon-series: $(FAVICON_SOURCE)
+$(FAVICON_HEADER): $(FAVICON_SOURCE)
 	$(call LOG_STATUS,FAVICON,$(FAVICON_SIZES))
 	@./mkfavicons $< $(FAVICON_HEADER) $(FAVICON_SIZES) &>/dev/null
 
@@ -116,12 +116,12 @@ minify: checkout
 
 ###############################################################################
 
-%.html: %.mkd $(TEMPLATE)
+%.html: %.mkd $(TEMPLATE) $(FAVICON_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) -o $@ $<
 	@./postproc $@
 
-src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html)
+src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(FAVICON_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 		-H src/include/index_header.html \
@@ -130,17 +130,16 @@ src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html)
 		-o $@ $<
 	@./postproc $@
 
-src/resources.html: src/resources.mkd $(TEMPLATE)
+src/resources.html: src/resources.mkd $(TEMPLATE) $(FAVICON_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 		--toc \
 		-o $@ $<
 	@./postproc $@
 
-
 # For the gitlog page, include a header with CSS/JS links and a footer
 # to post-load the query JS code.
-src/gitlog.html: src/gitlog.mkd $(wildcard src/include/gitlog*) $(TEMPLATE)
+src/gitlog.html: src/gitlog.mkd $(wildcard src/include/gitlog*) $(TEMPLATE) $(FAVICON_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 		-A src/include/gitlog_afterbody.html \
