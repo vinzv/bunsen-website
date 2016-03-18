@@ -8,5 +8,7 @@
 * imagemagick
 * inkscape
 * pandoc
+* python3
+* python3-beautifulsoup4
 * sed
 * yuicompressor
