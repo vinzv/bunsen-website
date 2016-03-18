@@ -102,7 +102,7 @@ deploy-kelaino: build
 
 $(FAVICON_HEADER): $(FAVICON_SOURCE)
 	$(call LOG_STATUS,FAVICON,$(FAVICON_SIZES))
-	@./mkfavicons $< $(FAVICON_HEADER) $(FAVICON_SIZES) &>/dev/null
+	@./libexec/mkfavicons $< $(FAVICON_HEADER) $(FAVICON_SIZES) &>/dev/null
 
 archive-revision: checkout
 	$(call LOG_STATUS,ARCHIVE,www-$(TIMESTAMP).tar.xz)
@@ -116,14 +116,14 @@ variables: src/installation.html src/index.html
 minify: checkout
 	$(call LOG_STATUS,MINIFY)
 	@find "$(DESTDIR)"/ -name '*.css' -o -name '*.js' -type f -print0 \
-		| xargs -0 -P 4 -n 1 -- ./compress
+		| xargs -0 -P 4 -n 1 -- ./libexec/compress
 
 ###############################################################################
 
 %.html: %.mkd $(TEMPLATE) $(FAVICON_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) -o $@ $<
-	@./postproc $@
+	@./libexec/postproc $@
 
 src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(FAVICON_HEADER) $(GALLERY_HEADER) $(GALLERY_NOSCRIPT_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
@@ -132,18 +132,18 @@ src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(
 		-A src/include/index_after.html \
 		-A src/include/footer_sponsor.html \
 		-o $@ $<
-	@./postproc $@
+	@./libexec/postproc $@
 
 $(GALLERY_NOSCRIPT_HEADER): $(GALLERY_HEADER)
 	$(call LOG_STATUS,GALLERY,$(notdir $@))
-	@./noscript-gallery $< > $@
+	@./libexec/noscript-gallery $< > $@
 
 src/resources.html: src/resources.mkd $(TEMPLATE) $(FAVICON_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 		--toc \
 		-o $@ $<
-	@./postproc $@
+	@./libexec/postproc $@
 
 # For the gitlog page, include a header with CSS/JS links and a footer
 # to post-load the query JS code.
@@ -153,7 +153,7 @@ src/gitlog.html: src/gitlog.mkd $(wildcard src/include/gitlog*) $(TEMPLATE) $(FA
 		-A src/include/gitlog_afterbody.html \
 		-H src/include/gitlog_header.html \
 		-o $@ $<
-	@./postproc $@
+	@./libexec/postproc $@
 
 # Generate thumbnails for the frontpage gallery. It is possible that
 # with different resize operators, imagemagick produces even more high-quality

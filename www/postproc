@@ -1,7 +1,0 @@
-#!/bin/bash
-
-readonly ABSPATH=$(readlink -f "$1")
-
-for PROC in ./postproc.d/*.sh ; do
-  "$PROC" "$ABSPATH"
-done
