@@ -38,28 +38,30 @@ TORRENT_MAGNET_LINK_32 = $(shell echo "$(MAGNET_32_RAW)" | sed 's/&/\\&/g')
 TORRENT_MAGNET_LINK_64 = $(shell echo "$(MAGNET_32_RAW)" | sed 's/&/\\&/g')
 
 GALLERY := $(shell cat src/include/index_gallery.html|sed 's/^\s*//'|tr -d '\n')
+GALLERY_NOSCRIPT = $(shell cat src/include/index_gallery_noscript.html|sed 's/^\s*//'|tr -d '\n')
 
 ### REFERENCED IN Makefile ###
 
-RELEASE_SUBST :=\
-	DDL_URL_32 \
-	DDL_URL_32M \
-	DDL_URL_64 \
-	DDL_URL_64M \
-	GALLERY \
-	ISO_32 ISO_64 \
-	ISO_32_SIZE \
-	ISO_64_SIZE \
-	RELEASE_ANNOUNCEMENT_URL \
-	RELEASE_CODENAME \
+RELEASE_SUBST :=             \
+	DDL_URL_32                 \
+	DDL_URL_32M                \
+	DDL_URL_64                 \
+	DDL_URL_64M                \
+	GALLERY                    \
+	GALLERY_NOSCRIPT           \
+	ISO_32 ISO_64              \
+	ISO_32_SIZE                \
+	ISO_64_SIZE                \
+	RELEASE_ANNOUNCEMENT_URL   \
+	RELEASE_CODENAME           \
 	RELEASE_CODENAME_LOWERCASE \
-	RELEASE_DATE \
-	RELEASE_VERSION \
-	SHA256SUMS_URL_32 \
-	SHA256SUMS_URL_64 \
-	SIG_URL_32 \
-	SIG_URL_64 \
-	TORRENT_MAGNET_LINK_32 \
-	TORRENT_MAGNET_LINK_64 \
-	TORRENT_URL_32 \
+	RELEASE_DATE               \
+	RELEASE_VERSION            \
+	SHA256SUMS_URL_32          \
+	SHA256SUMS_URL_64          \
+	SIG_URL_32                 \
+	SIG_URL_64                 \
+	TORRENT_MAGNET_LINK_32     \
+	TORRENT_MAGNET_LINK_64     \
+	TORRENT_URL_32             \
 	TORRENT_URL_64

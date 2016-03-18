@@ -13,6 +13,9 @@ continuation][bunsenintro] of CrunchBang Linux.
 [^1]: Released on \@\@RELEASE\_DATE\@\@. Read the announcement [here][releaseurl].
 
 \@\@GALLERY\@\@
+<noscript>
+\@\@GALLERY\_NOSCRIPT\@\@
+</noscript>
 
 ## Defining features
 
