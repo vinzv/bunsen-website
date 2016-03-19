@@ -141,7 +141,7 @@ minify: checkout
 	@pandoc $(ARGV) $(PANDOC_VARS) -o $@ $<
 	@./libexec/postproc $@
 
-src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(FAVICON_HEADER) $(GALLERY_HEADER) $(GALLERY_NOSCRIPT_HEADER)
+src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(FAVICON_HEADER) $(GALLERY_HEADER) $(GALLERY_NOSCRIPT_HEADER) $(FOOTER_SPONSOR)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 		-H src/include/index_header.html \
