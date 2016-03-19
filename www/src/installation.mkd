@@ -62,8 +62,10 @@ the password **live**.
 ### Downloads
 
 If you can use BitTorrent, please do so as to keep load off our server.
-If possible, please leave the client open for a while so you can seed the
-files for other users.
+If possible, please leave the client open for a while so you can seed
+the files for other users. Via BitTorrent, you will also be able to
+download significantly faster -- especially if you are not in Europe
+where our servers are located.
 
 Otherwise, use the direct download links. Do not forget to verify direct
 downloads using the checksum file provided[^2]. Use the provided OpenPGP
@@ -79,9 +81,9 @@ There is a section on the forums
 with any issues, bugs and comments related to the
 \@\@RELEASE\_VERSION\@\@ release.
 
-The 32bit ISO contains only a PAE-enabled kernel. We will provide a
-CD-sized ISO with a non-PAE kernel for systems like those using the
-Pentium M in a little while.
+The 32bit ISO contains only a PAE-enabled kernel. A CD-sized ISO with a
+non-PAE kernel for systems like those using the Pentium M [is in the
+works](https://forums.bunsenlabs.org/viewtopic.php?id=195).
 
 [^2]: Place the file containing the checksums in the same directory as
 your ISO file downloads, and then run in a terminal `sha256sum --check
