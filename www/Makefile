@@ -43,7 +43,7 @@ GALLERY_NOSCRIPT_HEADER			= src/include/index_gallery_noscript.html
 TARGETS                     = $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
 ASSETS                      = $(TARGETS) src/js src/img src/css src/robots.txt
 
-THUMB_DIM                   = 960x
+THUMB_DIM                   = 640x
 THUMB_DIR                   = src/img/frontpage-gallery/thumbs
 THUMB_FULLSIZE_JPEG_QUALITY = 90
 THUMB_JPEG_QUALITY          = 75
