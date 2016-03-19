@@ -76,10 +76,9 @@ signature to verify any download[^3].
 | \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [■][TorrentFile64]         | [■][DDL64]     | [■][shasums64]   | [■][pgp64]       |
 | \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [■][TorrentFile32]         | [■][DDL32]     | [■][shasums32]   | [■][pgp32]       |
 
-There is a section on the forums
-[here](https://forums.bunsenlabs.org/viewforum.php?id=14) which deals
-with any issues, bugs and comments related to the
-\@\@RELEASE\_VERSION\@\@ release.
+There is a [section](https://forums.bunsenlabs.org/viewtopic.php?id=195)
+on the forums which deals with any issues, bugs and comments related to
+the \@\@RELEASE\_VERSION\@\@ release.
 
 The 32bit ISO contains only a PAE-enabled kernel. A CD-sized ISO with a
 non-PAE kernel for systems like those using the Pentium M [is in the
