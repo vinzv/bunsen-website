@@ -6,7 +6,7 @@ readonly FILE=$1
 
 readonly TMP=$(mktemp)
 
-if yuicompressor "$FILE" >"$TMP" 2>/dev/null; then
+if yuicompressor --nomunge "$FILE" >"$TMP" 2>/dev/null; then
   mv "$TMP" "$FILE"
 else
   rm -f "$TMP"
