@@ -90,7 +90,6 @@ also required to be enabled for the dark theme to work.
 | www.bunsenlabs.org    | [■][theme-www-bright] | [■][theme-www-mercury] |
 | pkg.bunsenlabs.org    | [■][theme-pkg-bright] | [■][theme-pkg-mercury] |
 
-
 ## Miscellany
 
 * See the [commit log](gitlog.html) for an overview over recent development activity.
