@@ -1,3 +1,8 @@
+[theme-www-bright]: <?no-mercury>
+[theme-www-mercury]:<?mercury>
+[theme-pkg-bright]: <https://pkg.bunsenlabs.org/?no-mercury>
+[theme-pkg-mercury]:<https://pkg.bunsenlabs.org/?mercury>
+
 ## Community and communication
 
 The following communication channels are considered ‘official’:
@@ -70,10 +75,24 @@ containing packages backported from Debian testing and imported from
 Ubuntu. A list of packages is available
 [here](http://pkg.bunsenlabs.org/repoidx.html#distro-jessie-backports).
 
+## Dark website themes
+
+Both the BL [www](https://www.bunsenlabs.org) and
+[pkg](https://pkg.bunsenlabs.org) domains have optional dark CSS themes.
+The colours were derived from FluxBB's *Mercury* theme.
+
+You can switch between the bright and dark themes by setting or clearing
+a cookie via the links in the matrix below. At the moment, JavaScript is
+also required to be enabled for the dark theme to work.
+
+| Domain | Bright (default) | Dark |
+|:-------|:----------------:|:----:|
+| www    | [■][theme-www-bright] | [■][theme-www-mercury] |
+| pkg    | [■][theme-pkg-bright] | [■][theme-pkg-mercury] |
+
 
 ## Miscellany
 
 * See the [commit log](gitlog.html) for an overview over recent development activity.
 * Here is a [list](stuffweuse.html) of (mostly free and) open-source
   software we are using to run the BL project.
-
