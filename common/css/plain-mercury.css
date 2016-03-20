@@ -53,6 +53,10 @@ pre, pre>code
 {
   background-color:#46483D;
 }
+pre
+{
+  border:1px solid #545649!important;
+}
 html
 {
   border-top:5px solid #3c3e34;
@@ -64,4 +68,11 @@ html
 .warning
 {
   background-color:#422722;
+}
+@media screen
+{
+  pre
+  {
+    border:1px solid #545649!important;
+  }
 }
