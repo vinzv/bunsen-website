@@ -15,18 +15,15 @@ a, a:visited, .gha-feed a, .gha-feed a:visited
 {
   border:1px solid #545649;
 }
-
 hr.footer, .footnotes hr
 {
   color:#545649!important;
   background-color:#545649!important;
 }
-
 div#TOC, nav#TOC
 {
   border-bottom:1pt solid #545649;
 }
-
 table, #bl-repo-index table
 {
   border-bottom: 1pt solid #545649;
