@@ -9,8 +9,10 @@ var isIE = /*@cc_on!@*/false || !!document.documentMode;
 var isEdge = !isIE && !!window.StyleMedia;
 var isChrome = !!window.chrome && !!window.chrome.webstore;
 var isBlink = (isChrome || isOpera) && !!window.CSS;
+var b,ua = window.navigator.userAgent;
 if(isOpera || isSafari || isIE || isEdge) document.getElementById("agent-notchrome").style.display = "block";
 if(isChrome) document.getElementById("agent-chrome").style.display = "block";
+if(ua.indexOf("PaleMoon")>-1) document.getElementById("agent-palemoon").style.display = "block";
 </script>
 <noscript>
 <div class="warning">

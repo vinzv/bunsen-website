@@ -6,6 +6,10 @@ features ('harmony') enabled.</p></div>
 <p>This page has been been verified to be functional only on Firefox >=38
 and Chrome/Chromium >= 48 with experimental JS script features
 ('harmony') enabled. It may work for you or not.</p></div>
+<div class="info" id="agent-palemoon" style="display:none">
+<p>It looks like you are using the PaleMoon browser – please be
+informed that this page will not (yet) run on that browser's JavaScript
+engine for its lack of ECMAScript 6 features.</p></div>
 
 <div id="bl-repo-index-toc"></div>
 <div id="bl-repo-index"></div>
