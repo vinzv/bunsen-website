@@ -53,4 +53,15 @@ pre, pre>code
 {
   background-color:#46483D;
 }
-
+html
+{
+  border-top:5px solid #3c3e34;
+}
+.info
+{
+  background-color:#274222;
+}
+.warning
+{
+  background-color:#422722;
+}
