@@ -37,7 +37,7 @@ MAGNET_64_RAW = "magnet:?xt=urn:btih:dace10f7bf20fcfe8b43538cfa1fd98442e6d716&dn
 TORRENT_MAGNET_LINK_32 = $(shell echo "$(MAGNET_32_RAW)" | sed 's/&/\\&/g')
 TORRENT_MAGNET_LINK_64 = $(shell echo "$(MAGNET_32_RAW)" | sed 's/&/\\&/g')
 
-GALLERY := $(shell cat src/include/index_gallery.html|sed 's/^\s*//'|tr -d '\n')
+GALLERY = $(shell cat src/include/index_gallery.html|sed 's/^\s*//'|tr -d '\n')
 GALLERY_NOSCRIPT = $(shell cat src/include/index_gallery_noscript.html|sed 's/^\s*//'|tr -d '\n')
 
 ### REFERENCED IN Makefile ###

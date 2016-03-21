@@ -37,8 +37,9 @@ FAVICON_HEADER              = src/include/favicons.html
 FAVICON_SIZES               = 256 128
 FAVICON_SOURCE              = src/img/bl-flame-48px.svg
 
+GALLERY_CONFIG              = config/gallery.yaml
 GALLERY_HEADER              = src/include/index_gallery.html
-GALLERY_NOSCRIPT_HEADER			= src/include/index_gallery_noscript.html
+GALLERY_NOSCRIPT_HEADER     = src/include/index_gallery_noscript.html
 
 TARGETS                     = $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
 ASSETS                      = $(TARGETS) src/js src/img src/css src/robots.txt
@@ -106,6 +107,7 @@ clean:
 	@rm -f src/img/favicon*.png
 	@rm -f $(FAVICON_HEADER)
 	@rm -f $(GALLERY_NOSCRIPT_HEADER)
+	@rm -f $(GALLERY_HEADER)
 	@rm -fr dst/*
 
 deploy: build
@@ -149,6 +151,10 @@ src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(
 		-A src/include/footer_sponsor.html \
 		-o $@ $<
 	@./libexec/postproc $@
+
+$(GALLERY_HEADER): $(GALLERY_CONFIG)
+	$(call LOG_STATUS,GALLERY,$(notdir $@))
+	@./libexec/gallery $< > $@
 
 $(GALLERY_NOSCRIPT_HEADER): $(GALLERY_HEADER)
 	$(call LOG_STATUS,GALLERY,$(notdir $@))
