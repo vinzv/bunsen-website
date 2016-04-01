@@ -8,7 +8,7 @@ RELEASE_VERSION = rc2
 RELEASE_DATE = February 16, 2016
 RELEASE_ANNOUNCEMENT_URL = https://forums.bunsenlabs.org/viewtopic.php?id=1321
 
-DDL_BASE_URL = https://ddl.bunsenlabs.org
+DDL_BASE_URL = https://kelaino.bunsenlabs.org/ddl
 ISO_BASE_NAME = bl-$(RELEASE_CODENAME)-$(RELEASE_VERSION)
 
 ISO_32 = $(ISO_BASE_NAME)-i386.iso
