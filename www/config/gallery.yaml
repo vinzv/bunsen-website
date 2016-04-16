@@ -12,8 +12,6 @@
   base: djzk2
 - author: fog
 - author: damo
-- author: fog
-  base: fog4
 - author: hhh
 - author: BunsenLabs
   base: rc1hydrogen
@@ -26,4 +24,4 @@
   base: hydrogenteal1
 - author: hhh
   base: hhh2
-
+- author: panda
