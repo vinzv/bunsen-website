@@ -49,6 +49,14 @@ $if(dns-prefetch)$
   <link rel="dns-prefetch" href="//kelaino.bunsenlabs.org">
   <link rel="dns-prefetch" href="//pkg.bunsenlabs.org">
 $endif$
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://www.bunsenlabs.org",
+    "logo":"https://www.bunsenlabs.org/img/blflame512.png"
+  }
+</script>
 </head>
 <body>
 $if(padlock)$
