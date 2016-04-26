@@ -295,18 +295,24 @@ function render_distro(p, distro, m) {
         function (f) {
           if(!pkg[f]) return; /* empty field, may happen in $depends */
           let li = document.createElement("li");
-          if(f==="homepage"||f==="source") {
-            li.textContent = f.cfl() + ": ";
-            let a = document.createElement("a");
-            a.setAttribute("href", pkg[f]);
-            a.textContent = pkg[f];
-            li.appendChild(a);
-          } else if(f==="depends"||f==="recommends"||f==="suggests") {
-            li.textContent = f.cfl() + ": ";
-            link_debian_packages(pkg[f], li);
+          switch(f) {
+            case "homepage":
+            case "source":
+              li.textContent = f.cfl() + ": ";
+              let a = document.createElement("a");
+              a.setAttribute("href", pkg[f]);
+              a.textContent = pkg[f];
+              li.appendChild(a);
+              break;
+            case "depends":
+            case "recommends":
+            case "suggests":
+              li.textContent = f.cfl() + ": ";
+              link_debian_packages(pkg[f], li);
+              break;
+            default:
+              li.textContent = f.cfl() + ": " + pkg[f];
           }
-          else
-            li.textContent = f.cfl() + ": " + pkg[f];
           if(f==="version") {
             pkgmodnode = document.createElement("span");
             pkgmodnode.setAttribute("class", "pkg-mod-date");
