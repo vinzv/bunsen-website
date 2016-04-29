@@ -5,16 +5,21 @@
 [WindowsFAQ]: <https://www.debian.org/CD/faq/#record-windows>
 
 [DDL32]: <@@DDL_URL_32@@>
+[DDL32CD]: <@@DDL_URL_32CD@@>
 [DDL32M]: <@@DDL_URL_32M@@>
 [DDL64]: <@@DDL_URL_64@@>
 [DDL64M]: <@@DDL_URL_64M@@>
 [TorrentFile32]: <@@TORRENT_URL_32@@>
+[TorrentFile32CD]: <@@TORRENT_URL_32CD@@>
 [TorrentFile64]: <@@TORRENT_URL_64@@>
 [TorrentMagnet32]: <@@TORRENT_MAGNET_LINK_32@@>
+[TorrentMagnet32CD]: <@@TORRENT_MAGNET_LINK_32CD@@>
 [TorrentMagnet64]: <@@TORRENT_MAGNET_LINK_64@@>
 [shasums32]: <@@SHA256SUMS_URL_32@@>
+[shasums32CD]: <@@SHA256SUMS_URL_32CD@@>
 [shasums64]: <@@SHA256SUMS_URL_64@@>
 [pgp32]: <@@SIG_URL_32@@>
+[pgp32CD]: <@@SIG_URL_32CD@@>
 [pgp64]: <@@SIG_URL_64@@>
 [releasekey]: <https://pkg.bunsenlabs.org/#signing-key>
 
@@ -75,14 +80,15 @@ signature to verify any download[^3].
 |:------------------|:---------------------:|:--------------------------:|:--------------:|:----------------:|:----------------:|
 | \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [■][TorrentFile64]         | [■][DDL64]     | [■][shasums64]   | [■][pgp64]       |
 | \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [■][TorrentFile32]         | [■][DDL32]     | [■][shasums32]   | [■][pgp32]       |
+| \@\@ISO\_32CD\@\@ | \@\@ISO\_32CD\_SIZE\@\@ | [■][TorrentFile32CD]         | [■][DDL32CD]     | [■][shasums32CD]   | [■][pgp32CD]       |
 
 There is a [section](https://forums.bunsenlabs.org/viewtopic.php?id=195)
 on the forums which deals with any issues, bugs and comments related to
 the \@\@RELEASE\_VERSION\@\@ release.
 
-The 32bit ISO contains only a PAE-enabled kernel. A CD-sized ISO with a
-non-PAE kernel for systems like those using the Pentium M [is in the
-works](https://forums.bunsenlabs.org/viewtopic.php?id=195).
+The 32bit ISO contains only a PAE-enabled kernel. If you have a platform
+that doesn't support PAE, Use the CD-sized ISO which comes with a
+non-PAE kernel instead.
 
 [^2]: Place the file containing the checksums in the same directory as
 your ISO file downloads, and then run in a terminal `sha256sum --check
