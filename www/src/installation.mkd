@@ -12,9 +12,6 @@
 [TorrentFile32]: <@@TORRENT_URL_32@@>
 [TorrentFile32CD]: <@@TORRENT_URL_32CD@@>
 [TorrentFile64]: <@@TORRENT_URL_64@@>
-[TorrentMagnet32]: <@@TORRENT_MAGNET_LINK_32@@>
-[TorrentMagnet32CD]: <@@TORRENT_MAGNET_LINK_32CD@@>
-[TorrentMagnet64]: <@@TORRENT_MAGNET_LINK_64@@>
 [shasums32]: <@@SHA256SUMS_URL_32@@>
 [shasums32CD]: <@@SHA256SUMS_URL_32CD@@>
 [shasums64]: <@@SHA256SUMS_URL_64@@>

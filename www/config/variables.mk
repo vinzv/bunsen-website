@@ -2,46 +2,40 @@
 # TEMPLATING SYSTEM
 #
 
-RELEASE_CODENAME = Hydrogen
-RELEASE_CODENAME_LOWERCASE=$(shell echo $(RELEASE_CODENAME) | tr '[A-Z]' '[a-z]')
-RELEASE_VERSION =
-RELEASE_DATE = April 29, 2016
-RELEASE_ANNOUNCEMENT_URL = https://forums.bunsenlabs.org/viewtopic.php?id=1797
+RELEASE_CODENAME           = Hydrogen
+RELEASE_CODENAME_LOWERCASE = $(shell echo $(RELEASE_CODENAME) | tr '[A-Z]' '[a-z]')
+RELEASE_VERSION            =
+RELEASE_DATE               = April 29, 2016
+RELEASE_ANNOUNCEMENT_URL   = https://forums.bunsenlabs.org/viewtopic.php?id=1797
 
-DDL_BASE_URL = https://kelaino.bunsenlabs.org/ddl
-ISO_BASE_NAME = bl-$(RELEASE_CODENAME)$(RELEASE_VERSION)
+DDL_BASE_URL               = https://kelaino.bunsenlabs.org/ddl
+ISO_BASE_NAME              = bl-$(RELEASE_CODENAME)$(RELEASE_VERSION)
 
-ISO_32 = $(ISO_BASE_NAME)-i386.iso
-ISO_32CD = $(ISO_BASE_NAME)-i386+NonPAE.iso
-ISO_64 = $(ISO_BASE_NAME)-amd64.iso
+ISO_32                     = $(ISO_BASE_NAME)-i386.iso
+ISO_32CD                   = $(ISO_BASE_NAME)-i386+NonPAE.iso
+ISO_64                     = $(ISO_BASE_NAME)-amd64.iso
 
-ISO_32_SIZE = 960M
-ISO_32CD_SIZE = 659M
-ISO_64_SIZE = 836M
+ISO_32_SIZE                = 960M
+ISO_32CD_SIZE              = 659M
+ISO_64_SIZE                = 836M
 
-DDL_URL_32 = $(DDL_BASE_URL)/$(ISO_32)
-DDL_URL_32M = https://kelaino.bunsenlabs.org/ddl/$(ISO_32)
-DDL_URL_32CD = $(DDL_BASE_URL)/$(ISO_32CD)
-DDL_URL_64 = $(DDL_BASE_URL)/$(ISO_64)
-DDL_URL_64M = https://kelaino.bunsenlabs.org/ddl/$(ISO_64)
+DDL_URL_32                 = $(DDL_BASE_URL)/$(ISO_32)
+DDL_URL_32M                = https://kelaino.bunsenlabs.org/ddl/$(ISO_32)
+DDL_URL_32CD               = $(DDL_BASE_URL)/$(ISO_32CD)
+DDL_URL_64                 = $(DDL_BASE_URL)/$(ISO_64)
+DDL_URL_64M                = https://kelaino.bunsenlabs.org/ddl/$(ISO_64)
 
-SHA256SUMS_URL_32 = $(DDL_URL_32).sha256sum.txt
-SHA256SUMS_URL_32CD = $(DDL_URL_32CD).sha256sum.txt
-SHA256SUMS_URL_64 = $(DDL_URL_64).sha256sum.txt
+SHA256SUMS_URL_32          = $(DDL_URL_32).sha256sum.txt
+SHA256SUMS_URL_32CD        = $(DDL_URL_32CD).sha256sum.txt
+SHA256SUMS_URL_64          = $(DDL_URL_64).sha256sum.txt
 
-SIG_URL_32 = $(DDL_URL_32).sig
-SIG_URL_32CD = $(DDL_URL_32CD).sig
-SIG_URL_64 = $(DDL_URL_64).sig
+SIG_URL_32                 = $(DDL_URL_32).sig
+SIG_URL_32CD               = $(DDL_URL_32CD).sig
+SIG_URL_64                 = $(DDL_URL_64).sig
 
-TORRENT_URL_32 = $(DDL_URL_32).torrent
-TORRENT_URL_32CD = $(DDL_URL_32CD).torrent
-TORRENT_URL_64 = $(DDL_URL_64).torrent
-
-# Make sure to escape '&' in the URL because it's used as input to sed
-MAGNET_32_RAW = "magnet:?xt=urn:btih:539cd51b5ec43e4603dc0e3512b49272d179c734&dn=bl-Hydrogen-alpha2-i386.iso&tr=udp%3A%2F%2Ftracker.bunsenlabs.org%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&ws=http%3A%2F%2Fddl.bunsenlabs.org%2Fbl-Hydrogen-alpha2-i386.iso"
-MAGNET_64_RAW = "magnet:?xt=urn:btih:dace10f7bf20fcfe8b43538cfa1fd98442e6d716&dn=bl-Hydrogen-alpha2-amd64.iso&tr=udp%3A%2F%2Ftracker.bunsenlabs.org%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&ws=http%3A%2F%2Fddl.bunsenlabs.org%2Fbl-Hydrogen-alpha2-amd64.iso"
-TORRENT_MAGNET_LINK_32 = $(shell echo "$(MAGNET_32_RAW)" | sed 's/&/\\&/g')
-TORRENT_MAGNET_LINK_64 = $(shell echo "$(MAGNET_32_RAW)" | sed 's/&/\\&/g')
+TORRENT_URL_32             = $(DDL_URL_32).torrent
+TORRENT_URL_32CD           = $(DDL_URL_32CD).torrent
+TORRENT_URL_64             = $(DDL_URL_64).torrent
 
 GALLERY = $(shell cat src/include/index_gallery.html|sed 's/^\s*//'|tr -d '\n')
 GALLERY_NOSCRIPT = $(shell cat src/include/index_gallery_noscript.html|sed 's/^\s*//'|tr -d '\n')
