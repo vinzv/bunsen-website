@@ -79,7 +79,7 @@ signature to verify any download[^3].
 | \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [■][TorrentFile32]         | [■][DDL32]     | [■][shasums32]   | [■][pgp32]       |
 | \@\@ISO\_32CD\@\@ | \@\@ISO\_32CD\_SIZE\@\@ | [■][TorrentFile32CD]         | [■][DDL32CD]     | [■][shasums32CD]   | [■][pgp32CD]       |
 
-There is a [section](https://forums.bunsenlabs.org/viewtopic.php?id=195)
+There is a [section](https://forums.bunsenlabs.org/viewforum.php?id=14)
 on the forums which deals with any issues, bugs and comments related to
 the \@\@RELEASE\_VERSION\@\@ release.
 

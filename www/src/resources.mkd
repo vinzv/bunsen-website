@@ -18,6 +18,7 @@ Pages have also sprung up elsewhere:
 
 * User [Balloon](https://forums.bunsenlabs.org/viewtopic.php?pid=8855#p8855) has created an extensive resource in Japanese: [BunsenLabs Japan!・ブンゼンラボ ジャパン！](http://bunsenlabs-jp.jimdo.com/), including instructions and translations for a Japanese localization
 * On Google+, there is [BunsenLabs en Español](https://plus.google.com/communities/102155480089831191422)
+* There is a third-party Portuguese-speaking forum located at [bunsenlabs.com.br](http://www.bunsenlabs.com.br/forum/)
 * [DeviantArt group](http://bunsenlabs.deviantart.com/)
 
 ## Development
