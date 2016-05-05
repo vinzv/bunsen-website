@@ -41,6 +41,10 @@ GALLERY_CONFIG              = config/gallery.yaml
 GALLERY_HEADER              = src/include/index_gallery.html
 GALLERY_NOSCRIPT_HEADER     = src/include/index_gallery_noscript.html
 
+DONATION_REPORT             = src/include/donation-report.mkd
+DONATION_INTERMEDIATE       = src/donations.intermediate.mkd
+DONATION_DATA               = config/donations.csv
+
 TARGETS                     = $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
 ASSETS                      = $(TARGETS) src/js src/img src/css src/robots.txt
 
@@ -89,7 +93,7 @@ build: minify
 checkout: all
 	$(call LOG_STATUS,CHECKOUT)
 	@mkdir -p $(DESTDIR)
-	@rsync -auL $(ASSETS) $(DESTDIR)
+	@rsync -auL --exclude=$(DONATION_INTERMEDIATE) $(ASSETS) $(DESTDIR)
 
 all: html-pages thumbnails variables
 
@@ -108,6 +112,7 @@ clean:
 	@rm -f $(FAVICON_HEADER)
 	@rm -f $(GALLERY_NOSCRIPT_HEADER)
 	@rm -f $(GALLERY_HEADER)
+	@rm -f $(DONATION_REPORT) $(DONATION_INTERMEDIATE)
 	@rm -fr dst/*
 
 deploy: build
@@ -151,6 +156,20 @@ src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(
 		-A src/include/footer_sponsor.html \
 		-o $@ $<
 	@./libexec/postproc $@
+
+src/donations.html: $(DONATION_INTERMEDIATE)
+	$(call LOG_STATUS,PANDOC,$(notdir $@))
+	@pandoc $(ARGV) $(PANDOC_VARS) \
+		-H src/include/head_norobots.html \
+		-o $@ $<
+	@./libexec/postproc $@
+
+$(DONATION_INTERMEDIATE): src/donations.mkd $(DONATION_REPORT)
+	@cat $^ > $@
+
+$(DONATION_REPORT): $(DONATION_DATA) ./libexec/donation-report
+	$(call LOG_STATUS,REPORT,$(notdir $@))
+	@./libexec/donation-report $< > $@
 
 $(GALLERY_HEADER): $(GALLERY_CONFIG)
 	$(call LOG_STATUS,GALLERY,$(notdir $@))
