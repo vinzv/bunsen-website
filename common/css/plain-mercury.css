@@ -38,6 +38,10 @@ tr.odd:hover, tr.even:hover, #bl-repo-index #TOC ul li:hover, #bl-repo-index tbo
 {
   background-color: #46483D;
 }
+td > strong
+{
+  color: #f6b620;
+}
 pre, code
 {
   color:#61BBFF;

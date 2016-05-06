@@ -4,4 +4,5 @@ src/installation.mkd.description = Installation instructions
 src/resources.mkd.description = Development resources and package sources
 src/legal.mkd.description = Legal remarks and attribution
 src/donations.mkd.description = Support BunsenLabs
+src/donations.intermediate.mkd.description = Support BunsenLabs
 src/stuffweuse.mkd.description = Technologies used by the BL project
