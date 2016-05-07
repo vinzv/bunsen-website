@@ -61,6 +61,7 @@ as the place to voice suggestions and report bugs.
 
 ## In the press
 
+* 2016-05-02: DistroWatch: [BunsenLabs Linux entry](https://distrowatch.com/table.php?distribution=bunsenlabs)
 * 2016-02-19: LINUX.COM: *[5 Linux Desktop Distributions You Should Kow](http://www.linux.com/learn/tutorials/886407-5-live-linux-desktop-distributions-you-should-know)*
 * 2016-01: Ubuntu User, Spring 2016: *[BunsenLabs Hydrogen – CrunchBang's lightweight successor](https://www.ubuntu-user.com/Magazine/Archive/2016/28/BunsenLabs-Hydrogen-CrunchBang-s-lightweight-successor)*
 * 2016-01-21: LinuxUser 02/2016: *[Bunsenbrenner: BunsenLabs "Hydrogen" auch für ältere Hardware](http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2016/02/Bunsenbrenner)*
