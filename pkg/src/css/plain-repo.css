@@ -160,6 +160,10 @@ a.header, #TOC ul a {
   background-color: #efefef;
 }
 
+#bl-repo-index #TOC ul li {
+  padding: 0 4px 0 4px;
+}
+
 a.footnote, a.footnoteRef { /* Pandoc, MultiMarkdown footnote links */
     font-size: small; 
     vertical-align: text-top;
@@ -237,7 +241,6 @@ table
 {
   background-color: #eee;
 }
-
     
 td, th /* Table cells and table header cells */
     { 
