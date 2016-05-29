@@ -50,6 +50,15 @@ Package sources may be retrieved using the `apt-get source` command. To
 be able to do so, duplicate the lines in your `.list` files and
 change the archive type to [`deb-src`](https://wiki.debian.org/SourcesList#Archive_type).
 
+### Access via HTTPS
+
+You may change the `http://` prefix in your BL repository URLs to
+`https://` in order to access the repositories using an encrypted
+connection. Before setting this up, ensure that the package
+[`apt-transport-https`](https://packages.debian.org/search?suite=all&searchon=names&exact=1&keywords=apt-transport-https)
+is installed on your system. The package is part of the BL standard
+installation.
+
 ## Signing key
 
 Fetch and verify the repository's [signing key][SigningKey]:
