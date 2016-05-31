@@ -42,7 +42,7 @@ td > strong
 {
   color: #f6b620;
 }
-pre, code
+pre, code, blue, span.pkg-section
 {
   color:#61BBFF;
 }

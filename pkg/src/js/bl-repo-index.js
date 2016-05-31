@@ -254,7 +254,7 @@ function render_distro(p, distro, m) {
   if(tocli!=null) {
     let span = document.createElement("span");
     span.setAttribute("class", "pkg-count");
-    span.textContent = pkeys.length + " packages; last change: " + DIST_MOD_DATE[distro].toLocaleDateString();
+    span.textContent = pkeys.length + " packages as of " + DIST_MOD_DATE[distro].toLocaleDateString();
     tocli.appendChild(span);
   }
 
