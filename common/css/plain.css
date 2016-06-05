@@ -83,10 +83,13 @@ h1 { font-size: 125%; }
 
 pre, code 
     {
-    background-color: rgba(203,207,211, 0.1);
     font-family: 'Ubuntu Mono', monospace;
     white-space: pre;
     }
+
+pre {
+  background-color: rgba(203,207,211, 0.1);
+}
 
 code
     {
