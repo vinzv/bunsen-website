@@ -84,8 +84,9 @@ on the forums which deals with any issues, bugs and comments related to
 the \@\@RELEASE\_VERSION\@\@ release.
 
 The 32bit ISO contains only a PAE-enabled kernel. If you have a platform
-that doesn't support PAE, Use the CD-sized ISO which comes with a
-non-PAE kernel instead.
+that doesn't support
+[PAE](https://en.wikipedia.org/wiki/Physical_Address_Extension),
+download `@@ISO_32CD@@` which comes with a non-PAE kernel instead.
 
 [^2]: Place the file containing the checksums in the same directory as
 your ISO file downloads, and then run in a terminal `sha256sum --check
