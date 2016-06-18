@@ -59,6 +59,24 @@ connection. Before setting this up, ensure that the package
 is installed on your system. The package is part of the BL standard
 installation.
 
+### Mirrors
+
+We currently operate two repository mirrors. If you specify the host
+`pkg.bunsenlabs.org` in your APT configuration, you will be redirected
+automatically to the preferred server based on your IP addresses
+geolocation:
+
+* Users residing in Australia, Oceania and Asia get redirected to
+  `asia.pkg.bunsenlabs.org`; the server is located in Singapore.
+* Other users stay on `pkg.bunsenlabs.org` which is identical with
+  `eu.pkg.bunsenlabs.org`; the server is located in Germany.
+
+If you get redirected to `asia.pkg.bunsenlabs.org` but notice that your
+ISP has a faster route to the EU server than the Singapore one, put
+`eu.pkg.bunsenlabs.org` into your APT configuration in order to opt out
+from the redirect. Similarly, users in Europe, the Americas or Africa
+for whom `asia.pkg.bunsenlabs.org` is faster should switch to that mirror.
+
 ## Signing key
 
 Fetch and verify the repository's [signing key][SigningKey]:
@@ -89,7 +107,7 @@ sudo apt-get update
 You may now install <monospace>bunsen-\*</monospace> packages provided
 by the repository.
 
-## Directory index
+## /debian
 
 Browse the repository directory hierarchy [here](debian).
 
