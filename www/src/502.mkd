@@ -1,4 +1,0 @@
-# 502 Bad Gateway
-
-The requested service is currently not available. Please revisit after
-a short while.
