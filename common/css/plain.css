@@ -81,11 +81,10 @@ h1, h2, h3, h4, h5, h6
 
 h1 { font-size: 125%; }
 
-pre, code 
-    {
-    font-family: 'Ubuntu Mono', monospace;
-    white-space: pre;
-    }
+pre, code {
+  font-family: 'Ubuntu Mono', monospace;
+  white-space: pre;
+}
 
 pre {
   background-color: rgba(203,207,211, 0.1);
@@ -93,6 +92,7 @@ pre {
 
 code
     {
+    color: #9b0c0c;
     font-size: 110%;
     }
 
