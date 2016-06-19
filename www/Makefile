@@ -25,8 +25,8 @@ TIMESTAMP                   = $(shell date +%Y-%m-%d-%H-%M)
 LOG_STATUS                  = @printf "\033[1;32m%*s\033[0m %s\n" 10 "$(1)" "$(2)"
 DESTDIR                     = dst
 
-FOOTER_GLOBAL               = src/include/footer_copyright.html
-FOOTER_SPONSOR              = src/include/footer_sponsor.html
+FOOTER_GLOBAL               = src/include/footer/copyright.html
+FOOTER_SPONSOR              = src/include/footer/sponsor.html
 NAVIGATION_HTML             = src/include/navigation.html
 STYLE                       = css/plain.css
 TEMPLATE                    = templates/default.html5
@@ -160,7 +160,7 @@ src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(
 src/donations.html: $(DONATION_INTERMEDIATE)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
-		-H src/include/head_norobots.html \
+		-H src/include/head/norobots.html \
 		-o $@ $<
 	@./libexec/postproc $@
 
