@@ -25,23 +25,23 @@ TIMESTAMP                   = $(shell date +%Y-%m-%d-%H-%M)
 LOG_STATUS                  = @printf "\033[1;32m%*s\033[0m %s\n" 10 "$(1)" "$(2)"
 DESTDIR                     = dst
 
-FOOTER_GLOBAL               = src/include/footer/copyright.html
-FOOTER_SPONSOR              = src/include/footer/sponsor.html
-NAVIGATION_HTML             = src/include/navigation.html
+FOOTER_GLOBAL               = include/footer/copyright.html
+FOOTER_SPONSOR              = include/footer/sponsor.html
+NAVIGATION_HTML             = include/navigation.html
 STYLE                       = css/plain.css
 TEMPLATE                    = templates/default.html5
 OPENGRAPH_URL_PREFIX        = https://www.bunsenlabs.org
 OPENGRAPH_IMG               = img/opengraph-flame.png
 
-FAVICON_HEADER              = src/include/favicons.html
+FAVICON_HEADER              = include/favicons.html
 FAVICON_SIZES               = 256 180 128
 FAVICON_SOURCE              = src/img/bl-flame-48px.svg
 
 GALLERY_CONFIG              = config/gallery.yaml
-GALLERY_HEADER              = src/include/index_gallery.html
-GALLERY_NOSCRIPT_HEADER     = src/include/index_gallery_noscript.html
+GALLERY_HEADER              = include/index/gallery.html
+GALLERY_NOSCRIPT_HEADER     = include/index/gallery_noscript.html
 
-DONATION_REPORT             = src/include/donation-report.mkd
+DONATION_REPORT             = include/donation-report.mkd
 DONATION_INTERMEDIATE       = src/donations.intermediate.mkd
 DONATION_DATA               = config/donations.csv
 
@@ -151,16 +151,16 @@ minify: checkout
 src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(FAVICON_HEADER) $(GALLERY_HEADER) $(GALLERY_NOSCRIPT_HEADER) $(FOOTER_SPONSOR)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
-		-H src/include/index_header.html \
-		-A src/include/index_after.html \
-		-A src/include/footer_sponsor.html \
+		-H include/index/header.html \
+		-A include/index/after.html \
+		-A include/footer/sponsor.html \
 		-o $@ $<
 	@./libexec/postproc $@
 
 src/donations.html: $(DONATION_INTERMEDIATE)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
-		-H src/include/head/norobots.html \
+		-H include/head/norobots.html \
 		-o $@ $<
 	@./libexec/postproc $@
 
@@ -191,8 +191,8 @@ src/resources.html: src/resources.mkd $(TEMPLATE) $(FAVICON_HEADER)
 src/gitlog.html: src/gitlog.mkd $(wildcard src/include/gitlog*) $(TEMPLATE) $(FAVICON_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
-		-A src/include/gitlog_afterbody.html \
-		-H src/include/gitlog_header.html \
+		-A include/gitlog/after.html \
+		-H include/gitlog/header.html \
 		-o $@ $<
 	@./libexec/postproc $@
 
