@@ -2,17 +2,17 @@
 
 # Build system for the www.bunsenlabs.org website
 # Copyright (C) 2015-2016 Jens John <dev@2ion.de>
-# 
+#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-# 
+#
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
@@ -29,6 +29,7 @@ FOOTER_GLOBAL               = include/footer/copyright.html
 FOOTER_SPONSOR              = include/footer/sponsor.html
 NAVIGATION_HTML             = include/navigation.html
 STYLE                       = css/plain.css
+ALTERNATE_STYLES						= css/mercury.css
 TEMPLATE                    = templates/default.html5
 OPENGRAPH_URL_PREFIX        = https://www.bunsenlabs.org
 OPENGRAPH_IMG               = img/opengraph-flame.png
@@ -72,7 +73,8 @@ PANDOC_VARS=                                                                    
 	-M url-prefix="$(OPENGRAPH_URL_PREFIX)"                                        \
 	-M opengraph-image="$(OPENGRAPH_IMG)"                                          \
 	-M opengraph-description="$($<.description)"                                   \
-	-M dns-prefetch=1
+	-M dns-prefetch=1                                                              \
+	-M alternate-css="$(ALTERNATE_STYLES)"
 
 ###############################################################################
 
