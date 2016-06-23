@@ -1,7 +1,3 @@
-<div class="info" id="agent-chrome" style="display:none">
-<p>It looks like you are using Chromium or Chrome. This
-page will only work on version >=48 with experimental JavaScript
-features ('harmony') enabled.</p></div>
 <div class="info" id="agent-notchrome" style="display:none">
 <p>This page has been been verified to be functional only on Firefox >=38
 and Chrome/Chromium >= 48 with experimental JS script features
