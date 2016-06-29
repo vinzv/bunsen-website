@@ -27,7 +27,10 @@ const BLDIST = {
   jessie_backports: [
     "/debian/dists/jessie-backports/main/binary-amd64/Packages",
     "/debian/dists/jessie-backports/main/binary-i386/Packages",
-    "/debian/dists/jessie-backports/main/binary-armhf/Packages"]
+    "/debian/dists/jessie-backports/main/binary-armhf/Packages"],
+  unstable: [
+    "/debian/dists/unstable/main/binary-amd64/Packages",
+    "/debian/dists/unstable/main/binary-i386/Packages"]
 };
 
 var DIST_TOC_ENTRIES = {};            /* Global ToC DOM nodes */
@@ -254,7 +257,7 @@ function render_distro(p, distro, m) {
   if(tocli!=null) {
     let span = document.createElement("span");
     span.setAttribute("class", "pkg-count");
-    span.textContent = pkeys.length + " packages as of " + DIST_MOD_DATE[distro].toLocaleDateString();
+    span.textContent = pkeys.length + " package"+(pkeys.length>1?"s":"")+" as of " + DIST_MOD_DATE[distro].toLocaleDateString();
     tocli.appendChild(span);
   }
 
