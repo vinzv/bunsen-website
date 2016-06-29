@@ -44,6 +44,16 @@ Subsequent package upgrades will be installed from the backports repo or
 the regular repository, whichever package version is
 higher.
 
+### unstable
+
+This repository contains some packages built for Debian testing and
+unstable and is not part of BunsenLabs. See the package list
+[here](https://pkg.bunsenlabs.org/repoidx.html#unstable).
+
+~~~
+deb http://pkg.bunsenlabs.org/debian unstable main
+~~~
+
 ### Source archives
 
 Package sources may be retrieved using the `apt-get source` command. To
