@@ -38,7 +38,7 @@ $for(css)$
   <link rel="stylesheet" href="$css$">
 $endfor$
 $for(alternate-css)$
-  <link rel="alternate stylesheet" href="$alternate-css$">
+  <link rel="alternate stylesheet" href="$alternate-css$" title="Mercury">
 $endfor$
 $if(math)$
   $math$
