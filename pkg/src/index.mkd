@@ -89,6 +89,21 @@ for whom `asia.pkg.bunsenlabs.org` is faster should switch to that mirror.
 
 ## Signing key
 
+The preferred method for installing our archive key on your system is
+using the provided keyring package.
+
+### Keyring package
+
+Download the latest .deb keyring package and install it:
+
+~~~ {.bash}
+wget https://pkg.bunsenlabs.org/debian/pool/main/b/bunsen-keyring/bunsen-keyring_2016.7.2-1_all.deb
+sudo dpkg -i bunsen-keyring_2016.7.2-1_all.deb
+sudo apt-get update
+~~~
+
+### Alternative method
+
 Fetch and verify the repository's [signing key][SigningKey]:
 
 ~~~ { .bash }
