@@ -63,6 +63,12 @@ the password **live**.
 
 ### Downloads
 
+<div class="info">
+We have updated our repository signing key as of 2016-07-10. Please use
+only the ISO files provided below for a fresh install; earlier releases
+carry an outdated archive signing key.
+</div>
+
 If you can use BitTorrent, please do so as to keep load off our server.
 If possible, please leave the client open for a while so you can seed
 the files for other users. Via BitTorrent, you will also be able to

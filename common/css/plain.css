@@ -259,3 +259,9 @@ dl > dt
   align-items:center;
   justify-content:center;
 }
+
+.info {
+  background-color: #e0ffba;
+  padding: 10px 30px 10px 30px;
+  border: 1px solid #00aa00;
+}

@@ -11,13 +11,13 @@ RELEASE_ANNOUNCEMENT_URL   = https://forums.bunsenlabs.org/viewtopic.php?id=1797
 DDL_BASE_URL               = https://kelaino.bunsenlabs.org/ddl
 ISO_BASE_NAME              = bl-$(RELEASE_CODENAME)$(RELEASE_VERSION)
 
-ISO_32                     = $(ISO_BASE_NAME)-i386.iso
-ISO_32CD                   = $(ISO_BASE_NAME)-i386+NonPAE.iso
-ISO_64                     = $(ISO_BASE_NAME)-amd64.iso
+ISO_32                     = bl-Hydrogen-i386_20160710.iso
+ISO_32CD                   = bl-Hydrogen-i386+NonPAE_20160710.iso
+ISO_64                     = bl-Hydrogen-amd64_20160710.iso
 
-ISO_32_SIZE                = 960M
-ISO_32CD_SIZE              = 659M
-ISO_64_SIZE                = 836M
+ISO_32_SIZE                = 899M
+ISO_32CD_SIZE              = 674M
+ISO_64_SIZE                = 843M
 
 DDL_URL_32                 = $(DDL_BASE_URL)/$(ISO_32)
 DDL_URL_32M                = https://kelaino.bunsenlabs.org/ddl/$(ISO_32)
@@ -25,9 +25,10 @@ DDL_URL_32CD               = $(DDL_BASE_URL)/$(ISO_32CD)
 DDL_URL_64                 = $(DDL_BASE_URL)/$(ISO_64)
 DDL_URL_64M                = https://kelaino.bunsenlabs.org/ddl/$(ISO_64)
 
-SHA256SUMS_URL_32          = $(DDL_URL_32).sha256sum.txt
-SHA256SUMS_URL_32CD        = $(DDL_URL_32CD).sha256sum.txt
-SHA256SUMS_URL_64          = $(DDL_URL_64).sha256sum.txt
+SHA256SUMS = https://kelaino.bunsenlabs.org/ddl/bl-Hydrogen_20160710.sha256sums.txt
+SHA256SUMS_URL_32          = $(SHA256SUMS)
+SHA256SUMS_URL_32CD        = $(SHA256SUMS)
+SHA256SUMS_URL_64          = $(SHA256SUMS)
 
 SIG_URL_32                 = $(DDL_URL_32).sig
 SIG_URL_32CD               = $(DDL_URL_32CD).sig
