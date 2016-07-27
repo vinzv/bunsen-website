@@ -79,7 +79,7 @@ Otherwise, use the direct download links. Do not forget to verify direct
 downloads using the checksum file provided[^2]. Use the provided OpenPGP
 signature to verify any download[^3].
 
-| ISO file          | Size                  | .torrent                    | DDL            | SHA-256          | PGP .sig        |
+| ISO file          | Size                  | .torrent                    | https         | SHA-256          | PGP .sig        |
 |:------------------|:---------------------:|:--------------------------:|:--------------:|:----------------:|:----------------:|
 | \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [■][TorrentFile64]         | [■][DDL64]     | [■][shasums64]   | [■][pgp64]       |
 | \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [■][TorrentFile32]         | [■][DDL32]     | [■][shasums32]   | [■][pgp32]       |

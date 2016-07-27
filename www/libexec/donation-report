@@ -11,13 +11,10 @@ def main():
 |                               | US$       |
 |:------------------------------|:----------|
 | **Yearly funding goals**      |           |
-| Operating expenses            | 400 p.a.  |
+| Operating expenses            | ~400 p.a. |
 | Reserve (1.5a)                | 600       |
 """
-    GOALS={
-            2016:1000,
-            2017:400,
-            2018:400 }
+    GOALS={ 2016:1000, 2017:400, 2018:450 }
     with open(sys.argv[1], "r", encoding='ISO-8859-15') as FILE:
         d = csv.reader(FILE)
         next(d, None)
