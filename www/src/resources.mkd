@@ -37,7 +37,7 @@ members are also forum moderators.
 | lcafiero *(Larry Cafiero)*                  | [■](https://forums.bunsenlabs.org/profile.php?id=168) | [■](https://github.com/lcafiero)                            |                            |
 | pvsage *(Peter Sage*)                       | [■](https://forums.bunsenlabs.org/profile.php?id=39)  | [■](https://github.com/pvsage)                              |                            |
 | Sector11 *(Bruce M.)*                       | [■](https://forums.bunsenlabs.org/profile.php?id=5)   | [■](https://github.com/Sector11)                            |                            |
-| twoion <blue>[admin]</blue>                 | [■](https://forums.bunsenlabs.org/profile.php?id=2)   | [■](https://github.com/2ion)                                | [■](https://2ion.de)       |
+| twoion *(Jens John)* <blue>[admin]</blue>   | [■](https://forums.bunsenlabs.org/profile.php?id=2)   | [■](https://github.com/2ion)                                | [■](https://2ion.de)       |
 | Unia *(Jente Hidskes)*                      | [■](https://forums.bunsenlabs.org/profile.php?id=12)  | [■](https://github.com/Unia)                                | [■](https://unia.github.io/)|
 | xaos52                                      | [■](https://forums.bunsenlabs.org/profile.php?id=159) | [■](https://github.com/xaosfiftytwo)                        |                            |
 

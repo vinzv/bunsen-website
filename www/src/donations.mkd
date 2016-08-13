@@ -8,6 +8,11 @@ contribution, and many people support the project in other ways, but if
 you would like to send us something via PayPal it will of course be most
 welcome, and help us to meet the costs mentioned above.
 
+Besides donating cash, and supposing you already intended to sign up to
+DigitalOcean's hosting service, you can make use of our [referral
+link](https://m.do.co/c/f8d7dfb87c4f) in order to support our hosting
+expenses directly.
+
 Thank you!
 
 <div class="center marginbox">
