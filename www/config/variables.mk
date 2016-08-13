@@ -25,7 +25,7 @@ DDL_URL_32CD               = $(DDL_BASE_URL)/$(ISO_32CD)
 DDL_URL_64                 = $(DDL_BASE_URL)/$(ISO_64)
 DDL_URL_64M                = https://kelaino.bunsenlabs.org/ddl/$(ISO_64)
 
-SHA256SUMS = https://kelaino.bunsenlabs.org/ddl/bl-Hydrogen_20160710.sha256sums.txt
+SHA256SUMS = $(DDL_BASE_URL)/bl-Hydrogen_20160710.sha256sums.txt
 SHA256SUMS_URL_32          = $(SHA256SUMS)
 SHA256SUMS_URL_32CD        = $(SHA256SUMS)
 SHA256SUMS_URL_64          = $(SHA256SUMS)
