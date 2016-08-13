@@ -8,7 +8,7 @@ RELEASE_VERSION            =
 RELEASE_DATE               = April 29, 2016
 RELEASE_ANNOUNCEMENT_URL   = https://forums.bunsenlabs.org/viewtopic.php?id=1797
 
-DDL_BASE_URL               = https://kelaino.bunsenlabs.org/ddl
+DDL_BASE_URL               = https://ddl.bunsenlabs.org/ddl
 ISO_BASE_NAME              = bl-$(RELEASE_CODENAME)$(RELEASE_VERSION)
 
 ISO_32                     = bl-Hydrogen-i386_20160710.iso
