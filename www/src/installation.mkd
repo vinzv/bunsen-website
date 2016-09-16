@@ -87,7 +87,7 @@ signature to verify any download[^3].
 
 There is a [section](https://forums.bunsenlabs.org/viewforum.php?id=14)
 on the forums which deals with any issues, bugs and comments related to
-the \@\@RELEASE\_VERSION\@\@ release.
+the current release.
 
 The 32bit ISO contains only a PAE-enabled kernel. If you have a platform
 that doesn't support
