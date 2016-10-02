@@ -32,7 +32,7 @@ def main():
 |Shortfall|{:,.2f}|\n""".format(y, GOALS[y],  0.0 if FUNDS>=0 else abs(FUNDS))
         STATUST+="""\nAs of {}. This table is updated at irregular
 intervals. Depending on how the infrastructure and requirements
-change the funding goals may be adjusted.""".format(config['last-update'])
+change the funding goals may be adjusted.""".format(config['donation-report']['last-update'])
         print(STATUST)
     return 0
 

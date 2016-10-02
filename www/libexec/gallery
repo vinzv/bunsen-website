@@ -15,7 +15,7 @@ if __name__ == "__main__":
     print("""<div class="sliderbox" style="display:none">
     <div id="slider">""")
     with open(sys.argv[1], "r") as FILE:
-        for img in load(FILE):
+        for img in load(FILE)['gallery']:
             print(entry(img['base'] if 'base' in img else img['author'], img['author']))
     print("""    </div>
 </div>""")

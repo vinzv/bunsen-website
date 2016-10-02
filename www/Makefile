@@ -24,12 +24,13 @@ SHELL                       = /bin/bash
 TIMESTAMP                   = $(shell date +%Y-%m-%d-%H-%M)
 LOG_STATUS                  = @printf "\033[1;32m%*s\033[0m %s\n" 10 "$(1)" "$(2)"
 DESTDIR                     = dst
+SETTINGS                    = config/settings.yml
 
 FOOTER_GLOBAL               = include/footer/copyright.html
 FOOTER_SPONSOR              = include/footer/sponsor.html
 NAVIGATION_HTML             = include/navigation.html
 STYLE                       = css/plain.css
-ALTERNATE_STYLES						= css/plain-mercury.css
+ALTERNATE_STYLES            = css/plain-mercury.css
 TEMPLATE                    = templates/default.html5
 OPENGRAPH_URL_PREFIX        = https://www.bunsenlabs.org
 OPENGRAPH_IMG               = img/opengraph-flame.png
@@ -38,14 +39,12 @@ FAVICON_HEADER              = include/favicons.html
 FAVICON_SIZES               = 256 180 128
 FAVICON_SOURCE              = src/img/bl-flame-48px.svg
 
-GALLERY_CONFIG              = config/gallery.yaml
 GALLERY_HEADER              = include/index/gallery.html
 GALLERY_NOSCRIPT_HEADER     = include/index/gallery_noscript.html
 
 DONATION_REPORT             = include/donation-report.mkd
 DONATION_INTERMEDIATE       = src/donations.intermediate.mkd
 DONATION_DATA               = config/donations.csv
-DONATION_REPORT_CONFIG			= config/donations.yaml
 
 TARGETS                     = $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
 ASSETS                      = $(TARGETS) src/js src/img src/css src/robots.txt
@@ -170,11 +169,11 @@ src/donations.html: $(DONATION_INTERMEDIATE)
 $(DONATION_INTERMEDIATE): src/donations.mkd $(DONATION_REPORT)
 	@cat $^ > $@
 
-$(DONATION_REPORT): $(DONATION_DATA) ./libexec/donation-report $(DONATION_REPORT_CONFIG)
+$(DONATION_REPORT): $(DONATION_DATA) ./libexec/donation-report $(SETTINGS)
 	$(call LOG_STATUS,REPORT,$(notdir $@))
-	@./libexec/donation-report $< $(DONATION_REPORT_CONFIG) > $@
+	@./libexec/donation-report $< $(SETTINGS) > $@
 
-$(GALLERY_HEADER): $(GALLERY_CONFIG)
+$(GALLERY_HEADER): $(SETTINGS)
 	$(call LOG_STATUS,GALLERY,$(notdir $@))
 	@./libexec/gallery $< > $@
 
