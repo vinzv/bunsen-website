@@ -3,8 +3,11 @@
 import sys
 import csv
 from datetime import datetime
+import yaml
 
 def main():
+    with open(sys.argv[2], "r") as FILE:
+        config = yaml.load(FILE)
     FUNDS=0.0
     STATUST="""
 ## Funding Status
@@ -29,7 +32,7 @@ def main():
 |Shortfall|{:,.2f}|\n""".format(y, GOALS[y],  0.0 if FUNDS>=0 else abs(FUNDS))
         STATUST+="""\nAs of {}. This table is updated at irregular
 intervals. Depending on how the infrastructure and requirements
-change the funding goals may be adjusted.""".format(datetime.now().strftime("%Y-%m-%d"))
+change the funding goals may be adjusted.""".format(config['last-update'])
         print(STATUST)
     return 0
 

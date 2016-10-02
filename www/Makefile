@@ -45,6 +45,7 @@ GALLERY_NOSCRIPT_HEADER     = include/index/gallery_noscript.html
 DONATION_REPORT             = include/donation-report.mkd
 DONATION_INTERMEDIATE       = src/donations.intermediate.mkd
 DONATION_DATA               = config/donations.csv
+DONATION_REPORT_CONFIG			= config/donations.yaml
 
 TARGETS                     = $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
 ASSETS                      = $(TARGETS) src/js src/img src/css src/robots.txt
@@ -169,9 +170,9 @@ src/donations.html: $(DONATION_INTERMEDIATE)
 $(DONATION_INTERMEDIATE): src/donations.mkd $(DONATION_REPORT)
 	@cat $^ > $@
 
-$(DONATION_REPORT): $(DONATION_DATA) ./libexec/donation-report
+$(DONATION_REPORT): $(DONATION_DATA) ./libexec/donation-report $(DONATION_REPORT_CONFIG)
 	$(call LOG_STATUS,REPORT,$(notdir $@))
-	@./libexec/donation-report $< > $@
+	@./libexec/donation-report $< $(DONATION_REPORT_CONFIG) > $@
 
 $(GALLERY_HEADER): $(GALLERY_CONFIG)
 	$(call LOG_STATUS,GALLERY,$(notdir $@))
