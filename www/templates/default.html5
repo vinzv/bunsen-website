@@ -24,7 +24,6 @@ $endif$
 $if(opengraph-description)$
   <meta property="og:description" content="$opengraph-description$" />
 $endif$
-  <meta name="google" content="notranslate">
   <style type="text/css">code{white-space: pre;}</style>
 $if(quotes)$
   <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>

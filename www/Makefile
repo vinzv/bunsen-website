@@ -69,6 +69,7 @@ ARGV=                                                                           
 
 PANDOC_VARS=                                                                     \
 	-M pagetitle="$($<.title)"                                                     \
+	-M lang="en"                                                                   \
 	-M filename="$(@F)"                                                            \
 	-M url-prefix="$(OPENGRAPH_URL_PREFIX)"                                        \
 	-M opengraph-image="$(OPENGRAPH_IMG)"                                          \
