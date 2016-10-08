@@ -144,6 +144,11 @@ minify: checkout
 	@find "$(DESTDIR)"/ -type f \( -name '*.css' -o -name '*.js' \) -print0 \
 		| xargs -0 -P 4 -n 1 -- ./libexec/compress
 
+headinglinks: checkout
+	$(call LOG_STATUS,HLINKS)
+	@find "$(DESTDIR)"/ -maxdepth 1 -type f -name '*.html' -print0 \
+		| xargs -0 -P 4 -n 1 -- ./libexec/hnlink
+
 ###############################################################################
 
 %.html: %.mkd $(TEMPLATE) $(FAVICON_HEADER)

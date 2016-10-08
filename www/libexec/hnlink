@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+
+from bs4 import BeautifulSoup
+import sys
+import re
+
+with open(sys.argv[1], "r") as FILE:
+    s = BeautifulSoup(FILE.read(), "html.parser")
+
+for h in s.find_all(re.compile("^h[0-9]$")):
+    a = s.new_tag("a", href="#{}".format(h["id"]))
+    for c in h.children:
+        a.append(c)
+    h.clear()
+    h.append(a)
+
+with open(sys.argv[1], "w") as FILE:
+    FILE.write(s.prettify())
