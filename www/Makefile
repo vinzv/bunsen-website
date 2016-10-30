@@ -41,13 +41,14 @@ FAVICON_SOURCE              = src/img/bl-flame-48px.svg
 
 GALLERY_HEADER              = include/index/gallery.html
 GALLERY_NOSCRIPT_HEADER     = include/index/gallery_noscript.html
+GALLERY_INDEX								= src/gallery.json
 
 DONATION_REPORT             = include/donation-report.mkd
 DONATION_INTERMEDIATE       = src/donations.intermediate.mkd
 DONATION_DATA               = config/donations.csv
 
 TARGETS                     = $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
-ASSETS                      = $(TARGETS) src/js src/img src/css src/robots.txt
+ASSETS                      = $(TARGETS) src/js src/img src/css src/robots.txt $(GALLERY_INDEX)
 
 THUMB_DIM                   = 640x
 THUMB_DIR                   = src/img/frontpage-gallery/thumbs
@@ -98,7 +99,7 @@ checkout: all
 	@mkdir -p $(DESTDIR)
 	@rsync -auL --exclude=$(DONATION_INTERMEDIATE) $(ASSETS) $(DESTDIR)
 
-all: html-pages thumbnails variables
+all: html-pages thumbnails variables $(GALLERY_INDEX)
 
 html-pages: $(TARGETS)
 
@@ -106,6 +107,8 @@ thumbnails: $(THUMB_DIR) $(THUMB_OBJ)
 
 $(THUMB_DIR):
 	@mkdir -p $@
+
+gallery-index: $(GALLERY_INDEX)
 
 clean:
 	$(call LOG_STATUS,CLEAN)
@@ -116,6 +119,7 @@ clean:
 	@rm -f $(GALLERY_NOSCRIPT_HEADER)
 	@rm -f $(GALLERY_HEADER)
 	@rm -f $(DONATION_REPORT) $(DONATION_INTERMEDIATE)
+	@rm -f $(GALLERY_INDEX)
 	@rm -fr dst/*
 
 deploy: build
@@ -186,6 +190,10 @@ $(GALLERY_HEADER): $(SETTINGS)
 $(GALLERY_NOSCRIPT_HEADER): $(GALLERY_HEADER)
 	$(call LOG_STATUS,GALLERY,$(notdir $@))
 	@./libexec/noscript-gallery $< > $@
+
+$(GALLERY_INDEX): $(SETTINGS) libexec/gallery-json
+	$(call LOG_STATUS,GALLERY,$@)
+	@./libexec/gallery-json $(SETTINGS) $(GALLERY_INDEX)
 
 src/resources.html: src/resources.mkd $(TEMPLATE) $(FAVICON_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
