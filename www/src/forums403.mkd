@@ -1,0 +1,45 @@
+# Forums 403 FAQ
+
+This page serves as a guide to users who are getting locked out from
+accessing https://forums.bunsenlabs.org with a **403 Access Denied**
+HTTP error.
+
+## Why am I getting blocked?
+
+We do use a number of IP-based block lists to prevent spammers from
+signing up and accessing the forums. While we do not block full CIDR
+blocks anymore, chances are that your IP address has been listed on one
+of the following block lists:
+
+1. [Lashback UBL](https://iplists.firehol.org/?ipset=lashback_ubl)
+2. [FireHOL Webserver BL](https://iplists.firehol.org/?ipset=firehol_webserver)
+3. [NIXSPAM](https://iplists.firehol.org/?ipset=nixspam)
+4. [Stop-Forum-Spam](http://stopforumspam.com/)
+
+## Why did I get put on (one of) these block lists?
+
+1. You might be connecting from a dynamically assigned IP address which
+  was previously used in an abusive manner.
+2. A full IP block got added to the block list in terms of single IP
+  addresses, and your IP address got caught up in this mess. This is
+  particularly true when whole networks become notorious spam sources,
+  such as ISPs from Pakistan or India.
+3. Your ISP uses [carrier-grade NAT](https://en.wikipedia.org/wiki/Carrier-grade_NAT) and you share
+  one public IPv4 address with many other users, any one of whom could
+  have caused the block list entry to be added. Such a situation might
+  amplify the effects of (2).
+4. You did actually spam a forum before.
+5. Any other reason. Contact the block list operators for details.
+
+## What can I do to get unblocked?
+
+* Email admin@bunsenlabs.org and tell us your IP address, we can
+  explicitly whitelist you.
+* If you are behind a CNAT but have a routable IPv6 address, try
+  connecting to the forums via IPv6 instead.
+* Contact the block list operators to get your IP address removed from
+  the list.
+* Contact your ISP and demand that they get the block list entries
+  removed (it's part of their job, especially if they are employing
+  CNAT).
+* Wait until the block list entry gets removed.

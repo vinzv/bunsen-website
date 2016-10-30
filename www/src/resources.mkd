@@ -75,6 +75,12 @@ containing packages backported from Debian testing and imported from
 Ubuntu. A list of packages is available
 [here](http://pkg.bunsenlabs.org/repoidx.html#distro-jessie-backports).
 
+## Forums '403 Access Denied' errors
+
+This is because your IP address is on a IP block list. Please refer to
+the [Forums 403 FAQ](https://www.bunsenlabs.org/forums403.html) for more
+information.
+
 ## Miscellany
 
 * See the [commit log](gitlog.html) for an overview over recent development activity.

@@ -194,6 +194,13 @@ src/resources.html: src/resources.mkd $(TEMPLATE) $(FAVICON_HEADER)
 		-o $@ $<
 	@./libexec/postproc $@
 
+src/forums403.html: src/forums403.mkd $(TEMPLATE) $(FAVICON_HEADER)
+	$(call LOG_STATUS,PANDOC,$(notdir $@))
+	@pandoc $(ARGV) $(PANDOC_VARS) \
+		--toc \
+		-o $@ $<
+	@./libexec/postproc $@
+
 # For the gitlog page, include a header with CSS/JS links and a footer
 # to post-load the query JS code.
 src/gitlog.html: src/gitlog.mkd $(wildcard src/include/gitlog*) $(TEMPLATE) $(FAVICON_HEADER)
