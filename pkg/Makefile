@@ -65,7 +65,7 @@ clean:
 	rm -fr dst/*
 
 deploy: rebuild
-	rsync -auL --progress --human-readable --chmod=D0755,F0644 --exclude='google8a3d1d52c066d25a.html' dst/ bunsen@bunsen:/srv/pkg.bunsenlabs.org/
+	rsync -auL --progress --human-readable --chmod=D0755,F0644 --exclude='google8a3d1d52c066d25a.html' dst/ bunsen@kernel:/srv/pkg.bunsenlabs.org/
 
 ### PAGE BUILD TARGETS ###
 
