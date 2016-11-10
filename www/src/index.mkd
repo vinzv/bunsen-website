@@ -11,7 +11,9 @@ customizable Openbox desktop. The current release is
 Jessie. The project is a [community continuation][bunsenintro] of
 CrunchBang Linux.
 
-[^1]: Released on \@\@RELEASE\_DATE\@\@. Read the announcement [here][releaseurl].
+[^1]: Released on \@\@RELEASE\_DATE\@\@. Read the announcement
+[here][releaseurl]. A refreshed ISO was released on 2016-07-10, the
+announcement is [here](https://forums.bunsenlabs.org/viewtopic.php?id=2318).
 
 \@\@GALLERY\@\@
 <noscript>

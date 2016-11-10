@@ -45,6 +45,59 @@ String.prototype.cfl = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
+/* It's a fucking embarrassment that there is no standard API for
+ * parsing query strings. Toy languages... */
+function parse_query_string() {
+  let seg = window.location.search.substring(1).split('&');
+  let pairs = {};
+  seg.forEach((e) => {
+    let [ k, v ] = e.split('=' , 2);
+    pairs[k] = decodeURIComponent(v).replace("+", " ");
+  });
+  return pairs;
+}
+
+function fill_in_form() {
+  let pairs = parse_query_string();
+  if(pairs.k && pairs.k.length>0 && pairs.v && pairs.v.length > 0) {
+    let select = document.querySelector("#filter-key");
+    let input = document.querySelector("#filter-value");
+    select.value = pairs.k;
+    input.value = pairs.v;
+  }
+}
+
+function apply_filter(pkgmap) {
+  let pairs = parse_query_string();
+  if(!pairs.k||!pairs.v) return pkgmap;
+
+  let test = new RegExp(pairs.v, "i");
+  let regex = null;
+
+  switch(pairs.k) {
+    case "any":
+      regex = /^.*$/;
+      break;
+    default:
+      regex = new RegExp(`^${pairs.k.replace("-", "|")}$`, "i");
+      break;
+  }
+
+  for(let [k, v] of pkgmap) {
+    let keep = false;
+    for(let field in v) {
+      if(regex.exec(field) && test.exec(v[field])) {
+        keep = true;
+        break;
+      }
+    }
+    if(!keep) pkgmap.delete(k);
+  }
+
+  return pkgmap;
+}
+
+
 /* Extracts package information from a Debian distro's Packages file.
  * @param Packages String, representation of the file contents
  * @param distro String, name of the distro. This parameter is not used
@@ -95,6 +148,8 @@ function parse_Packages(Packages, distro) {
       if(cap = rx[expr_name].exec(line)) pkgi[expr_name] = cap[1];
   }
   finalize_package();
+
+  packages = apply_filter(packages);
 
   return [packages, distro];
 };
@@ -257,7 +312,7 @@ function render_distro(p, distro, m) {
   if(tocli!=null) {
     let span = document.createElement("span");
     span.setAttribute("class", "pkg-count");
-    span.textContent = pkeys.length + " package"+(pkeys.length>1?"s":"")+" as of " + DIST_MOD_DATE[distro].toLocaleDateString();
+    span.textContent = `${pkeys.length} package${pkeys.length==1?"":"s"}, last updated on ${DIST_MOD_DATE[distro].toLocaleDateString()}`;
     tocli.appendChild(span);
   }
 
@@ -420,6 +475,8 @@ function main(node) {
   /* DOM element we attach to */
   let p = document.querySelector(node);
   if(p===null) return;
+
+  fill_in_form();
 
   render_main_toc();
 
