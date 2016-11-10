@@ -10,7 +10,7 @@ engine for its lack of ECMAScript 6 features.</p></div>
 <form action="/repoidx.html" method="get" style="text-align:center">
 <select id="filter-key" name="k" style="width:20%;display:inline;">
 <option value="any">Any field</option>
-<option value="description-title">Title | Descr</option>
+<option value="description-title">Title, Descr</option>
 <option value="maintainer">Maintainer</option>
 <option value="depends">Depends</option>
 <option value="suggests">Suggests</option>
