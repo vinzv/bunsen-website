@@ -78,22 +78,5 @@ $for(include-after)$
 $include-after$
 $endfor$
 <script src="js/lock.js"></script>
-<script>
-  var n = window.location.search.substring(1);
-  if(n == "mercury")
-    document.cookie = "css=mercury";
-  else if(n=="no-mercury")
-    document.cookie = "css=no-mercury";
-  if(document.cookie == "css=mercury") {
-    if(n = document.querySelector("img.logo")) {
-      n.setAttribute("src", "img/bunsenlabs-text-flame-mercury.svg");
-    }
-    n = document.createElement("link");
-    n.href="css/plain-mercury.css";
-    n.type="text/css";
-    n.rel="stylesheet";
-    document.head.appendChild(n);
-  }
-</script>
 </body>
 </html>
