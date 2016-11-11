@@ -9,13 +9,13 @@ engine for its lack of ECMAScript 6 features.</p></div>
 
 <form action="/repoidx.html" method="get" style="text-align:center">
 <select id="filter-key" title="Select the package property to filter by" name="k" style="width:20%;display:inline;">
-<option value="any">Any field</option>
-<option value="description-title">Title, Descr</option>
-<option value="maintainer">Maintainer</option>
-<option value="section">Section</option>
+<option value="any" label="Search any metadata field">Any field</option>
 <option value="depends">Depends</option>
-<option value="suggests">Suggests</option>
+<option value="maintainer">Maintainer</option>
+<option value="name-description" label="Search in name or description">Name or Descr</option>
 <option value="recommends">Recommneds</option>
+<option value="section">Section</option>
+<option value="suggests">Suggests</option>
 <option value="version">Version</option>
 </select>
 <input id="filter-value" style="width:75%;display:inline;" type="text" autofocus="true" name="v" minlength="1">
