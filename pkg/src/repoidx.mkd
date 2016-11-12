@@ -12,7 +12,7 @@ engine for its lack of ECMAScript 6 features.</p></div>
 <option value="any" label="Search any metadata field">Any field</option>
 <option value="depends">Depends</option>
 <option value="maintainer">Maintainer</option>
-<option value="name-description" label="Search in name or description">Name or Descr</option>
+<option value="name-description">Name or Descr</option>
 <option value="recommends">Recommneds</option>
 <option value="section">Section</option>
 <option value="suggests">Suggests</option>
