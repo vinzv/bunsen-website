@@ -376,11 +376,12 @@ function render_distro(p, distro, m) {
             pkgmodnode.setAttribute("class", "pkg-mod-date");
             pkgmodnode.setAttribute("title", "Last package update");
             li.appendChild(pkgmodnode);
+
             let span = document.createElement("span");
             span.setAttribute("class", "pkg-section");
             span.setAttribute("title", "Package section");
             span.textContent = pkg.section;
-            li.appendChild(span);
+            h3.appendChild(span);
           }
           ul.appendChild(li);
         });

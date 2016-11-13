@@ -313,7 +313,8 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
 }
 
 span.pkg-section {
-  font-family: "Ubuntu Mono";
+  font-family: "Ubuntu Mono", monospace;
+  color:#aaa;
   font-size: 110%;
 }
 span.pkg-section::before {
