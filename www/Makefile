@@ -130,6 +130,10 @@ deploy-kelaino: build
 	$(call LOG_STATUS,DEPLOY,KELAINO)
 	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/www/
 
+deploy-local: build
+	$(call LOG_STATUS,DEPLOY,LOCAL)
+	@-rsync -au --progress --human-readable --delete --chmod=D0755,F0644 dst/ /var/www/
+
 $(FAVICON_HEADER): $(FAVICON_SOURCE)
 	$(call LOG_STATUS,FAVICON,$(FAVICON_SIZES))
 	@./libexec/mkfavicons $< $(FAVICON_HEADER) $(FAVICON_SIZES) &>/dev/null
