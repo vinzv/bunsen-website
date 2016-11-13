@@ -204,6 +204,13 @@ src/resources.html: src/resources.mkd $(TEMPLATE) $(FAVICON_HEADER)
 		-o $@ $<
 	@./libexec/postproc $@
 
+src/repositories.html: src/repositories.mkd $(TEMPLATE) $(FAVICON_HEADER)
+	$(call LOG_STATUS,PANDOC,$(notdir $@))
+	@pandoc $(ARGV) $(PANDOC_VARS) \
+		--toc \
+		-o $@ $<
+	@./libexec/postproc $@
+
 src/forums403.html: src/forums403.mkd $(TEMPLATE) $(FAVICON_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \

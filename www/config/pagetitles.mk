@@ -13,3 +13,4 @@ src/donations.mkd.title			= $(BASE_PAGE_TITLE) :: Donations
 src/donations.intermediate.mkd.title			= $(BASE_PAGE_TITLE) :: Donations
 src/stuffweuse.mkd.title		= $(BASE_PAGE_TITLE) :: Stuff We Use
 src/forums403.mkd.title = $(BASE_PAGE_TITLE) :: Forums 403 FAQ
+src/repositories.mkd.title = $(BASE_PAGE_TITLE) :: Repositories
