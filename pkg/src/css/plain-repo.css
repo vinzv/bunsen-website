@@ -1,5 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,300);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,300');
+@import url('https://fonts.googleapis.com/css?family=Roboto:500');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700');
 
 .center {
   text-align: center;
@@ -72,8 +73,8 @@ html {
 
 h1, h2, h3, h4, h5, h6
 {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
     page-break-after: avoid; /* Firefox, Chrome, and Safari do not support the property value "avoid" */
 }
 
