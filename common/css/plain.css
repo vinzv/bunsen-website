@@ -28,46 +28,125 @@ monospace {
   font-size: 107%;
 }
 
+html {
+	height:100%;
+}
+
 body {
-    margin: auto;
+    width:100%;
+		height:100%;
+    margin:auto;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    margin-bottom: 2ex;
     color: #111;
     text-rendering: optimizeLegibility;
 }
 
-body > p {
+.content-wrapper {
+  width:750px;
+  margin:auto;
+}
+
+nav > .content-wrapper, footer > .content-wrapper {
+  text-align:center;
+}
+
+nav {
+  padding: 2ex 0 3ex 0;
+  background-color: #272822;
+}
+
+nav img {
+	margin-bottom: 1ex;
+}
+
+footer {
+	padding: 2ex 0 1ex 0;
+	border-bottom: 1px solid #ddd;
+	border-top:1px solid #ddd;
+	background-color:#f6f6f6;
+	color:#272822;
+	font-size:2ex;
+}
+
+.footer-row {
+	margin-bottom:1ex;
+}
+
+.footer-row a, .footer-row a:visited {
+	padding: 10px 12px 6px 12px;
+	margin-right:2ex;
+	color:#272822;
+	text-decoration:none;
+}
+
+.footer-sponsor {
+	float:left;
+	margin-left:2ex;
+}
+
+.footer-sponsor img {
+	height:6ex;
+}
+
+.footer-row a:hover {
+	text-decoration:none;
+	border-bottom:4px solid #272822;
+}
+
+.nav-row a, .nav-row a:visited {
+	margin-top: 4px;
+	padding: 6px 12px 6px 12px;
+	color: #fff;
+	font-size: 2ex;
+	text-decoration:none;
+}
+
+.nav-row a:hover {
+	text-decoration:none;
+	border-bottom: 4px solid #f6f6f6;
+}
+
+.nav-row a.selected {
+	border-bottom: 4px solid #f6b620;
+}
+
+.toc {
+	padding:2ex 0 2ex 0;
+	background-color: #f6f6f6;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+.toc ul {
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.toc a {
+	color:#272822;
+	text-decoration:none;
+	font-size:2ex;
+}
+
+main p {
   line-height: 1.50;
 }
 
-html {
-  border-top: 5px solid #3E3E3E;
-}
-
 @media all and (min-width: 800px) {
-  body {
-    width: 750px;
-  }
-  img.logo {
+  nav img {
     height: 120px;
   }
 }
 
 @media all and (max-width: 799px) {
-  body {
-    width: 90%;
-  }
-  img.logo {
+  nav img {
     width: 85%;
   }
 }
 
 @media all and (max-width: 799px) and (orientation: landscape) {
-  body {
-    width: 75%;
-  }
-  img.logo {
+  nav img {
     width: 65%;
   }
 }
@@ -129,12 +208,12 @@ hr.footer {
   background-color: #aaa;
 }
 
-a {
+main  a {
   text-decoration: none;
   color: #9b0c0c;
 }
 
-a:visited {
+main a:visited {
   color: #9b0c0c;
 }
 
@@ -149,11 +228,6 @@ a.header, #TOC ul a {
 a.footnote, a.footnoteRef { /* Pandoc, MultiMarkdown footnote links */
   font-size: small;
   vertical-align: text-top;
-}
-
-div#TOC, nav#TOC {
-  border-bottom: 1px solid #aaa;
-  margin-bottom: 0.5em;
 }
 
 span.semibold {

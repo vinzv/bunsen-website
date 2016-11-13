@@ -27,7 +27,6 @@ DESTDIR                     = dst
 SETTINGS                    = config/settings.yml
 
 FOOTER_GLOBAL               = include/footer/copyright.html
-FOOTER_SPONSOR              = include/footer/sponsor.html
 NAVIGATION_HTML             = include/navigation.html
 STYLE                       = css/plain.css
 ALTERNATE_STYLES            = css/plain-mercury.css
@@ -92,7 +91,7 @@ PANDOC_VARS=                                                                    
 	minify           \
 	thumbnails
 
-build: minify
+build: checkout
 
 checkout: all
 	$(call LOG_STATUS,CHECKOUT)
@@ -164,12 +163,11 @@ headinglinks: checkout
 	@pandoc $(ARGV) $(PANDOC_VARS) -o $@ $<
 	@./libexec/postproc $@
 
-src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(FAVICON_HEADER) $(GALLERY_HEADER) $(GALLERY_NOSCRIPT_HEADER) $(FOOTER_SPONSOR)
+src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(FAVICON_HEADER) $(GALLERY_HEADER) $(GALLERY_NOSCRIPT_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 		-H include/index/header.html \
 		-A include/index/after.html \
-		-A include/footer/sponsor.html \
 		-o $@ $<
 	@./libexec/postproc $@
 
