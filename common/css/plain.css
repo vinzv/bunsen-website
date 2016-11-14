@@ -34,7 +34,7 @@ body {
     margin:auto;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    color: #111;
+    color: #272822;
     text-rendering: optimizeLegibility;
 }
 
@@ -141,7 +141,7 @@ main p {
     width: 85%;
   }
   .content-wrapper {
-    width:95%;
+    width:90%;
   }
   nav .content-wrapper a, footer .footer-row a {
     display:block;
