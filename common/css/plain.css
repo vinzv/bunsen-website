@@ -241,6 +241,8 @@ span.semibold {
 #feed {
   max-width:700px;
   margin:auto;
+  margin-bottom:2ex;
+  margin-top:2ex;
 }
 
 .gha-header, .gha-push {
@@ -253,6 +255,10 @@ span.semibold {
 
 .gha-feed {
   background-color: rgba(203, 207, 211, 0.1) ! important;
+}
+
+.gha-footer {
+  border-bottom:1px solid #ddd;
 }
 
 table {
