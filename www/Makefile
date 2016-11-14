@@ -63,6 +63,7 @@ ARGV=                                                                           
 	-c $(STYLE)                                                                    \
 	--highlight-style monochrome                                                   \
 	--include-before-body=$(NAVIGATION_HTML)                                       \
+	--toc                                       \
 	--include-after-body=$(FOOTER_GLOBAL)                                          \
 	-H $(FAVICON_HEADER)
 
@@ -166,7 +167,6 @@ src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 		-H include/index/header.html \
 		-A include/index/after.html \
-		--toc \
 		-o $@ $<
 	@./libexec/postproc $@
 
@@ -195,34 +195,6 @@ $(GALLERY_NOSCRIPT_HEADER): $(GALLERY_HEADER)
 $(GALLERY_INDEX): $(SETTINGS) libexec/gallery-json
 	$(call LOG_STATUS,GALLERY,$@)
 	@./libexec/gallery-json $(SETTINGS) $(GALLERY_INDEX)
-
-src/resources.html: src/resources.mkd $(TEMPLATE) $(FAVICON_HEADER)
-	$(call LOG_STATUS,PANDOC,$(notdir $@))
-	@pandoc $(ARGV) $(PANDOC_VARS) \
-		--toc \
-		-o $@ $<
-	@./libexec/postproc $@
-
-src/repositories.html: src/repositories.mkd $(TEMPLATE) $(FAVICON_HEADER)
-	$(call LOG_STATUS,PANDOC,$(notdir $@))
-	@pandoc $(ARGV) $(PANDOC_VARS) \
-		--toc \
-		-o $@ $<
-	@./libexec/postproc $@
-
-src/installation.html: src/installation.mkd $(TEMPLATE) $(FAVICON_HEADER)
-	$(call LOG_STATUS,PANDOC,$(notdir $@))
-	@pandoc $(ARGV) $(PANDOC_VARS) \
-		--toc \
-		-o $@ $<
-	@./libexec/postproc $@
-
-src/forums403.html: src/forums403.mkd $(TEMPLATE) $(FAVICON_HEADER)
-	$(call LOG_STATUS,PANDOC,$(notdir $@))
-	@pandoc $(ARGV) $(PANDOC_VARS) \
-		--toc \
-		-o $@ $<
-	@./libexec/postproc $@
 
 # For the gitlog page, include a header with CSS/JS links and a footer
 # to post-load the query JS code.

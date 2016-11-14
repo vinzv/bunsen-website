@@ -10,7 +10,7 @@ def main():
         config = yaml.load(FILE)
     FUNDS=0.0
     STATUST="""
-## Funding Status
+## Funding status
 |                               | US$       |
 |:------------------------------|:----------|
 | **Yearly funding goals**      |           |

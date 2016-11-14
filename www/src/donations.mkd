@@ -1,3 +1,5 @@
+## The cause
+
 BunsenLabs is created and maintained by volunteers – we do this work
 because we love it, not for money. However, keeping the distro available
 online does involve some costs, for example, renting a server and
