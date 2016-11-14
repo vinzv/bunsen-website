@@ -4,30 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
-$for(author-meta)$
-  <meta name="author" content="$author-meta$">
-$endfor$
-$if(date-meta)$
-  <meta name="dcterms.date" content="$date-meta$">
-$endif$
-$if(opengraph-description)$
   <meta name="description" content="$opengraph-description$">
-$endif$
   <meta property="og:url" content="$url-prefix$/$filename$">
   <meta property="og:type" content="website">
-$if(pagetitle)$
   <meta property="og:title" content="$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$">
-$endif$
-$if(opengraph-image)$
   <meta property="og:image" content="$url-prefix$/$opengraph-image$">
-$endif$
-$if(opengraph-description)$
   <meta property="og:description" content="$opengraph-description$">
-$endif$
   <style type="text/css">code{white-space: pre;}</style>
-$if(quotes)$
-  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
-$endif$
 $if(highlighting-css)$
   <style type="text/css">
 $highlighting-css$
@@ -39,14 +22,12 @@ $endfor$
 $for(header-includes)$
   $header-includes$
 $endfor$
-$if(dns-prefetch)$
   <link rel="dns-prefetch" href="//forums.bunsenlabs.org">
   <link rel="dns-prefetch" href="//ddl.bunsenlabs.org">
   <link rel="dns-prefetch" href="//asia.pkg.bunsenlabs.org">
   <link rel="dns-prefetch" href="//eu.pkg.bunsenlabs.org">
   <link rel="dns-prefetch" href="//kelaino.bunsenlabs.org">
   <link rel="dns-prefetch" href="//pkg.bunsenlabs.org">
-$endif$
   <script type="application/ld+json">
   {
     "@context": "http://schema.org",

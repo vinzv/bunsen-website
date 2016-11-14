@@ -74,7 +74,6 @@ PANDOC_VARS=                                                                    
 	-M url-prefix="$(OPENGRAPH_URL_PREFIX)"                                        \
 	-M opengraph-image="$(OPENGRAPH_IMG)"                                          \
 	-M opengraph-description="$($<.description)"                                   \
-	-M dns-prefetch=1                                                              
 
 ###############################################################################
 
