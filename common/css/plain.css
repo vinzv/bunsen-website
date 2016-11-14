@@ -198,18 +198,12 @@ pre {
 hr {
   height: 1px;
   border-width: 0;
-  background-color: #3e3e3e;
-  color: #3e3e3e;
+  background-color: #272822;
+  color: #272822;
   text-align:center; margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 20px;
   width: 20%;
-}
-
-hr.footer {
-  width: 100%;
-  color: #aaa;
-  background-color: #aaa;
 }
 
 main  a {
