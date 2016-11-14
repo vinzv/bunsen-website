@@ -75,7 +75,7 @@ change the archive type to [`deb-src`](https://wiki.debian.org/SourcesList#Archi
 <option value="suggests">Suggests</option>
 <option value="version">Version</option>
 </select>
-<input id="filter-value" style="width:75%;display:inline;" type="text" autofocus="true" name="v" minlength="1">
+<input id="filter-value" style="width:75%;display:inline;" type="text" name="v" minlength="1">
 </form>
 
 You can also just browse the list [here](/repoidx.html).
