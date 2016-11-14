@@ -11,18 +11,18 @@ $if(date-meta)$
   <meta name="dcterms.date" content="$date-meta$">
 $endif$
 $if(opengraph-description)$
-  <meta name="description" content="$opengraph-description$" />
+  <meta name="description" content="$opengraph-description$">
 $endif$
-  <meta property="og:url" content="$url-prefix$/$filename$"/>
-  <meta property="og:type" content="website" />
+  <meta property="og:url" content="$url-prefix$/$filename$">
+  <meta property="og:type" content="website">
 $if(pagetitle)$
-  <meta property="og:title" content="$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$" />
+  <meta property="og:title" content="$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$">
 $endif$
 $if(opengraph-image)$
-  <meta property="og:image" content="$url-prefix$/$opengraph-image$" />
+  <meta property="og:image" content="$url-prefix$/$opengraph-image$">
 $endif$
 $if(opengraph-description)$
-  <meta property="og:description" content="$opengraph-description$" />
+  <meta property="og:description" content="$opengraph-description$">
 $endif$
   <style type="text/css">code{white-space: pre;}</style>
 $if(quotes)$
@@ -36,21 +36,16 @@ $endif$
 $for(css)$
   <link rel="stylesheet" href="$css$">
 $endfor$
-$for(alternate-css)$
-  <link rel="alternate stylesheet" href="$alternate-css$" title="Mercury">
-$endfor$
-$if(math)$
-  $math$
-$endif$
 $for(header-includes)$
   $header-includes$
 $endfor$
 $if(dns-prefetch)$
-  <link rel="dns-prefetch" href="//asia.pkg.bunsenlabs.org">
   <link rel="dns-prefetch" href="//forums.bunsenlabs.org">
+  <link rel="dns-prefetch" href="//ddl.bunsenlabs.org">
+  <link rel="dns-prefetch" href="//asia.pkg.bunsenlabs.org">
+  <link rel="dns-prefetch" href="//eu.pkg.bunsenlabs.org">
   <link rel="dns-prefetch" href="//kelaino.bunsenlabs.org">
   <link rel="dns-prefetch" href="//pkg.bunsenlabs.org">
-  <link rel="dns-prefetch" href="//asia.pkg.bunsenlabs.org">
 $endif$
   <script type="application/ld+json">
   {
@@ -74,24 +69,22 @@ $if(toc)$
   </div>
 $endif$
 
-<main>
-  <div class="content-wrapper">
-    
-    $body$
+  <main>
+    <div class="content-wrapper">
+      $body$
+    </div>
+  </main>
 
-  </div>
-</main>
-
-<footer>
-  <div class="footer-sponsor">
-        <a href="https://www.netcup.de" title="Sponsored by"><img alt="[NetCup Logo]" src="img/netcup-logo.png"></a>
-  </div>
-  <div class="content-wrapper">
-    $for(include-after)$
-    $include-after$
-    $endfor$
-  </div>
-</footer>
+  <footer>
+    <div class="footer-sponsor">
+      <a href="https://www.netcup.de" title="Sponsored by"><img alt="[NetCup Logo]" src="img/netcup-logo.png"></a>
+    </div>
+    <div class="content-wrapper">
+      $for(include-after)$
+      $include-after$
+      $endfor$
+    </div>
+  </footer>
 
 </body>
 </html>

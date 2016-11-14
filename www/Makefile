@@ -29,7 +29,6 @@ SETTINGS                    = config/settings.yml
 FOOTER_GLOBAL               = include/footer/copyright.html
 NAVIGATION_HTML             = include/navigation.html
 STYLE                       = css/plain.css
-ALTERNATE_STYLES            = css/plain-mercury.css
 TEMPLATE                    = templates/default.html5
 OPENGRAPH_URL_PREFIX        = https://www.bunsenlabs.org
 OPENGRAPH_IMG               = img/opengraph-flame.png
@@ -74,8 +73,7 @@ PANDOC_VARS=                                                                    
 	-M url-prefix="$(OPENGRAPH_URL_PREFIX)"                                        \
 	-M opengraph-image="$(OPENGRAPH_IMG)"                                          \
 	-M opengraph-description="$($<.description)"                                   \
-	-M dns-prefetch=1                                                              \
-	-M alternate-css="$(ALTERNATE_STYLES)"
+	-M dns-prefetch=1                                                              
 
 ###############################################################################
 
@@ -168,6 +166,7 @@ src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 		-H include/index/header.html \
 		-A include/index/after.html \
+		--toc \
 		-o $@ $<
 	@./libexec/postproc $@
 
@@ -205,6 +204,13 @@ src/resources.html: src/resources.mkd $(TEMPLATE) $(FAVICON_HEADER)
 	@./libexec/postproc $@
 
 src/repositories.html: src/repositories.mkd $(TEMPLATE) $(FAVICON_HEADER)
+	$(call LOG_STATUS,PANDOC,$(notdir $@))
+	@pandoc $(ARGV) $(PANDOC_VARS) \
+		--toc \
+		-o $@ $<
+	@./libexec/postproc $@
+
+src/installation.html: src/installation.mkd $(TEMPLATE) $(FAVICON_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 		--toc \

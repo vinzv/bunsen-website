@@ -43,7 +43,7 @@ and we also host [several active
 threads](https://forums.bunsenlabs.org/viewforum.php?id=9) on conky
 configuration.
 
-### Architectures
+## Architectures
 
 We offer combined [live-CD and installation
 media](/installation.html#live-cddvdusb-key-method) for the Debian
@@ -54,7 +54,7 @@ Our repository currently provides **[armhf](https://wiki.debian.org/ArmHardFloat
 If you would like to see [another Debian ARM port](https://www.debian.org/ports/arm/) supported,
 file a request [here](https://forums.bunsenlabs.org/viewforum.php?id=13).
 
-## Forums
+## Community support
 
 In general, we recommend new users to [visit and sign up for  our
 forums](https://forums.bunsenlabs.org): It provides plenty of resources

@@ -143,11 +143,20 @@ main p {
   nav img {
     width: 85%;
   }
+  .content-wrapper {
+    width:95%;
+  }
+  nav .content-wrapper a {
+    display:block;
+  }
 }
 
 @media all and (max-width: 799px) and (orientation: landscape) {
   nav img {
     width: 65%;
+  }
+  .content-wrapper {
+    width:75%;
   }
 }
 

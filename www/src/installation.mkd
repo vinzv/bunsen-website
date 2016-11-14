@@ -20,12 +20,6 @@
 [pgp64]: <@@SIG_URL_64@@>
 [releasekey]: <https://pkg.bunsenlabs.org/#signing-key>
 
-There are two ways to install all or part of BunsenLabs Linux:
-
-1. [Install the system from a live CD, DVD or USB key](#live-cddvdusb-key-method)
-2. [Include the repository](#repository-method) into your existing Debian system and
-   selectively install BunsenLabs packages.
-
 ## System requirements
 
 BunsenLabs is a Debian Jessie desktop with custom configurations and
@@ -42,7 +36,7 @@ Depending on the applications and feature set you decide to use
 fine with less resources. An installation from the live ISOs uses
 approximately 2.1G of space on the hard drive.
 
-## Live CD/DVD/USB key method
+## Live CD/DVD/USB key install
 
 This is the preferred and officially supported installation method. You
 first download a so-called hybrid ISO image which, depending on size, is
@@ -103,13 +97,13 @@ same directory and invoking GnuPG as follows: `gpg --verify
 ${SIGNATURE_FILE} ${ISO_FILE}`. GnuPG should tell you that you passed it
 a 'good signature'.
 
-## Repository method
+## Package-based install
 
 You may also choose to follow our repository set-up
 [instructions](http://pkg.bunsenlabs.org) and include our package
-repository into your existing system. This way, you can selectively
-install [packages from the BunsenLabs project](resources.html#core-packages-and-bug-reports) and use
-only a subset of our configurations and assets.
+repository into your Debian existing system. This way, you can
+selectively install [packages from the BunsenLabs project](resources.html#core-packages-and-bug-reports) and use only a
+subset of our configurations and assets.
 
 The packages are built and made to be installed on Debian Jessie
 systems. However, depending on the package, it may be possible to
