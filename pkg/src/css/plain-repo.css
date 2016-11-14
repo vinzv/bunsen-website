@@ -78,9 +78,6 @@ h1, h2, h3, h4, h5, h6
     page-break-after: avoid; /* Firefox, Chrome, and Safari do not support the property value "avoid" */
 }
 
-#bl-repo-index h3 {
-  margin-bottom:-0.5em;
-}
 
 #bl-repo-index a {
   color: #111;
@@ -218,7 +215,7 @@ span.semibold {
     the header. Rows highlight on hover to help scanning the table on screen.
 */
 
-table
+#bl-repo-index table
     {
     border-collapse: collapse;
     border-spacing: 0; /* IE 6 */

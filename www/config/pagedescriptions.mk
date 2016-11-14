@@ -8,3 +8,4 @@ src/donations.intermediate.mkd.description = Support BunsenLabs
 src/stuffweuse.mkd.description = Technologies used by the BL project
 src/forums403.mkd.description = FAQs about forum blocks
 src/repositories.mkd.description = APT repository configuration and signing key
+src/repoidx.mkd.description = Details of all packages hosted by BunsenLabs
