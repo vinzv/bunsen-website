@@ -257,15 +257,15 @@ span.semibold {
 
 table {
   border-collapse: collapse;
-  border-bottom: 2pt solid #000;
-  border-top: 2pt solid #000;
+  border-bottom: 2pt solid #272822;
+  border-top: 2pt solid #272822;
   margin-left: auto;
   margin-right: auto;
   width:100%;
 }
 
 thead {
-  border-bottom: 1pt solid #000;
+  border-bottom: 1pt solid #272822;
   background-color: #f5f5f5;
 }
 
@@ -373,12 +373,12 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
 }
 
 #bl-repo-index table {
-  border-bottom: 1pt solid #000;
-  border-top: 1pt solid #000;
+  border-bottom: 1pt solid #272822;
+  border-top: 1pt solid #272822;
 }
 
 #bl-repo-index thead {
-  border-bottom: 1pt solid #000;
+  border-bottom: 1pt solid #272822;
   background-color: #f5f5f5;
 }
 
