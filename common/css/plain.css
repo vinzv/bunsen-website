@@ -74,15 +74,15 @@ footer {
 }
 
 .footer-row a, .footer-row a:visited {
-	padding: 10px 12px 6px 12px;
-	margin-right:2ex;
-	color:#272822;
-	text-decoration:none;
+  padding: 10px 12px 6px 12px;
+  margin-right:2ex;
+  color:#272822;
+  text-decoration:none;
 }
 
 .footer-sponsor {
-	float:left;
-	margin-left:2ex;
+  float:left;
+  margin-left:2ex;
 }
 
 .footer-sponsor img {
@@ -145,8 +145,11 @@ main p {
   .content-wrapper {
     width:95%;
   }
-  nav .content-wrapper a {
+  nav .content-wrapper a, footer .footer-row a {
     display:block;
+  }
+  .footer-sponsor {
+    display:none;
   }
 }
 
