@@ -62,6 +62,11 @@ Package sources may be retrieved using the `apt-get source` command. To
 be able to do so, duplicate the lines in your `.list` files and
 change the archive type to [`deb-src`](https://wiki.debian.org/SourcesList#Archive_type).
 
+## Package search
+
+A web-searchable index of all packages hosted by BL is available
+[here](/repoidx.html).
+
 ## Mirrors
 
 We currently operate two repository mirrors. If you specify the host
