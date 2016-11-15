@@ -21,14 +21,14 @@ include config/pagetitles.mk
 include config/variables.mk
 
 SHELL                       = /bin/bash
-TIMESTAMP                   = $(shell date +%Y-%m-%d-%H-%M)
+TIMESTAMP                   = $(shell date +%Y%m%d%H%M)
 LOG_STATUS                  = @printf "\033[1;32m%*s\033[0m %s\n" 10 "$(1)" "$(2)"
 DESTDIR                     = dst
 SETTINGS                    = config/settings.yml
 
 FOOTER_GLOBAL               = include/footer/copyright.html
 NAVIGATION_HTML             = include/navigation.html
-STYLE                       = /css/plain.css
+STYLE                       = /css/plain.css?$(TIMESTAMP)
 TEMPLATE                    = templates/default.html5
 OPENGRAPH_URL_PREFIX        = https://www.bunsenlabs.org
 OPENGRAPH_IMG               = /img/opengraph-flame.png
