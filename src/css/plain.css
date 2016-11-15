@@ -278,17 +278,6 @@ ul > li, ol > li {
   line-height: 1.5;
 }
 
-.padlock {
-  position: relative;
-}
-
-.padlock img {
-  height:32px;
-  position: absolute;
-  top:0px;
-  right:0px;
-}
-
 dl > dt
 {
   font-weight: 600;
