@@ -1,9 +1,0 @@
-User-Agent: *
-Disallow: /css/
-Disallow: /img/
-Disallow: /templates/
-Disallow: /repoidx.html
-Disallow: /README.txt
-Disallow: /HEADER.txt
-Disallow: /BunsenLabs-RELEASE.asc
-Disallow: /debian/

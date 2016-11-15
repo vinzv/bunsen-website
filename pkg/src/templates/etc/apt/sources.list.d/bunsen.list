@@ -1,3 +1,0 @@
-deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen main
-# Uncomment to include source packages
-#deb-src http://pkg.bunsenlabs.org/debian bunsen-hydrogen main
