@@ -1,15 +1,22 @@
-### Build dependencies
+# www.BunsenLabs.org
 
-* GNU make
+* pkg.bunsenlabs.org does not longer have a separate website, all has
+  been concentrated into www.bunsenlabs.org.
+
+* asia.pkg.bunsenlabs.org, eu.pkg.bunsenlabs.org redirect now to www
+  (except for /debian subdir).
+
+## Build dependencies
+
 * bash
 * coreutils
 * findutils
 * git
 * imagemagick
 * inkscape
+* make
 * pandoc
 * python3
 * python3-beautifulsoup4
 * python3-yaml
 * sed
-* yuicompressor
