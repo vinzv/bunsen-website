@@ -1,19 +1,19 @@
-[theme-www-bright]: <?no-mercury>
-[theme-www-mercury]:<?mercury>
-[theme-pkg-bright]: <https://pkg.bunsenlabs.org/?no-mercury>
-[theme-pkg-mercury]:<https://pkg.bunsenlabs.org/?mercury>
+## Where can I talk to other BL users and developers?
 
-## Community and communication
-
-The following communication channels are considered ‘official’:
+### Official channels
 
   * [Forums](https://forums.bunsenlabs.org) -- this is our main communication channel
   * IRC channel [#bunsenlabs@freenode](irc://chat.freenode.net:6697/#bunsenlabs)
-  
+
 As you may know, we had been using the [CrunchBang Linux forums](http://crunchbang.org/forums)
 in the beginning. Registrations over there are now closed, but there's
 much knowledge left for you to harvest.
 
+You can also consume our [News & Announcement](https://forums.bunsenlabs.org/viewforum.php?id=12)
+news feed via [Planet Debian](http://planet.debian.org/deriv/).
+
+### Independent channels
+  
 Unofficial pages have also sprung up elsewhere:
 
 * [DeviantArt group](http://bunsenlabs.deviantart.com/)
@@ -21,11 +21,11 @@ Unofficial pages have also sprung up elsewhere:
 * User [Balloon](https://forums.bunsenlabs.org/viewtopic.php?pid=8855#p8855) has created an extensive resource in Japanese: [BunsenLabs Japan!・ブンゼンラボ ジャパン！](http://bunsenlabs-jp.jimdo.com/), including instructions and translations for a Japanese localization
 * There is a third-party German-speaking forum located [here](https://bunsenlabs-de.lima-city.de/index.php)
 
-## Development
+## Where is the BL source code?
 
-BunsenLabs is being developed [on Github](https://github.com/BunsenLabs).
+BunsenLabs is being developed in public, [on Github](https://github.com/BunsenLabs). A commit log summary [is available here](/gitlog.html).
 
-The core development team is comprised of the following people.
+## Who are the developers?
 
 | Handle                                      | BL forums                                             | Github                                                      | Website                    |
 |:--------------------------------------------|:-----------------------------------------------------:|:-----------------------------------------------------------:|:--------------------------:|
@@ -40,17 +40,10 @@ The core development team is comprised of the following people.
 | Unia *(Jente Hidskes)*                      | [■](https://forums.bunsenlabs.org/profile.php?id=12)  | [■](https://github.com/Unia)                                | [■](https://unia.github.io/)|
 | xaos52                                      | [■](https://forums.bunsenlabs.org/profile.php?id=159) | [■](https://github.com/xaosfiftytwo)                        |                            |
 
-### Packages and bug reports
+## Where can I report bugs?
 
-**Detailed package indices and content listings are available on the
-['repositories'](https://pkg.bunsenlabs.org) page.**
-
-If you have a bug to report, you may do so either [on the
-forums](https://forums.bunsenlabs.org/viewforum.php?id=14) or, ideally,
-to the package's issue tracker.  Use the VCS browser links provided
-below to browse the package sources.
-
-The list of currently maintained packages is as follows:
+Report bugs [on the forums](https://forums.bunsenlabs.org/viewforum.php?id=14) or the
+respective package's issue tracker:
 
 | Package                                                           | VCS Browser                                                   | Issue Tracker                                                           |
 |:------------------------------------------------------------------|:-------------------------------------------------------------:|:-----------------------------------------------------------------------:|
@@ -67,22 +60,12 @@ The list of currently maintained packages is as follows:
 |bunsen-utilities *(utility scripts)*                               | [■](https://github.com/bunsenlabs/bunsen-utilities)           | [■](https://github.com/BunsenLabs/bunsen-utilities/issues)              |
 |bunsen-welcome *(initial user and system setup)*                   | [■](https://github.com/bunsenlabs/bunsen-welcome)             | [■](https://github.com/BunsenLabs/bunsen-welcome/issues)                |
 
-
-### Third-party and backported packages
-
-We maintain an auxiliary repository named **jessie-backports**
-containing packages backported from Debian testing and imported from
-Ubuntu. A list of packages is available
-[here](http://pkg.bunsenlabs.org/repoidx.html#distro-jessie-backports).
-
-## Forums '403 Access Denied' errors
+## I keep getting a 403 Access Denied error when trying to access the forums!
 
 This is because your IP address is on a IP block list. Please refer to
 the [Forums 403 FAQ](https://www.bunsenlabs.org/forums403.html) for more
-information.
+information and how to resolve this kind of problem.
 
-## Miscellany
+## What software does BL run on?
 
-* See the [commit log](gitlog.html) for an overview over recent development activity.
-* Here is a [list](stuffweuse.html) of (mostly free and) open-source
-  software we are using to run the BL project.
+Here is a [list](/stuffweuse.html).
