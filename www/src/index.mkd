@@ -67,6 +67,7 @@ news feed via [Planet Debian](http://planet.debian.org/deriv/).
 
 ## In the press
 
+* 2016-10/11: LinuxWelt, printed edition 10-11/2016, there is a one-page review on page 34
 * 2016-07-29: LinuxWelt, 5/2016: [BunsenLabs is featured on the accompanying DVD](http://www.pcwelt.de/news/LinuxWelt-5-2016-jetzt-am-Kiosk-10016907.html)
 * 2016-06-13: DistroWatch Weekly, Issue 665: *[Review: BunsenLabs Linux](https://distrowatch.com/weekly.php?issue=20160613#bunsen)*
 * 2016-05-02: DistroWatch: [BunsenLabs Linux entry](https://distrowatch.com/table.php?distribution=bunsenlabs)

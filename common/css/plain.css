@@ -1,10 +1,10 @@
 /*
- * plain.css - BunsenLabs main stylesheet
- * Copyright (C) 2015-2016 2ion <twoion@bunsenlabs.org>
+ * plain.css - BunsenLabs.org stylesheet
+ * Copyright (C) 2015-2016 Jens John <asterisk@2ion.de>
  *
- * Parts of it and the overall look are based on or copied from the
- * 'Buttondown' pandoc stylesheet by Ryan Gray. Link to the original
- * file: https://gist.github.com/ryangray/1882525
+ * Parts of it are based on or copied from the 'Buttondown' pandoc
+ * stylesheet by Ryan Gray. Link to the original file:
+ * https://gist.github.com/ryangray/1882525
  */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600');
