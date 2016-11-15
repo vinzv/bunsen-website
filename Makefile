@@ -167,7 +167,6 @@ src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(
 src/donations.html: $(DONATION_INTERMEDIATE)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
-		-H include/head/norobots.html \
 		-o $@ $<
 	@./libexec/postproc $@
 
