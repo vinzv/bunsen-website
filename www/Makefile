@@ -28,10 +28,10 @@ SETTINGS                    = config/settings.yml
 
 FOOTER_GLOBAL               = include/footer/copyright.html
 NAVIGATION_HTML             = include/navigation.html
-STYLE                       = css/plain.css
+STYLE                       = /css/plain.css
 TEMPLATE                    = templates/default.html5
 OPENGRAPH_URL_PREFIX        = https://www.bunsenlabs.org
-OPENGRAPH_IMG               = img/opengraph-flame.png
+OPENGRAPH_IMG               = /img/opengraph-flame.png
 
 FAVICON_HEADER              = include/favicons.html
 FAVICON_SIZES               = 256 180 128

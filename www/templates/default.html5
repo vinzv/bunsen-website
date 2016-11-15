@@ -3,11 +3,11 @@
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+  <title>$pagetitle$</title>
   <meta name="description" content="$opengraph-description$">
   <meta property="og:url" content="$url-prefix$/$filename$">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$">
+  <meta property="og:title" content="$pagetitle$">
   <meta property="og:image" content="$url-prefix$/$opengraph-image$">
   <meta property="og:description" content="$opengraph-description$">
   <style type="text/css">code{white-space: pre;}</style>
