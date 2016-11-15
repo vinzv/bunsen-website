@@ -1,20 +1,11 @@
-*This site is hosted in Germany. The following information is mandated
-by [§55 RStV](http://revosax.sachsen.de/vorschrift/1236-Rundfunkstaatsvertrag#p55).*
-
 ## Imprint
 
-Webmaster contact: [admin@bunsenlabs.org](mailto:admin@bunsenlabs.org)
+The Webmaster contact is [admin@bunsenlabs.org](mailto:admin@bunsenlabs.org).
 
 Postal mail for the BunsenLabs Linux Project is to be sent to the
-administrative contact of the domain name `Mmlvbi5kZQ==`[^2].
+administrative contact (ADMIN-C) of the domain name 2ion.de.
 
-[^2]: The domain name is base64-encoded ASCII text; you may obtain the
-cleartext by running the following command in a UNIX-like environment:
-```
-printf Mmlvbi5kZQ== | base64 -d
-```
-
-## Rechtliche Hinweise
+## Legal remarks · Rechtliche Hinweise
 
 Die Inhalte unserer Webseiten haben wir sorgfältig zusammen gestellt.
 Sollten sich dennoch fehlerhafte oder veraltete Daten eingeschlichen

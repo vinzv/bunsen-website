@@ -64,7 +64,7 @@ as the place to voice suggestions and report bugs.
 
 There are a few independent communities, see [here for a list](https://www.bunsenlabs.org/resources.html#independent-channels).
 
-### FAQ and How to get started
+## FAQ and How to get started
 
 * Refer to the [Getting Started](https://forums.bunsenlabs.org/viewforum.php?id=21) section on the forums, and
 * Please do also look at our [Resources](https://www.bunsenlabs.org/resources.html) page for more general information and bug reporting guidelines.

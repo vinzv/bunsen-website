@@ -55,7 +55,7 @@ $endif$
 
   <footer>
     <div class="footer-sponsor">
-      <a href="https://www.netcup.de" title="Sponsored by"><img alt="[NetCup Logo]" src="img/netcup-logo.png"></a>
+      <a href="https://www.netcup.de" title="Sponsored by"><img alt="[NetCup Logo]" src="/img/netcup-logo.png"></a>
     </div>
     <div class="content-wrapper">
       $for(include-after)$

@@ -388,7 +388,7 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
     display:none;
   }
   span.pkg-version, span.pkg-count, span.distro-modification-date {
-    display: none!important;
+    display: none;
   }
 }
 

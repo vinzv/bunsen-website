@@ -1,22 +1,17 @@
 ## Legal and licenses
 
-All content on this page, if not otherwise noted, is Copyright © 2015–2016 The
+All content on this page, if not otherwise noted, is Copyright © The
 BunsenLabs Linux Project and licensed under a [Creative Commons
 Attribution-NonCommercial-ShareAlike 4.0 International
 License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 <div class="center icons">
-![](img/cc-icons-svg/cc.svg)![](img/cc-icons-svg/by.svg)![](img/cc-icons-svg/nc.svg)![](img/cc-icons-svg/sa.svg)
+![](/img/cc-icons-svg/cc.svg)![](img/cc-icons-svg/by.svg)![](img/cc-icons-svg/nc.svg)![](img/cc-icons-svg/sa.svg)
 </div>
 
-The BunsenLabs logo is Copyright © 2015 Rodrigo Moya (user
-[Ututo](https://forums.bunsenlabs.org/profile.php?id=67)) and also licensed
-under CC-BY-NC-SA 4.0.
-
-The [red lock icon](/img/numix_lock.svg) has been derived from the [KDE
-Breeze](https://projects.kde.org/projects/kde/workspace/breeze) icon
-*object\_unlocked.svg* and is licensed under the GNU Lesser General Public
-License (LGPL) v3 or later.
+The BunsenLabs logo is Copyright © 2015 Rodrigo Moya (BL user
+[Ututo](https://forums.bunsenlabs.org/profile.php?id=67)) and also
+licensed under CC-BY-NC-SA 4.0.
 
 All registered trademarks mentioned on this site belong to their rightful
 owners.
