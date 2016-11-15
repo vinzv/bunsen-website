@@ -8,8 +8,8 @@ except ImportError:
     from yaml import Loader, Dumper
 
 def entry(stem, alt):
-    return """        <a href="img/frontpage-gallery/{}.jpg" title="Screenshot by {}" target="_blank">\
-<img alt="[ Screenshot by {} ]" data-src="img/frontpage-gallery/thumbs/{}.thumb.jpg"></a>""".format(stem, alt, alt, stem)
+    return """        <a href="/img/frontpage-gallery/{}.jpg" title="Screenshot by {}" target="_blank">\
+<img alt="[ Screenshot by {} ]" data-src="/img/frontpage-gallery/thumbs/{}.thumb.jpg"></a>""".format(stem, alt, alt, stem)
 
 if __name__ == "__main__":
     print("""<div class="sliderbox" style="display:none">
