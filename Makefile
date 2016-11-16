@@ -10,11 +10,11 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 include config/pagedescriptions.mk
 include config/pagetitles.mk
@@ -39,7 +39,7 @@ FAVICON_SOURCE              = src/img/bl-flame-48px.svg
 
 GALLERY_HEADER              = include/index/gallery.html
 GALLERY_NOSCRIPT_HEADER     = include/index/gallery_noscript.html
-GALLERY_INDEX								= src/gallery.json
+GALLERY_INDEX               = src/gallery.json
 
 DONATION_REPORT             = include/donation-report.mkd
 DONATION_INTERMEDIATE       = src/donations.intermediate.mkd
@@ -63,30 +63,28 @@ ARGV=                                                                           
 	-c $(STYLE)                                                                    \
 	--highlight-style monochrome                                                   \
 	--include-before-body=$(NAVIGATION_HTML)                                       \
-	--toc                                       \
+	--toc                                                                          \
 	--include-after-body=$(FOOTER_GLOBAL)                                          \
 	-H $(FAVICON_HEADER)
 
-PANDOC_VARS=                                                                     \
-	-M pagetitle="$($<.title)"                                                     \
-	-M lang="en"                                                                   \
-	-M filename="$(@F)"                                                            \
-	-M url-prefix="$(OPENGRAPH_URL_PREFIX)"                                        \
-	-M opengraph-image="$(OPENGRAPH_IMG)"                                          \
-	-M opengraph-description="$($<.description)"                                   \
+PANDOC_VARS=                                   \
+	-M pagetitle="$($<.title)"                   \
+	-M lang="en"                                 \
+	-M filename="$(@F)"                          \
+	-M url-prefix="$(OPENGRAPH_URL_PREFIX)"      \
+	-M opengraph-image="$(OPENGRAPH_IMG)"        \
+	-M opengraph-description="$($<.description)"
 
 ###############################################################################
 
-.PHONY:            \
-	all              \
-	archive-revision \
-	build            \
-	checkout         \
-	clean            \
-	deploy-kelaino   \
-	deploy           \
-	html-pages       \
-	minify           \
+.PHONY:          \
+	all            \
+	build          \
+	checkout       \
+	clean          \
+	deploy-kelaino \
+	deploy-local   \
+	html-pages     \
 	thumbnails
 
 build: checkout
