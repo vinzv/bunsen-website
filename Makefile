@@ -48,10 +48,10 @@ DONATION_DATA               = config/donations.csv
 TARGETS                     = $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
 ASSETS                      = $(TARGETS) src/js src/img src/css src/robots.txt $(GALLERY_INDEX)
 
-THUMB_DIM                   = 640x
+THUMB_DIM                   = 750x
 THUMB_DIR                   = src/img/frontpage-gallery/thumbs
 THUMB_FULLSIZE_JPEG_QUALITY = 90
-THUMB_JPEG_QUALITY          = 75
+THUMB_JPEG_QUALITY          = 90
 THUMB_OBJ                   = $(subst frontpage-gallery/,frontpage-gallery/thumbs/,$(patsubst %.png,%.thumb.jpg,$(wildcard src/img/frontpage-gallery/*.png)))
 
 ARGV=                                                                            \
@@ -119,10 +119,6 @@ clean:
 	@rm -f $(GALLERY_INDEX)
 	@rm -fr dst/*
 
-deploy: build
-	$(call LOG_STATUS,DEPLOY,BUNSEN)
-	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ bunsen@bunsen:/srv/www.bunsenlabs.org/
-
 deploy-kelaino: build
 	$(call LOG_STATUS,DEPLOY,KELAINO)
 	@-rsync -au --progress --human-readable --delete --exclude=private --chmod=D0755,F0644 dst/ root@kelaino:/srv/kelaino.bunsenlabs.org/www/
@@ -135,19 +131,9 @@ $(FAVICON_HEADER): $(FAVICON_SOURCE)
 	$(call LOG_STATUS,FAVICON,$(FAVICON_SIZES))
 	@./libexec/mkfavicons $< $(FAVICON_HEADER) $(FAVICON_SIZES) &>/dev/null
 
-archive-revision: checkout
-	$(call LOG_STATUS,ARCHIVE,www-$(TIMESTAMP).tar.xz)
-	@mkdir -p ./archive/
-	@tar -cJf ./archive/www-$(TIMESTAMP).tar.xz ./dst/
-
 variables: src/installation.html src/index.html
 	$(call LOG_STATUS,VARIABLES,$(notdir $^))
 	$(foreach VAR,$(RELEASE_SUBST),$(shell sed -i 's^@@$(VAR)@@^$($(VAR))^' $^ ))
-
-headinglinks: checkout
-	$(call LOG_STATUS,HLINKS)
-	@find "$(DESTDIR)"/ -maxdepth 1 -type f -name '*.html' -print0 \
-		| xargs -0 -P 4 -n 1 -- ./libexec/hnlink
 
 ###############################################################################
 
@@ -204,6 +190,6 @@ src/gitlog.html: src/gitlog.mkd $(wildcard src/include/gitlog*) $(TEMPLATE) $(FA
 # preview images. Documentation: http://www.imagemagick.org/Usage/resize/
 $(THUMB_DIR)/%.thumb.jpg: $(THUMB_DIR)/../%.png
 	$(call LOG_STATUS,THUMBNAIL,$(notdir $@))
-	@convert $< -adaptive-resize $(THUMB_DIM) -quality $(THUMB_JPEG_QUALITY) $@
+	@convert $< -define jpeg:dct-method=float -strip -interlace Plane -sampling-factor 4:2:0 -resize $(THUMB_DIM) -quality $(THUMB_JPEG_QUALITY) $@
 	@convert $< -quality $(THUMB_FULLSIZE_JPEG_QUALITY) $(<:.png=.jpg)
 
