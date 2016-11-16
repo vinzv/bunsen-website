@@ -1,68 +1,69 @@
 <!DOCTYPE html>
 <html$if(lang)$ lang="$lang$"$endif$>
-<head prefix="og: http://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>$pagetitle$</title>
-  <meta name="description" content="$opengraph-description$">
-  <meta property="og:url" content="$url-prefix$/$filename$">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="$pagetitle$">
-  <meta property="og:image" content="$url-prefix$/$opengraph-image$">
-  <meta property="og:description" content="$opengraph-description$">
-  <style type="text/css">code{white-space: pre;}</style>
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>$pagetitle$</title>
+    <meta name="description" content="$opengraph-description$">
+    <meta property="og:url" content="$url-prefix$/$filename$">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="$pagetitle$">
+    <meta property="og:image" content="$url-prefix$/$opengraph-image$">
+    <meta property="og:description" content="$opengraph-description$">
+    <style type="text/css">code{white-space: pre;}</style>
 $if(highlighting-css)$
-  <style type="text/css">
-$highlighting-css$
-  </style>
+    <style type="text/css">
+      $highlighting-css$
+    </style>
 $endif$
 $for(css)$
-  <link rel="stylesheet" href="$css$">
+    <link rel="stylesheet" href="$css$">
 $endfor$
 $for(header-includes)$
-  $header-includes$
+    $header-includes$
 $endfor$
-  <link rel="dns-prefetch" href="//forums.bunsenlabs.org">
-  <link rel="dns-prefetch" href="//pkg.bunsenlabs.org">
-  <link rel="dns-prefetch" href="//ddl.bunsenlabs.org">
-  <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "url": "https://www.bunsenlabs.org",
-    "logo":"https://www.bunsenlabs.org/img/blflame512.png"
-  }
-</script>
-</head>
-<body>
+    <link rel="dns-prefetch" href="//forums.bunsenlabs.org">
+    <link rel="dns-prefetch" href="//pkg.bunsenlabs.org">
+    <link rel="dns-prefetch" href="//ddl.bunsenlabs.org">
+    <script type="application/ld+json">
+      { "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "https://www.bunsenlabs.org",
+        "logo":"https://www.bunsenlabs.org/img/blflame512.png"
+      }
+    </script>
+  </head>
+  <body>
 $for(include-before)$
-$include-before$
+  $include-before$
 $endfor$
-
 $if(toc)$
-  <div class="toc">
-    <div class="content-wrapper">
-      $toc$
+    <div class="toc">
+      <div class="content-wrapper">
+        $toc$
+      </div>
     </div>
-  </div>
 $endif$
-
-  <main>
-    <div class="content-wrapper">
-      $body$
-    </div>
-  </main>
-
-  <footer>
-    <div class="footer-sponsor">
-      <a href="https://www.netcup.de" title="Sponsored by"><img alt="[NetCup Logo]" src="/img/netcup-logo.png"></a>
-    </div>
-    <div class="content-wrapper">
-      $for(include-after)$
-      $include-after$
-      $endfor$
-    </div>
-  </footer>
-
-</body>
+    <main>
+      <div class="content-wrapper">
+        $body$
+      </div>
+    </main>
+    <footer>
+      <div class="footer-sponsor">
+        <a href="https://www.netcup.de" title="Sponsored by"><img alt="[NetCup Logo]" src="/img/netcup-logo.png"></a>
+      </div>
+      <div class="content-wrapper">
+        <div class="footer-row">
+          Copyright © 2015–2016 The BunsenLabs Linux Project
+        </div>
+        <div class="footer-row">
+          <a href="legal.html">Legal & licenses</a> <a href="imprint.html">Imprint</a>
+        </div>
+      </div>
+    </footer>
+$for(include-after)$
+    $include-after$
+$endfor$
+  </body>
 </html>

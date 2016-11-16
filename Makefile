@@ -26,7 +26,6 @@ LOG_STATUS                  = @printf "\033[1;32m%*s\033[0m %s\n" 10 "$(1)" "$(2
 DESTDIR                     = dst
 SETTINGS                    = config/settings.yml
 
-FOOTER_GLOBAL               = include/footer/copyright.html
 NAVIGATION_HTML             = include/navigation.html
 STYLE                       = /css/plain.css?$(TIMESTAMP)
 TEMPLATE                    = templates/default.html5
@@ -64,7 +63,6 @@ ARGV=                                                                           
 	--highlight-style monochrome                                                   \
 	--include-before-body=$(NAVIGATION_HTML)                                       \
 	--toc                                                                          \
-	--include-after-body=$(FOOTER_GLOBAL)                                          \
 	-H $(FAVICON_HEADER)
 
 PANDOC_VARS=                                   \
