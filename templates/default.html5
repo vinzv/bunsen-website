@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>$pagetitle$</title>
-    <meta name="description" content="$opengraph-description$">
+    <meta name="description" content="$opengraph-description$"/>
     <meta property="og:url" content="$url-prefix$/$filename$">
     <meta property="og:type" content="website">
     <meta property="og:title" content="$pagetitle$">
@@ -22,6 +22,7 @@ $endfor$
 $for(header-includes)$
     $header-includes$
 $endfor$
+    <link rel="alternate" type="application/rss+xml" title="BunsenLabs.org sitemap" href="https://www.bunsenlabs.org/feeds/rss.xml">
     <link rel="dns-prefetch" href="//forums.bunsenlabs.org">
     <link rel="dns-prefetch" href="//pkg.bunsenlabs.org">
     <link rel="dns-prefetch" href="//ddl.bunsenlabs.org">

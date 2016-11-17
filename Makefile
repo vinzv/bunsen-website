@@ -86,11 +86,13 @@ PANDOC_VARS=                                   \
 	thumbnails
 
 build: checkout
+	@mkdir -p "$(DESTDIR)/feeds"
+	@./libexec/generate-feeds "$(DESTDIR)" "$(DESTDIR)/feeds/atom.xml" "$(DESTDIR)/feeds/rss.xml"
 
 checkout: all
 	$(call LOG_STATUS,CHECKOUT)
 	@mkdir -p $(DESTDIR)
-	@rsync -auL --exclude=$(DONATION_INTERMEDIATE) $(ASSETS) $(DESTDIR)
+	@rsync -auL --exclude='*intermediate*' $(ASSETS) $(DESTDIR)
 
 all: html-pages thumbnails variables $(GALLERY_INDEX)
 
