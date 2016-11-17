@@ -107,6 +107,14 @@ connection. Before setting this up, ensure that the package
 is installed on your system. The package is part of the BL standard
 installation.
 
+<div class="warning">
+You might see `apt-get update` complaining sporadically with the error:
+`W: Size of file [...] is not what the server reported`. apt has some
+strange issues in conjunction with apt-transport-https which are hard to
+debug despite having been declared fixed before (e.g. Debian bug
+#802617). As a workaround, either ignore the messages or do not use
+apt-transport-https.
+</div>
 
 ## Signing key
 

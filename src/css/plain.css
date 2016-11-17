@@ -299,6 +299,12 @@ dl > dt
   border: 1px solid #00aa00;
 }
 
+.warning {
+  background-color: #fcffba;
+  padding: 10px 30px 10px 30px;
+  border: 1px solid #aa0000;
+}
+
 /* Repository index */
 span.pkg-section {
   font-family: "Ubuntu Mono", monospace;
