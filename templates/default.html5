@@ -10,6 +10,7 @@
     <meta property="og:title" content="$pagetitle$">
     <meta property="og:image" content="$url-prefix$/$opengraph-image$">
     <meta property="og:description" content="$opengraph-description$">
+    <meta name="google-site-verification" content="ByQMdLyQ-5hvmKWXrBv1vCfiJR-hcXO9dviLGz8xI7I">
     <style type="text/css">code{white-space: pre;}</style>
 $if(highlighting-css)$
     <style type="text/css">
@@ -22,7 +23,7 @@ $endfor$
 $for(header-includes)$
     $header-includes$
 $endfor$
-    <link rel="alternate" type="application/rss+xml" title="BunsenLabs.org sitemap" href="https://www.bunsenlabs.org/feeds/rss.xml">
+    <link rel="alternate" type="application/rss+xml" title="Sitemap" href="https://www.bunsenlabs.org/feeds/rss.xml">
     <link rel="dns-prefetch" href="//forums.bunsenlabs.org">
     <link rel="dns-prefetch" href="//pkg.bunsenlabs.org">
     <link rel="dns-prefetch" href="//ddl.bunsenlabs.org">
