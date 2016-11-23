@@ -9,6 +9,7 @@ BASE_URL ="https://www.bunsenlabs.org/img/frontpage-gallery"
 def add_link(i):
     infix = i['base'] if 'base' in i else i['author']
     i['url'] = "{}/{}.jpg".format(BASE_URL,infix)
+    i['hq_url'] = "{}/{}.png".format(BASE_URL,infix)
     i.pop('base', 0)
     i['thumbnail_url'] = "{}/thumbs/{}.thumb.jpg".format(BASE_URL, infix)
     return i
