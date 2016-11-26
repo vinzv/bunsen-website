@@ -21,3 +21,18 @@
 * python3-yaml
 * python3-django feed generator module
 * sed
+
+## License
+
+For *content*:
+
+* Copyright (C) 2015-2016 The BunsenLabs Linux Project unless stated otherwise
+* CC-BY-NC-SA-4 unless stated otherwise
+
+For *code*:
+
+* Copyright (C) 2015-2016 Jens John <asterisk@2ion.de> unless stated otherwise
+* GNU General Public License v3 or later unless stated otherwise
+
+Components created by third parties are subject to their respective
+copyright clauses and licenses.
