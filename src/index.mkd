@@ -1,0 +1,87 @@
+[openbox]:    <http://openbox.org/wiki/Main_Page>
+[debian]:     <https://www.debian.org>
+[bunsenintro]:<http://crunchbang.org/forums/viewtopic.php?id=39049>
+[cb]:         <http://crunchbang.org/forums/viewtopic.php?id=38916>
+[releaseurl]: <@@RELEASE_ANNOUNCEMENT_URL@@>
+[censuslink]: <https://wiki.debian.org/Derivatives/Census/BunsenLabs>
+
+BunsenLabs Linux is a distribution offering a light-weight and easily
+customizable Openbox desktop. The current release is
+**\@\@RELEASE\_CODENAME\@\@**[^1], [derived][censuslink] from Debian
+Jessie. The project is a [community continuation][bunsenintro] of
+CrunchBang Linux.
+
+[^1]: Released on \@\@RELEASE\_DATE\@\@. Read the announcement
+[here][releaseurl]. A refreshed ISO was released on 2016-07-10, the
+announcement is [here](https://forums.bunsenlabs.org/viewtopic.php?id=2318).
+
+\@\@GALLERY\@\@
+<noscript>
+\@\@GALLERY\_NOSCRIPT\@\@
+</noscript>
+
+## Defining features
+
+The distribution consists of configuration and resource packages
+installed on top of Debian. There are no changes to the way the Debian
+base system is administrated.
+
+* Pre-configured [Openbox](http://openbox.org/wiki/Main_Page) window
+  manager with [tint2](https://gitlab.com/o9000/tint2) panel and
+  [conky](http://conky.sourceforge.net/) system monitor
+* Assortment of harmonising GTK2/3 themes, wallpapers and
+  [conky](https://github.com/brndnmtthws/conky) configurations
+* Various configuration and application utilities to maintain this
+  system
+* Additional desktop-, multimedia- and hardware-related packages come
+  pre-installed to offer a better "out-of-the-box" experience.
+
+There is no limit to customization: You can review desktop
+configurations in our forums' [Artwork &
+Screenshots](https://forums.bunsenlabs.org/viewforum.php?id=8) section,
+and we also host [several active
+threads](https://forums.bunsenlabs.org/viewforum.php?id=9) on conky
+configuration.
+
+## Architectures
+
+We offer combined [live-CD and installation
+media](/installation.html#live-cddvdusb-key-method) for the Debian
+**i386** (i686) and **amd64** (x86-64) architectures.
+
+However, you can install our [packages](/installation.html#repository-method) also on ARM platforms.
+Our repository currently provides **[armhf](https://wiki.debian.org/ArmHardFloatPort)**.
+If you would like to see [another Debian ARM port](https://www.debian.org/ports/arm/) supported,
+file a request [here](https://forums.bunsenlabs.org/viewforum.php?id=13).
+
+## Community support
+
+In general, we recommend new users to [visit and sign up for  our
+forums](https://forums.bunsenlabs.org): It provides plenty of resources
+and assistance in dealing with every configuration aspect of the BL
+distribution, and is the main platform for user-to-user support as well
+as the place to voice suggestions and report bugs.
+
+There are a few independent communities, see [here for a list](https://www.bunsenlabs.org/resources.html#independent-channels).
+
+## FAQ and How to get started
+
+* Refer to the [Getting Started](https://forums.bunsenlabs.org/viewforum.php?id=21) section on the forums, and
+* Please do also look at our [Resources](https://www.bunsenlabs.org/resources.html) page for more general information and bug reporting guidelines.
+
+## In the press
+
+* 2016-10/11: LinuxWelt, printed edition 10-11/2016, there is a one-page review on page 34
+* 2016-07-29: LinuxWelt, 5/2016: [BunsenLabs is featured on the accompanying DVD](http://www.pcwelt.de/news/LinuxWelt-5-2016-jetzt-am-Kiosk-10016907.html)
+* 2016-06-13: DistroWatch Weekly, Issue 665: *[Review: BunsenLabs Linux](https://distrowatch.com/weekly.php?issue=20160613#bunsen)*
+* 2016-05-02: DistroWatch: [BunsenLabs Linux entry](https://distrowatch.com/table.php?distribution=bunsenlabs)
+* 2016-02-19: LINUX.COM: *[5 Linux Desktop Distributions You Should Kow](http://www.linux.com/learn/tutorials/886407-5-live-linux-desktop-distributions-you-should-know)*
+* 2016-01: Ubuntu User, Spring 2016: *[BunsenLabs Hydrogen – CrunchBang's lightweight successor](https://www.ubuntu-user.com/Magazine/Archive/2016/28/BunsenLabs-Hydrogen-CrunchBang-s-lightweight-successor)*
+* 2016-01-21: LinuxUser 02/2016: *[Bunsenbrenner: BunsenLabs "Hydrogen" auch für ältere Hardware](http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2016/02/Bunsenbrenner)*
+* 2016-01-21: skipolivia: *[A Deep Look at BunsenLabs](http://opensource.skipoliva.com/2016/01/21/a-deep-look-at-bunsenlabs/)*
+* 2015-12-07: Linux Insider: *[Hot New BunsenLabs Linux Eases Pain of CrunchBang Loss](http://www.linuxinsider.com/story/82837.html?rss=1)*
+* 2015-11-15: Sunday Morning Linux Review, Episode 167: *[BunsenLabs Linux](http://smlr.us/?p=4833/)*
+* 2015-09-21: DistroWatch Weekly, Issue 628: *[New Linux distributions](http://distrowatch.com/weekly.php?issue=20150921#waiting)*
+* 2015-06-21: entornos GNU/Linux: *[Un pasno por BunsenLabs GNU/Linux 8.1 (Hydrogen)](http://entornosgnulinux.com/2015/06/21/un-paseo-por-bunsenlabs-gnulinux-8-1-hydrogen/)*
+
+There is a [forum thread](https://forums.bunsenlabs.org/viewtopic.php?id=763) for collecting quality reviews -- if you have a link to add, please submit a post!

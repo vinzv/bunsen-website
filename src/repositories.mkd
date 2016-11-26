@@ -1,0 +1,162 @@
+[SigningKey]: <https://pkg.bunsenlabs.org/BunsenLabs-RELEASE.asc>
+[AptSources]: <https://pkg.bunsenlabs.org/templates/etc/apt/sources.list.d/bunsen.list>
+[AptSourcesBp]: <https://pkg.bunsenlabs.org/templates/etc/apt/sources.list.d/bunsen-jessie-backports.list>
+[DebianTree]: <https://pkg.bunsenlabs.org/debian/>
+
+## Repositories
+
+To use our repositories, follow the instructions below: Set up the APT
+configuration and import our signing key.
+
+### bunsen-hydrogen
+
+This is our main repository which contains our core packages.
+
+Set up a file at `/etc/apt/sources.list.d/bunsen.list` with the
+following [contents][AptSources]:
+
+~~~
+deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen main
+~~~
+
+### jessie-backports
+
+This is an auxiliary repository containing packages backported from
+Debian testing and imported from Ubuntu.
+
+Set up `/etc/apt/sources.list.d/bunsen-jessie-backports.list` with the
+following [contents][AptSourcesBp]:
+
+~~~
+deb http://pkg.bunsenlabs.org/debian jessie-backports main
+~~~
+
+The backports repo's packages will have a pin priority of 100, so
+regular jessie packages will continue to take precedence until you
+explicitly install a backported package.
+
+To upgrade a package to its backports version, target the backports
+distribution as follows:
+
+~~~ { .bash }
+sudo apt-get -t jessie-backports install ${PACKAGE_NAME}
+~~~
+
+Subsequent package upgrades will be installed from the backports repo or
+the regular repository, whichever package version is
+higher.
+
+### unstable
+
+This repository contains some packages built for Debian testing and
+unstable and is not part of BunsenLabs. See the package list
+[here](https://pkg.bunsenlabs.org/repoidx.html#unstable).
+
+~~~
+deb http://pkg.bunsenlabs.org/debian unstable main
+~~~
+
+### Source archives
+
+Package sources may be retrieved using the `apt-get source` command. To
+be able to do so, duplicate the lines in your `.list` files and
+change the archive type to [`deb-src`](https://wiki.debian.org/SourcesList#Archive_type).
+
+## Package search
+
+<form action="/repoidx.html" method="get" style="text-align:center">
+<select id="filter-key" title="Select the package property to filter by" name="k" style="width:20%;display:inline;">
+<option value="any">Any metadata field</option>
+<option value="depends">Depends</option>
+<option value="maintainer">Maintainer</option>
+<option value="name-description" selected="selected">Name or Descr</option>
+<option value="recommends">Recommneds</option>
+<option value="section">Section</option>
+<option value="suggests">Suggests</option>
+<option value="version">Version</option>
+</select>
+<input id="filter-value" style="width:75%;display:inline;" type="text" name="v" minlength="1">
+</form>
+
+You can also just browse the list [here](/repoidx.html).
+
+## Mirrors
+
+We currently operate two repository mirrors. If you specify the host
+`pkg.bunsenlabs.org` in your APT configuration, you will be redirected
+automatically to the preferred server based on your IP addresses
+geolocation:
+
+* Users residing in Australia, Oceania and Asia get redirected to
+  `asia.pkg.bunsenlabs.org`; the server is located in Singapore.
+* Other users stay on `pkg.bunsenlabs.org` which is identical with
+  `eu.pkg.bunsenlabs.org`; the server is located in Germany.
+
+If you get redirected to `asia.pkg.bunsenlabs.org` but notice that your
+ISP has a faster route to the EU server than the Singapore one, put
+`eu.pkg.bunsenlabs.org` into your APT configuration in order to opt out
+from the redirect. Similarly, users in Europe, the Americas or Africa
+for whom `asia.pkg.bunsenlabs.org` is faster should switch to that mirror.
+
+### Access via HTTPS
+
+You may change the `http://` prefix in your BL repository URLs to
+`https://` in order to access the repositories using an encrypted
+connection. Before setting this up, ensure that the package
+[`apt-transport-https`](https://packages.debian.org/search?suite=all&searchon=names&exact=1&keywords=apt-transport-https)
+is installed on your system. The package is part of the BL standard
+installation.
+
+<div class="warning">
+You might see `apt-get update` complaining sporadically with the error:
+`W: Size of file [...] is not what the server reported`. apt has some
+strange issues in conjunction with apt-transport-https which are hard to
+debug despite having been declared fixed before (e.g. Debian bug
+#802617). As a workaround, either ignore the messages or do not use
+apt-transport-https.
+</div>
+
+## Signing key
+
+The preferred method for installing our archive key on your system is
+using the provided keyring package.
+
+### Keyring package
+
+Download the latest .deb keyring package and install it:
+
+~~~ {.bash}
+wget https://pkg.bunsenlabs.org/debian/pool/main/b/bunsen-keyring/bunsen-keyring_2016.7.2-1_all.deb
+sudo dpkg -i bunsen-keyring_2016.7.2-1_all.deb
+sudo apt-get update
+~~~
+
+### Manual setup
+
+Fetch and verify the repository's [signing key][SigningKey]:
+
+~~~ { .bash }
+wget https://pkg.bunsenlabs.org/BunsenLabs-RELEASE.asc
+gpg --with-fingerprint BunsenLabs-RELEASE.asc
+~~~
+
+The key's fingerprint as displayed by gpg should be identical with the
+following hexstring:
+
+~~~~~
+3172 4784 0522 7490 BBB7 43E6 A067 3F72 FE62 D9C5 
+~~~~~
+
+If that is not the case, you have got the wrong key. Use a safe,
+non-intercepted internet connection in order to retrieve the correct key
+file.
+
+Finally, add the key to APT and update the package index:
+
+~~~ { .bash }
+sudo apt-key add BunsenLabs-RELEASE.asc
+sudo apt-get update
+~~~
+
+You may now install <monospace>bunsen-\*</monospace> packages provided
+by the repository.

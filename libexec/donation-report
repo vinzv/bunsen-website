@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+
+import sys
+import csv
+from datetime import datetime
+import yaml
+
+def main():
+    with open(sys.argv[2], "r") as FILE:
+        config = yaml.load(FILE)
+    FUNDS=0.0
+    STATUST="""
+## Funding status
+|                               | US$       |
+|:------------------------------|:----------|
+| **Yearly funding goals**      |           |
+| Operating expenses            | ~400 p.a. |
+| Reserve (1.5a)                | 600       |
+"""
+    GOALS={ 2016:1000, 2017:400, 2018:450 }
+    with open(sys.argv[1], "r", encoding='ISO-8859-15') as FILE:
+        d = csv.reader(FILE)
+        next(d, None)
+        for r in d:
+            if "Received" in r[4]:
+                FUNDS+=float(r[7])
+        for y in GOALS:
+            FUNDS-=GOALS[y]
+            if abs(FUNDS)>GOALS[y]:
+                break
+            STATUST+="""|**{} funding goal**|**{:,}**|
+|Shortfall|{:,.2f}|\n""".format(y, GOALS[y],  0.0 if FUNDS>=0 else abs(FUNDS))
+        STATUST+="""\nAs of {}. This table is updated at irregular
+intervals. Depending on how the infrastructure and requirements
+change the funding goals may be adjusted.""".format(config['donation-report']['last-update'])
+        print(STATUST)
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())

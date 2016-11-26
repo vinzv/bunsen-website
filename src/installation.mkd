@@ -1,0 +1,121 @@
+[HardwareRequirements]: <https://www.debian.org/releases/jessie/amd64/ch03s04.html.en>
+[LinuxFAQ]: <https://www.debian.org/CD/faq/#record-unix>
+[OSXFAQ]: <https://www.debian.org/CD/faq/#record-mac>
+[USBFAQ]: <https://www.debian.org/CD/faq/#write-usb>
+[WindowsFAQ]: <https://www.debian.org/CD/faq/#record-windows>
+
+[DDL32]: <@@DDL_URL_32@@>
+[DDL32CD]: <@@DDL_URL_32CD@@>
+[DDL32M]: <@@DDL_URL_32M@@>
+[DDL64]: <@@DDL_URL_64@@>
+[DDL64M]: <@@DDL_URL_64M@@>
+[TorrentFile32]: <@@TORRENT_URL_32@@>
+[TorrentFile32CD]: <@@TORRENT_URL_32CD@@>
+[TorrentFile64]: <@@TORRENT_URL_64@@>
+[shasums32]: <@@SHA256SUMS_URL_32@@>
+[shasums32CD]: <@@SHA256SUMS_URL_32CD@@>
+[shasums64]: <@@SHA256SUMS_URL_64@@>
+[pgp32]: <@@SIG_URL_32@@>
+[pgp32CD]: <@@SIG_URL_32CD@@>
+[pgp64]: <@@SIG_URL_64@@>
+[releasekey]: <https://pkg.bunsenlabs.org/#signing-key>
+
+## System requirements
+
+BunsenLabs is a Debian Jessie desktop with custom configurations and
+some additions. Hence, the [hardware
+recommendations][HardwareRequirements] from the Debian project apply for
+both 32bit and 64bit systems:
+
+|RAM (minimum)|RAM (recommended)|Hard Drive |
+|:-----------:|:---------------:|:---------:|
+| 256M        | 1G              | 10G       |
+
+Depending on the applications and feature set you decide to use
+(especially if you do not run a graphical desktop), the system may run
+fine with less resources. An installation from the live ISOs uses
+approximately 2.1G of space on the hard drive.
+
+## Live CD/DVD/USB key install
+
+This is the preferred and officially supported installation method. You
+first download a so-called hybrid ISO image which, depending on size, is
+suitable for writing to a CD/DVD medium or a USB key drive. Then, after
+booting from the installation medium, you have the chance to test the
+Bunsen desktop and install the system to your computer.
+
+After downloading the ISO file from one of the sources below, you may
+find help with burning the file to disk or writing to a USB key in the
+Debian FAQ section:
+
+* How to write an ISO image under [Linux/Unix][LinuxFAQ],
+  [Windows][WindowsFAQ] or [Mac OS X][OSXFAQ]?
+* [How to write a CD/DVD/BD image to a USB flash drive][USBFAQ]?
+
+<div class="info">
+To log in after booting the live session, enter the username **user** and
+the password **live**.
+</div>
+
+### Downloads
+
+If you can use BitTorrent, please do so as to keep load off our server.
+If possible, please leave the client open for a while so you can seed
+the files for other users. Via BitTorrent, you will also be able to
+download significantly faster -- especially if you are not in Europe
+where our servers are located.
+
+Otherwise, use the direct download links. Do not forget to verify direct
+downloads using the checksum file provided[^2]. Use the provided OpenPGP
+signature to verify any download[^3].
+
+| ISO file          | Size                  | .torrent                    | https         | SHA-256          | PGP .sig        |
+|:------------------|:---------------------:|:--------------------------:|:--------------:|:----------------:|:----------------:|
+| \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [⬛][TorrentFile64]         | [⬛][DDL64]     | [⬛][shasums64]   | [⬛][pgp64]       |
+| \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [⬛][TorrentFile32]         | [⬛][DDL32]     | [⬛][shasums32]   | [⬛][pgp32]       |
+| \@\@ISO\_32CD\@\@ | \@\@ISO\_32CD\_SIZE\@\@ | [⬛][TorrentFile32CD]         | [⬛][DDL32CD]     | [⬛][shasums32CD]   | [⬛][pgp32CD]       |
+
+There is a [section](https://forums.bunsenlabs.org/viewforum.php?id=14)
+on the forums which deals with any issues, bugs and comments related to
+the current release.
+
+The 32bit ISO contains only a PAE-enabled kernel. If you have a platform
+that doesn't support
+[PAE](https://en.wikipedia.org/wiki/Physical_Address_Extension),
+download `@@ISO_32CD@@` which comes with a non-PAE kernel instead.
+
+[^2]: Place the file containing the checksums in the same directory as
+your ISO file downloads, and then run in a terminal `sha256sum --check
+${CHECKSUM_FILE}`. Make sure to pass the name of the `*.sha256sum.txt`
+file, and **not** the ISO file!
+
+[^3]: We use our [release key][releasekey] for signing. Import the key
+into your local user's keyring by executing `gpg --import <(wget -qO-
+https://pkg.bunsenlabs.org/BunsenLabs-RELEASE.asc)`.  Verify the
+signature by downloading both the ISO file and the signature file to the
+same directory and invoking GnuPG as follows: `gpg --verify
+${SIGNATURE_FILE} ${ISO_FILE}`. GnuPG should tell you that you passed it
+a 'good signature'.
+
+## Package-based install
+
+You may also choose to follow our repository set-up
+[instructions](http://pkg.bunsenlabs.org) and include our package
+repository into your Debian existing system. This way, you can
+selectively install [packages from the BunsenLabs project](resources.html#core-packages-and-bug-reports) and use only a
+subset of our configurations and assets.
+
+The packages are built and made to be installed on Debian Jessie
+systems. However, depending on the package, it may be possible to
+install on the Debian old-stable release
+[Wheezy](https://wiki.debian.org/DebianWheezy) and current
+[Ubuntu](http://releases.ubuntu.com/) releases.
+
+### netinstall script
+
+It is also possible to include the BunsenLabs system into a minimal
+[netinstall](https://www.debian.org/CD/netinst/) Debian installation
+using a special script. Please consult its
+[README](https://github.com/BunsenLabs/bunsen-netinstall) for detailed
+instructions. There is also a [forum thread](http://crunchbang.org/forums/viewtopic.php?id=39656)
+on this topic.

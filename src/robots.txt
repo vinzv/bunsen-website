@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /imprint.html
+Disallow: /legal.html
+Disallow: /donations.html

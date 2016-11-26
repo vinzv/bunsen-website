@@ -1,0 +1,25 @@
+## Legal and licenses
+
+All content on this page, if not otherwise noted, is Copyright © The
+BunsenLabs Linux Project and licensed under a [Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International
+License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+<div class="center icons">
+![](/img/cc-icons-svg/cc.svg)![](img/cc-icons-svg/by.svg)![](img/cc-icons-svg/nc.svg)![](img/cc-icons-svg/sa.svg)
+</div>
+
+The BunsenLabs logo is Copyright © 2015 Rodrigo Moya (BL user
+[Ututo](https://forums.bunsenlabs.org/profile.php?id=67)) and also
+licensed under CC-BY-NC-SA 4.0.
+
+All registered trademarks mentioned on this site belong to their rightful
+owners.
+
+The BunsenLabs Linux Project is not affiliated with Debian. Debian is a
+registered trademark owned by Software in the Public Interest, Inc.
+
+Linux® is the registered trademark of Linus Torvalds in the U.S.  and other
+countries.
+
+netcup® is the registered trademark of Felix Preuß.
