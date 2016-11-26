@@ -35,4 +35,6 @@ For *code*:
 * GNU General Public License v3 or later unless stated otherwise
 
 Components created by third parties are subject to their respective
-copyright clauses and licenses.
+copyright clauses and licenses. Especially the individual creators of
+the screenshots presented in the frontpage's slideshow are identified in
+config/settings.yml.
