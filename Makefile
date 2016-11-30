@@ -123,7 +123,7 @@ deploy-kelaino: build
 
 deploy-local: build
 	$(call LOG_STATUS,DEPLOY,LOCAL)
-	@-rsync -au --progress --human-readable --delete --chmod=D0755,F0644 dst/ /var/www/
+	@-rsync -a --progress --human-readable --delete --chmod=D0755,F0644 dst/ /var/www/
 
 $(FAVICON_HEADER): $(FAVICON_SOURCE)
 	$(call LOG_STATUS,FAVICON,$(FAVICON_SIZES))
