@@ -102,8 +102,9 @@ a 'good signature'.
 You may also choose to follow our repository set-up
 [instructions](http://pkg.bunsenlabs.org) and include our package
 repository into your Debian existing system. This way, you can
-selectively install [packages from the BunsenLabs project](resources.html#core-packages-and-bug-reports) and use only a
-subset of our configurations and assets.
+selectively install [packages from the BunsenLabs
+project](https://www.bunsenlabs.org/repoidx.html?k=name-description&v=bunsen-)
+and use only a subset of our configurations and assets.
 
 The packages are built and made to be installed on Debian Jessie
 systems. However, depending on the package, it may be possible to

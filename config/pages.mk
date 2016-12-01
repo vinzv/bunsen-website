@@ -4,7 +4,7 @@ BASE_PAGE_TITLE                            = BunsenLabs Linux
 
 src/index.mkd.description                  = BunsenLabs Linux is a distribution offering a light-weight and easily customizable Openbox desktop
 src/installation.mkd.description           = Installation and download instructions
-src/resources.mkd.description              = Community/development resources and BL team members
+src/faq.mkd.description                    = FAQ about community/development resources and BL team members
 src/legal.mkd.description                  = Legal remarks, licenses, attribution
 src/donations.mkd.description              = Support BunsenLabs with a direct donation or via affiliate links
 src/donations.intermediate.mkd.description = Support BunsenLabs with a direct donation or via affiliate links
@@ -18,7 +18,7 @@ src/gitlog.mkd.description                 = Commit activity of public BunsenLab
 src/index.mkd.title                        = $(BASE_PAGE_TITLE)
 src/repository.mkd.title                   = $(BASE_PAGE_TITLE) :: Repository
 src/installation.mkd.title                 = $(BASE_PAGE_TITLE) :: Installation
-src/resources.mkd.title                    = $(BASE_PAGE_TITLE) :: Resources
+src/faq.mkd.title                          = $(BASE_PAGE_TITLE) :: FAQ
 src/gitlog.mkd.title                       = $(BASE_PAGE_TITLE) :: Activity Log
 src/imprint.mkd.title                      = $(BASE_PAGE_TITLE) :: Imprint
 src/legal.mkd.title                        = $(BASE_PAGE_TITLE) :: Legal Remarks
