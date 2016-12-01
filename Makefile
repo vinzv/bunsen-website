@@ -140,13 +140,20 @@ variables: src/installation.html src/index.html
 	@pandoc $(ARGV) $(PANDOC_VARS) -o $@ $<
 	@./libexec/postproc $@
 
-src/index.html: src/index.mkd $(TEMPLATE) $(wildcard src/include/index*.html) $(FAVICON_HEADER) $(GALLERY_HEADER) $(GALLERY_NOSCRIPT_HEADER)
+src/index.html: src/index.mkd $(TEMPLATE) $(wildcard include/index/*.html) $(FAVICON_HEADER) $(GALLERY_HEADER) $(GALLERY_NOSCRIPT_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 		-H include/index/header.html \
 		-A include/index/after.html \
 		-o $@ $<
 	@./libexec/postproc $@
+
+src/installation.html: src/installation.mkd $(TEMPLATE) $(wildcard include/installation/*.html)
+	$(call LOG_STATUS,PANDOC,$(notdir $@))
+	@pandoc $(ARGV) $(PANDOC_VARS) \
+			-A include/installation/after.html \
+			-o $@ $<
+		@./libexec/postproc $@
 
 src/donations.html: $(DONATION_INTERMEDIATE)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))

@@ -406,3 +406,9 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
     width:75%;
   }
 }
+
+.torrent-status {
+  display:none;
+  font-family:"Ubuntu Mono";
+  color:#6f6f6f;
+}
