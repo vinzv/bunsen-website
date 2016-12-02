@@ -62,12 +62,12 @@ and assistance in dealing with every configuration aspect of the BL
 distribution, and is the main platform for user-to-user support as well
 as the place to voice suggestions and report bugs.
 
-There are a few independent communities, see [here for a list](https://www.bunsenlabs.org/resources.html#independent-channels).
+There are a few independent communities, see [here for a list](https://www.bunsenlabs.org/faq.html#independent-channels).
 
 ## FAQ and How to get started
 
 * Refer to the [Getting Started](https://forums.bunsenlabs.org/viewforum.php?id=21) section on the forums, and
-* Please do also look at our [Resources](https://www.bunsenlabs.org/resources.html) page for more general information and bug reporting guidelines.
+* Please do also look at our [dedicated FAQ page](https://www.bunsenlabs.org/faq.html) page for more general information and bug reporting guidelines.
 
 ## In the press
 

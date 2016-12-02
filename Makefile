@@ -16,8 +16,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-include config/pagedescriptions.mk
-include config/pagetitles.mk
+include config/pages.mk
 include config/variables.mk
 
 SHELL                       = /bin/bash

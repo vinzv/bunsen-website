@@ -8,8 +8,8 @@ function update_torrent_status() {
 	d = JSON.parse(r.response);
 	document.querySelectorAll(".torrent-status").forEach((n) => {
 	  let id = n.getAttribute("id");
-	  if(id in d) {
-	    n.textContent = `⬆${ d[id].s } ⬇${ d[id].l }`;
+	  if(id in d.torrents) {
+	    n.textContent = `⬆${ d.torrents[id].s } ⬇${ d.torrents[id].l }`;
 	    n.style.display = "block";
 	  }
 	});
