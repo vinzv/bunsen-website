@@ -27,18 +27,18 @@ BunsenLabs is being developed in public, [on Github](https://github.com/BunsenLa
 
 ## Who are the developers?
 
-| Handle                                      | BL forums                                             | Github                                                      | Website                    |
-|:--------------------------------------------|:-----------------------------------------------------:|:-----------------------------------------------------------:|:--------------------------:|
-| damo                                        | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=6)   | [⬛ ](https://github.com/capn-damo)                           |                            |
-| Head on a Stick                             | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=74)  | [⬛ ](https://github.com/Head-on-a-Stick/)                    |                            |
-| hhh *(H. Sumen)*                            | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=10)  | [⬛ ](https://github.com/hhhorb)                              |                            |
-| johnraff *(John Crawley)* [forums admin]    | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=7)   | [⬛ ](https://github.com/johnraff)                            | [⬛ ](http://asazuke.com/)   |
-| lcafiero *(Larry Cafiero)*                  | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=168) | [⬛ ](https://github.com/lcafiero)                            |                            |
-| pvsage *(Peter Sage)* [forums admin]        | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=39)  | [⬛ ](https://github.com/pvsage)                              |                            |
-| Sector11 *(Bruce M.)*                       | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=5)   | [⬛ ](https://github.com/Sector11)                            |                            |
-| twoion *(Jens John)* <blue>[sysadmin]</blue>| [⬛ ](https://forums.bunsenlabs.org/profile.php?id=2)   | [⬛ ](https://github.com/2ion)                                | [⬛ ](https://2ion.de)       |
-| Unia *(Jente Hidskes)*                      | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=12)  | [⬛ ](https://github.com/Unia)                                | [⬛ ](https://unia.github.io/)|
-| xaos52                                      | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=159) | [⬛ ](https://github.com/xaosfiftytwo)                        |                            |
+| Handle                                        | BL forums                                               | Github                                                        | Website                           |
+|:----------------------------------------------|:-------------------------------------------------------:|:------------------------------------------------------------: |:---------------------------------:|
+| damo                                          | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=6)   | [⬛ ](https://github.com/capn-damo)                           |                                   |
+| Head on a Stick                               | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=74)  | [⬛ ](https://github.com/Head-on-a-Stick/)                    |                                   |
+| hhh *(H. Sumen)*                              | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=10)  | [⬛ ](https://github.com/hhhorb)                              |                                   |
+| johnraff *(John Crawley)* [forums admin]      | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=7)   | [⬛ ](https://github.com/johnraff)                            | [⬛ ](http://asazuke.com/)        |
+| lcafiero *(Larry Cafiero)*                    | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=168) | [⬛ ](https://github.com/lcafiero)                            |                                   |
+| pvsage *(Peter Sage)* [forums admin]          | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=39)  | [⬛ ](https://github.com/pvsage)                              |                                   |
+| Sector11 *(Bruce M.)*                         | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=5)   | [⬛ ](https://github.com/Sector11)                            |                                   |
+| twoion *(Jens John)* [infra]                  | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=2)   | [⬛ ](https://github.com/2ion)                                | [⬛ ](https://2ion.de)            |
+| Unia *(Jente Hidskes)*                        | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=12)  | [⬛ ](https://github.com/Hjdskes)                             | [⬛ ](https://hjdskes.github.io/) |
+| xaos52                                        | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=159) | [⬛ ](https://github.com/xaosfiftytwo)                        |                                   |
 
 ## Where can I report bugs?
 
