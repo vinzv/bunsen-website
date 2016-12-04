@@ -398,7 +398,7 @@ function render_distro(p, distro, m) {
     tr.appendChild(th);
     th = document.createElement("th");
     th.setAttribute("align", "left");
-    th.textContent = "~Size";
+    th.textContent = "Size";
     tr.appendChild(th);
     th = document.createElement("th");
     th.setAttribute("align", "left");
