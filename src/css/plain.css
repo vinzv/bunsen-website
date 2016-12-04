@@ -373,6 +373,12 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   padding: 0 4px 0 4px;
 }
 
+.torrent-status {
+  display:none;
+  font-family:"Ubuntu Mono";
+  color:#6f6f6f;
+}
+
 /* Responsive @media */
 @media all and (min-width: 800px) {
   nav img {
@@ -396,6 +402,9 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   span.pkg-version, span.pkg-count, span.distro-modification-date {
     display: none;
   }
+  span.torrent-status {
+    display:none;
+  }
 }
 
 @media all and (max-width: 799px) and (orientation: landscape) {
@@ -407,8 +416,4 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   }
 }
 
-.torrent-status {
-  display:none;
-  font-family:"Ubuntu Mono";
-  color:#6f6f6f;
-}
+

@@ -147,12 +147,12 @@ src/index.html: src/index.mkd $(TEMPLATE) $(wildcard include/index/*.html) $(FAV
 		-o $@ $<
 	@./libexec/postproc $@
 
-src/installation.html: src/installation.mkd $(TEMPLATE) $(wildcard include/installation/*.html)
+src/installation.html: src/installation.mkd $(TEMPLATE) $(wildcard include/installation/*.html) $(FAVICON_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 			-A include/installation/after.html \
 			-o $@ $<
-		@./libexec/postproc $@
+	@./libexec/postproc $@
 
 src/donations.html: $(DONATION_INTERMEDIATE)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
