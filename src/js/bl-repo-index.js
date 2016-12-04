@@ -430,7 +430,6 @@ function render_distro(p, distro, m) {
 
       td = document.createElement("td");
       td.setAttribute("align", "left");
-      td.setAttribute("class", "monospaced");
       td.textContent = pkg.arch[arch].sha1;
       tr.appendChild(td);
 
