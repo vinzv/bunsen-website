@@ -27,7 +27,7 @@ BunsenLabs is being developed in public, [on Github](https://github.com/BunsenLa
 
 ## Who are the developers?
 
-| Handle []                                     | BL forums                                               | Github                                                        | Website                           |
+| Handle                                        | BL forums                                               | Github                                                        | Website                           |
 |:----------------------------------------------|:-------------------------------------------------------:|:------------------------------------------------------------: |:---------------------------------:|
 | damo [forums mod]                             | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=6)   | [⬛ ](https://github.com/capn-damo)                           |                                   |
 | Head on a Stick [forums mod]                  | [⬛ ](https://forums.bunsenlabs.org/profile.php?id=74)  | [⬛ ](https://github.com/Head-on-a-Stick/)                    |                                   |
