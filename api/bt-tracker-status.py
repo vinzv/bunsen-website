@@ -24,10 +24,8 @@ class Fetcher(threading.Thread):
         for line in data:
             [ hash, seeders, leechers ] = line.split(":", 3)
             _public["torrents"][hash.lower()] = { "s":seeders, "l":leechers }
-        meta = self.fetchot("mode=completed")
         _public["completed"] = self.fetchot("mode=completed")[0]
         _public["ts"] = int(time.time())
-        print(_public)
         global PUBLIC
         PUBLIC = _public
 
