@@ -28,8 +28,11 @@ Thank you!
 Bitcoin donations may be made to the following address:
 
 <div class="emph">
-<center>1Cx6R3QVR7VfkXsfEDfyFVxSchGS85TE9W</center>
+<center><monospace>1Cx6R3QVR7VfkXsfEDfyFVxSchGS85TE9W</monospace></center>
 </div>
+
+A version of the address signed with our [release key](https://pkg.bunsenlabs.org/BunsenLabs-RELEASE.asc) is available
+[here](bitcoinaddress.txt).
 
 ## DigitalOcean referral
 
