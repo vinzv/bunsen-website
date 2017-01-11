@@ -24,8 +24,10 @@ class Fetcher(threading.Thread):
         for line in data:
             [ hash, seeders, leechers ] = line.split(":", 3)
             _public["torrents"][hash.lower()] = { "s":seeders, "l":leechers }
-        _public["completed"] = self.fetchot("mode=completed")[0]
+
+        _public["completed"] = int(self.fetchot("mode=completed")[0])
         _public["ts"] = int(time.time())
+
         global PUBLIC
         PUBLIC = _public
 
@@ -44,6 +46,6 @@ def torrent_status():
     return PUBLIC
 
 if __name__ == "__main__":
-    fetcher = Fetcher()
-    fetcher.start()
-    run(host="localhost", port=10101, server="cherrypy")
+  fetcher = Fetcher()
+  fetcher.start()
+  run(host="localhost", port=10101, server="cherrypy")

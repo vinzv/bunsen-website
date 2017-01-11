@@ -44,7 +44,7 @@ DONATION_INTERMEDIATE       = src/donations.intermediate.mkd
 DONATION_DATA               = config/donations.csv
 
 TARGETS                     = $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
-ASSETS                      = $(TARGETS) src/bundle src/js src/img src/css src/robots.txt $(GALLERY_INDEX)
+ASSETS                      = $(TARGETS) src/bundle src/js src/img src/css src/robots.txt src/bitcoinaddress.txt $(GALLERY_INDEX)
 
 THUMB_DIM                   = 750x
 THUMB_DIR                   = src/img/frontpage-gallery/thumbs
@@ -147,12 +147,12 @@ src/index.html: src/index.mkd $(TEMPLATE) $(wildcard include/index/*.html) $(FAV
 		-o $@ $<
 	@./libexec/postproc $@
 
-src/installation.html: src/installation.mkd $(TEMPLATE) $(wildcard include/installation/*.html)
+src/installation.html: src/installation.mkd $(TEMPLATE) $(wildcard include/installation/*.html) $(FAVICON_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
 			-A include/installation/after.html \
 			-o $@ $<
-		@./libexec/postproc $@
+	@./libexec/postproc $@
 
 src/donations.html: $(DONATION_INTERMEDIATE)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
