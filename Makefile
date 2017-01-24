@@ -135,7 +135,7 @@ $(RECENT_NEWS_HEADER): libexec/recentnews
 	$(call LOG_STATUS,RECENTNEWS,$^)
 	@./libexec/recentnews $@
 
-variables: src/installation.html src/index.html
+variables: src/installation.html src/index.html src/news.html
 	$(call LOG_STATUS,VARIABLES,$(notdir $^))
 	$(foreach VAR,$(RELEASE_SUBST),$(shell sed -i 's^@@$(VAR)@@^$($(VAR))^' $^ ))
 

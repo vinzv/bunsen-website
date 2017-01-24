@@ -385,6 +385,17 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   color:#6f6f6f;
 }
 
+.news-heading {
+  position:relative;
+}
+
+.news-updated {
+  position:absolute;
+  left:0;
+  transform:translate(-120%, -0);
+  color:#272822;
+}
+
 /* Responsive @media */
 @media all and (min-width: 800px) {
   nav img {
