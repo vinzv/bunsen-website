@@ -69,6 +69,10 @@ There are a few independent communities, see [here for a list](https://www.bunse
 * Refer to the [Getting Started](https://forums.bunsenlabs.org/viewforum.php?id=21) section on the forums, and
 * Please do also look at our [dedicated FAQ page](https://www.bunsenlabs.org/faq.html) page for more general information and bug reporting guidelines.
 
+## News
+
+\@\@NEWS\@\@
+
 ## In the press
 
 * 2016-10/11: LinuxWelt, printed edition 10-11/2016, there is a one-page review on page 34

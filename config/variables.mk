@@ -41,6 +41,8 @@ TORRENT_URL_64             = $(DDL_URL_64).torrent
 GALLERY = $(shell cat include/index/gallery.html|sed 's/^\s*//'|tr -d '\n')
 GALLERY_NOSCRIPT = $(shell cat include/index/gallery_noscript.html|sed 's/^\s*//'|tr -d '\n')
 
+NEWS = $(shell cat include/news.html)
+
 ### REFERENCED IN Makefile ###
 
 RELEASE_SUBST :=             \
@@ -68,4 +70,5 @@ RELEASE_SUBST :=             \
 	SIG_URL_64                 \
 	TORRENT_URL_32             \
 	TORRENT_URL_32CD           \
-	TORRENT_URL_64
+	TORRENT_URL_64						 \
+	NEWS

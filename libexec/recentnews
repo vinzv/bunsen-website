@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+import feedparser
+import sys
+
+def head(s, sep):
+  return s.split(sep)[0]
+
+if __name__=="__main__":
+  feed = feedparser.parse("https://forums.bunsenlabs.org/extern.php?action=feed&fid=12&type=atom")
+  lbuf = ["""<ul class="news">"""]
+  for e in feed.entries:
+    lbuf.append(f"""<li>{head(e['updated'],'T')}: <a href="{head(e['link'],'&')}">{e['title']}</a></li>""")
+  lbuf.append("</ul>")
+  with open(sys.argv[1],"w") as FILE:
+    FILE.write("\n".join(lbuf))
