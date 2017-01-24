@@ -422,6 +422,9 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   span.torrent-status {
     display:none;
   }
+  span.news-updated {
+    display:none;
+  }
 }
 
 @media all and (max-width: 799px) and (orientation: landscape) {
