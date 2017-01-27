@@ -396,6 +396,10 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   color:#272822;
 }
 
+.right {
+  float:right;
+}
+
 /* Responsive @media */
 @media all and (min-width: 800px) {
   nav img {
