@@ -6,6 +6,8 @@ function update_news() {
     })
     .then((json) => {
       let anchor = document.querySelector(".news");
+      /* A bit too destructive ^^ */
+      while(anchor.firstChild) anchor.removeChild(anchor.firstChild);
       json.entries.forEach((e) => {
         let h2 = document.createElement("h2");
         h2.setAttribute("class", "news-heading");
