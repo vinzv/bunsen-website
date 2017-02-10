@@ -8,7 +8,7 @@ def head(s, sep):
 
 if __name__=="__main__":
   feed = feedparser.parse("https://forums.bunsenlabs.org/extern.php?action=feed&fid=12&type=atom")
-  lbuf = ["""<ul class="news">"""]
+  lbuf = ["""<div class="news">"""]
   for e in feed.entries:
     link = head(e['link'], '&')
     date = head(e['updated'], 'T')
@@ -17,6 +17,6 @@ if __name__=="__main__":
     lbuf.append(f"""
 <h2 class="news-heading"><span class="news-updated">{date}</span><a href="{link}">{title}</a></h2>
 """)
-  lbuf.append("</ul>")
+  lbuf.append("""<h2 class="news-archive"><a href="https://forums.bunsenlabs.org/viewforum.php?id=12">Older entries…</a></h2>""")
   with open(sys.argv[1],"w") as FILE:
     FILE.write("\n".join(lbuf))

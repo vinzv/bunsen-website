@@ -396,6 +396,10 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   color:#272822;
 }
 
+.news-archive a, .news-archive a:visited {
+  color:#272822;
+}
+
 .right {
   float:right;
 }
