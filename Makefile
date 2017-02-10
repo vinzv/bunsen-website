@@ -161,6 +161,13 @@ src/installation.html: src/installation.mkd $(TEMPLATE) $(wildcard include/insta
 			-o $@ $<
 	@./libexec/postproc $@
 
+src/news.html: src/news.mkd $(TEMPLATE) $(wildcard include/news/*.html) $(FAVICON_HEADER)
+	$(call LOG_STATUS,PANDOC,$(notdir $@))
+	@pandoc $(ARGV) $(PANDOC_VARS) \
+		-A include/news/after.html \
+		-o $@ $<
+	@./libexec/postproc $@
+
 src/donations.html: $(DONATION_INTERMEDIATE)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
