@@ -11,12 +11,12 @@ function update_news() {
       json.entries.forEach((e) => {
         let h2 = document.createElement("h2");
         h2.setAttribute("class", "news-heading");
-        
+
         let span = document.createElement("span");
         span.setAttribute("class", "news-updated");
         span.textContent = e.date;
         h2.appendChild(span);
-        
+
         let a = document.createElement("a");
         a.setAttribute("href", e.link);
         a.textContent = e.title;
@@ -24,6 +24,15 @@ function update_news() {
 
         anchor.appendChild(h2);
       });
+      let a = document.createElement("a");
+      a.setAttribute("href", "https://forums.bunsenlabs.org/viewforum.php?id=12");
+      a.textContent = "Older entries…";
+
+      let h2 = document.createElement("h2");
+      h2.setAttribute("class", "news-archive");
+      h2.appendChild(a);
+
+      anchor.appendChild(h2);
     });
 };
 update_news();
