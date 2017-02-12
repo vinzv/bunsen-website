@@ -27,7 +27,7 @@ SETTINGS                    = config/settings.yml
 
 NAVIGATION_HTML             = include/navigation.html
 STYLE                       = /css/plain.css?$(TIMESTAMP)
-TEMPLATE                    = templates/default.html5
+TEMPLATE                    = template.html
 OPENGRAPH_URL_PREFIX        = https://www.bunsenlabs.org
 OPENGRAPH_IMG               = /img/opengraph-flame.png
 
