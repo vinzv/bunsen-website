@@ -1,0 +1,2 @@
+\@\@NEWS\@\@
+<script type="text/javascript" src="/js/news.js"></script>
