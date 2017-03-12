@@ -33,6 +33,13 @@ function update_news() {
       h2.appendChild(a);
 
       anchor.appendChild(h2);
+    })
+    .catch((err) => {
+      /* If we encounter an error (most importantly, during local
+       * testing), default to noscript */
+      let noscript = document.querySelector("noscript");
+      let anchor = document.querySelector(".news");
+      noscript.innerHTML = anchor.innerHTML;
     });
 };
 update_news();

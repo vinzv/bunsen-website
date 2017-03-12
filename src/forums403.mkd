@@ -35,11 +35,12 @@ of the following block lists:
 
 * Email admin@bunsenlabs.org and tell us your IP address, we can
   explicitly whitelist you.
-* If you are behind a CNAT but have a routable IPv6 address, try
+* If you are behind an IPv4 CNAT but have a routable IPv6 address, try
   connecting to the forums via IPv6 instead.
 * Contact the block list operators to get your IP address removed from
   the list.
 * Contact your ISP and demand that they get the block list entries
-  removed (it's part of their job, especially if they are employing
+  removed for you (it's part of their job, especially if they are employing
   CNAT).
-* Wait until the block list entry gets removed.
+* Wait until the block list entry gets removed, most entries expire at
+  some point.
