@@ -389,6 +389,10 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   position:relative;
 }
 
+.news-section p {
+  margin-top:-1ex;
+}
+
 .news-updated {
   position:absolute;
   left:0;
