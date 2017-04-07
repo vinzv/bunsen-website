@@ -1,4 +1,17 @@
-## Build dependencies
+## Building the website
+
+ * `make -j8`
+
+## Deploying the website
+
+* `make -j8 deploy-kelaino`
+* `make -j8 deploy-local`
+
+## Cleaning up the tree
+
+* `make clean`
+
+### Build dependencies
 
 * bash
 * coreutils
@@ -6,7 +19,7 @@
 * git
 * imagemagick
 * inkscape
-* make
+* GNU make
 * pandoc
 * python3 (>=3.6)
 * python-beautifulsoup4
