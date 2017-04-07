@@ -9,6 +9,9 @@ function update_news() {
       /* A bit too destructive ^^ */
       while(anchor.firstChild) anchor.removeChild(anchor.firstChild);
       json.entries.forEach((e) => {
+        let div = document.createElement("div");
+        div.setAttribute("class", "news-section");
+
         let h2 = document.createElement("h2");
         h2.setAttribute("class", "news-heading");
 
@@ -22,7 +25,10 @@ function update_news() {
         a.textContent = e.title;
         h2.appendChild(a);
 
-        anchor.appendChild(h2);
+        div.appendChild(h2);
+        div.innerHTML += e.op_summary;
+
+        anchor.appendChild(div);
       });
       let a = document.createElement("a");
       a.setAttribute("href", "https://forums.bunsenlabs.org/viewforum.php?id=12");

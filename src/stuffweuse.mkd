@@ -7,10 +7,9 @@ the curious, here is a curated list:
 * [FluxBB](https://fluxbb.org/) forum software
 * [GnuPG](https://www.gnupg.org/) for signing packages and ISO images
 * [LXC](https://linuxcontainers.org/) for running multiple services well-separated from each other on the same server
-* [MariaDB](https://mariadb.org/) as the forum database (but looking to switch to PostgreSQL)
+* [MariaDB](https://mariadb.org/)
 * [OpenSSH](http://www.openssh.com/) and [rsync](https://rsync.samba.org/) for shuffling data around
-* [git](https://git-scm.com/) for our VCS
-* [gogs](https://gogs.io/) Git frontend for internal repos and mirroring
+* [git](https://git-scm.com/) for our VCS, [gitea](https://gitea.io) as a repository browser
 * [netdata](https://github.com/firehol/netdata) as an UNIX-y, awesome monitoring dashboard
 * [nginx](http://nginx.org/) is what we use for our webserver and web-facing load balancer. It also blocks spammers using a blocklist provided by the [Stop-Forum-Spam](https://stopforumspam.com/) project: We regularly fetch the list as a CSV file from a [cronjob](https://en.wikipedia.org/wiki/Anacron), transform it using sed and then pass it on to nginx as a configuration file which nginx just includes from its main configuration.
 * [opentracker](https://erdgeist.org/arts/software/opentracker/) is our bittorrent tracker; the torrent files are generated using [buildtorrent](https://directory.fsf.org/wiki/Buildtorrent). opentracker is a bit weird in that it needs to be compiled once for IPv4, and once for IPv6 -- otherwise a very neat tool.
@@ -23,3 +22,4 @@ the curious, here is a curated list:
 
 * [InfluxDB](https://influxdata.com/) for storing time-series data collected by collectd
 * [collectd](https://collectd.org/) for collecting metrics from the system, forum database, webserver, etc
+* [gogs](https://gogs.io/) Git frontend for internal repos and mirroring

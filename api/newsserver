@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 
-from bottle import run, route, abort
-import threading
+from bottle import run, route, abort, response
+from bs4 import BeautifulSoup
+from django.utils import feedgenerator
 import feedparser
 import sys
+import threading
 import time
+import requests
+from datetime import datetime
 
 PUBLIC = {}
+PUBLIC_ATOM = ""
 
 class Fetcher(threading.Thread):
   def run(self):
@@ -15,15 +20,36 @@ class Fetcher(threading.Thread):
     while not self.event.wait(timeout=900):
       self.update_feed_data()
 
+  def retrieve_op_summary(self, topic_url):
+    text = ""
+    try:
+      body = requests.get(topic_url).text
+      soup = BeautifulSoup(body, "html.parser")
+      op = soup.find("div", { "class": "blockpost1" }).find("div", { "class":"postmsg"}).find("p")
+      text = op.prettify(formatter="html")
+    except BaseException as e:
+      print("ERROR:", e)
+    return text
+
   def update_feed_data(self):
     feed = feedparser.parse("https://forums.bunsenlabs.org/extern.php?action=feed&fid=12&type=atom")
+    refeed = feedgenerator.Atom1Feed('BunsenLabs Linux News', 'https://forums.bunsenlabs.org/viewforum.php?id=12', "")
     entries = list(map(lambda e: {
-      "link":   self.head(e['link'], '&'),
-      "date":   self.head(e['updated'], 'T'),
-      "title":  " ".join(e['title'].split())
+      "link":       self.head(e['link'], '&'),
+      "date":       self.head(e['updated'], 'T'),
+      "updated":    e['updated'],
+      "op_summary": self.retrieve_op_summary(e['link']),
+      "title":      " ".join(e['title'].split())
       }, feed.entries))
+    # JSON API
     global PUBLIC
     PUBLIC = { "entries": entries, "ts": int(time.time()) }
+    # ATOM XML API
+    for e in entries:
+      refeed.add_item(e["title"], e["link"], e["op_summary"],
+          updateddate = datetime.strptime(e["updated"], "%Y-%m-%dT%H:%M:%SZ"))
+    global PUBLIC_ATOM
+    PUBLIC_ATOM = refeed.writeString("utf-8")
 
   @staticmethod
   def head(s, sep):
@@ -33,6 +59,11 @@ class Fetcher(threading.Thread):
 @route('/feed/news')
 def index():
   return PUBLIC
+
+@route('/feed/news/atom')
+def idex():
+  response.content_type = "application/atom+xml; charset=utf-8"
+  return PUBLIC_ATOM
 
 if __name__ == "__main__":
   fetcher = Fetcher()

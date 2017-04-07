@@ -27,7 +27,7 @@ SETTINGS                    = config/settings.yml
 
 NAVIGATION_HTML             = include/navigation.html
 STYLE                       = /css/plain.css?$(TIMESTAMP)
-TEMPLATE                    = templates/default.html5
+TEMPLATE                    = template.html
 OPENGRAPH_URL_PREFIX        = https://www.bunsenlabs.org
 OPENGRAPH_IMG               = /img/opengraph-flame.png
 
@@ -131,9 +131,9 @@ $(FAVICON_HEADER): $(FAVICON_SOURCE)
 	$(call LOG_STATUS,FAVICON,$(FAVICON_SIZES))
 	@./libexec/mkfavicons $< $(FAVICON_HEADER) $(FAVICON_SIZES) &>/dev/null
 
-$(RECENT_NEWS_HEADER): libexec/recentnews
-	$(call LOG_STATUS,RECENTNEWS,$^)
-	@./libexec/recentnews $@
+$(RECENT_NEWS_HEADER): libexec/news-noscript
+	$(call LOG_STATUS,NEWS,$^)
+	@./libexec/news-noscript $@
 
 variables: src/installation.html src/index.html src/news.html
 	$(call LOG_STATUS,VARIABLES,$(notdir $^))
@@ -211,3 +211,5 @@ $(THUMB_DIR)/%.thumb.jpg: $(THUMB_DIR)/../%.png
 	@convert $< -define jpeg:dct-method=float -strip -interlace Plane -sampling-factor 4:2:0 -resize $(THUMB_DIM) -quality $(THUMB_JPEG_QUALITY) $@
 	@convert $< -quality $(THUMB_FULLSIZE_JPEG_QUALITY) $(<:.png=.jpg)
 
+public: clean
+	rsync --recursive --update --exclude=donations.csv --delete api config doc include src libexec LICENSE.CC LICENSE.GPL3 Makefile template.html ../public/

@@ -39,7 +39,7 @@ body {
 }
 
 .content-wrapper {
-  width:750px;
+  width:800px;
   margin:auto;
 }
 
@@ -387,6 +387,10 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
 
 .news-heading {
   position:relative;
+}
+
+.news-section p {
+  margin-top:-1ex;
 }
 
 .news-updated {
