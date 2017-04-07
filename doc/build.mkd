@@ -1,0 +1,16 @@
+## Build dependencies
+
+* bash
+* coreutils
+* findutils
+* git
+* imagemagick
+* inkscape
+* make
+* pandoc
+* python3 (>=3.6)
+* python-beautifulsoup4
+* python-django feed generator module
+* python-feedparser
+* python-yaml
+* sed
