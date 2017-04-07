@@ -11,7 +11,7 @@
 
 * `make clean`
 
-### Build dependencies
+## Build dependencies
 
 * bash
 * coreutils
