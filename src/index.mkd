@@ -71,6 +71,8 @@ There are a few independent communities, see [here for a list](https://www.bunse
 
 ## In the press
 
+* 2017-04-28: ghacks.net, a look at Openbox as a DE replacement using BunsenLabs Linux:  *[A look at Desktop Environments: Openbox Window Manager](https://www.ghacks.net/2017/04/28/a-look-at-desktop-environments-openbox-window-manager/)*
+* 2017-03-28: A review video in Portuguese: *[BunsenLabs Linux - Apresentação e Configurações iniciais](https://www.youtube.com/watch?v=HoNKPopVpbw)*
 * 2017-01: Linux Format, printed issue 219, there is a review of several lightweight distros including BunsenLabs on [pages 29f](https://www.myfavouritemagazines.co.uk/computer/linux-format-magazine-back-issues/linux-format-january-2017-issue-219/).
 * 2016-10/11: LinuxWelt, printed edition 10-11/2016, there is a one-page review on page 34
 * 2016-07-29: LinuxWelt, 5/2016: [BunsenLabs is featured on the accompanying DVD](http://www.pcwelt.de/news/LinuxWelt-5-2016-jetzt-am-Kiosk-10016907.html)
