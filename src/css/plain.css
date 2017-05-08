@@ -394,10 +394,10 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
 }
 
 .news-updated {
-  position:absolute;
-  left:0;
-  transform:translate(-120%, -0);
   color:#272822;
+  display:block;
+  float:right;
+  margin-left:1ex;
 }
 
 .news-archive a, .news-archive a:visited {
