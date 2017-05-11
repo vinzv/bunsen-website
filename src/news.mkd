@@ -1,2 +1,2 @@
-\@\@NEWS\@\@
+<div class="news"></div>
 <script type="text/javascript" src="/js/news.js"></script>

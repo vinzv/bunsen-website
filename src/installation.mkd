@@ -71,9 +71,9 @@ signature to verify any download[^3].
 
 | ISO file          | Size                  | .torrent                    | https         | SHA-256          | PGP .sig        |
 |:------------------|:---------------------:|:--------------------------:|:--------------:|:----------------:|:----------------:|
-| \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [⬛][TorrentFile64]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="6b66a0e9eac8fbbb804aeb86cd1e32534ff9c34c"></span>         | [⬛][DDL64]     | [⬛][shasums64]   | [⬛][pgp64]       |
-| \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [⬛][TorrentFile32]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="7ddc8f8a23532ea7c4f645ffcbe654fd59f44a05"></span>        | [⬛][DDL32]     | [⬛][shasums32]   | [⬛][pgp32]       |
-| \@\@ISO\_32CD\@\@ | \@\@ISO\_32CD\_SIZE\@\@ | [⬛][TorrentFile32CD]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="0bc8e7d0f4961c3b42c1f5bd7f978d6bcd13605b"></span>        | [⬛][DDL32CD]     | [⬛][shasums32CD]   | [⬛][pgp32CD]       |
+| \@\@ISO\_64\@\@   | \@\@ISO\_64\_SIZE\@\@ | [⬛][TorrentFile64]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="7105a3932e1126dc60e8c4c81b3fd9928841e4c5"></span>         | [⬛][DDL64]     | [⬛][shasums64]   | [⬛][pgp64]       |
+| \@\@ISO\_32\@\@   | \@\@ISO\_32\_SIZE\@\@ | [⬛][TorrentFile32]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="2de3c45ac5c997497f81819b25fa114a43984156"></span>        | [⬛][DDL32]     | [⬛][shasums32]   | [⬛][pgp32]       |
+| \@\@ISO\_32CD\@\@ | \@\@ISO\_32CD\_SIZE\@\@ | [⬛][TorrentFile32CD]<span title="⬆: Seeders ⬇: Leechers" class="torrent-status" id="1dd4cd32087f83bf0280122dab56a1fb3a2e0e75"></span>        | [⬛][DDL32CD]     | [⬛][shasums32CD]   | [⬛][pgp32CD]       |
 
 There is a [section](https://forums.bunsenlabs.org/viewforum.php?id=14)
 on the forums which deals with any issues, bugs and comments related to
