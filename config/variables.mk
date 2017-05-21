@@ -6,7 +6,7 @@ RELEASE_CODENAME           = Deuterium
 RELEASE_CODENAME_LOWERCASE = $(shell echo $(RELEASE_CODENAME) | tr '[A-Z]' '[a-z]')
 RELEASE_VERSION            =
 RELEASE_DATE               = April 29, 2017
-RELEASE_ANNOUNCEMENT_URL   = https://forums.bunsenlabs.org/viewtopic.php?id=1797
+RELEASE_ANNOUNCEMENT_URL   = https://forums.bunsenlabs.org/viewtopic.php?id=3685
 
 DDL_BASE_URL               = https://ddl.bunsenlabs.org/ddl
 ISO_BASE_NAME              = bl-$(RELEASE_CODENAME)$(RELEASE_VERSION)
