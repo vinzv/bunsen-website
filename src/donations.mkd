@@ -43,3 +43,13 @@ link in order to support our hosting expenses directly:
 <div class="emph">
 <center> [https://m.do.co/c/f8d7dfb87c4f](https://m.do.co/c/f8d7dfb87c4f) </center>
 </div>
+
+## Funding status
+
+<div class="progress" id="shortfall"></div>
+
+|                                               | USD                                                     |
+|:----------------------------------------------|:-------------------------------------------------------:|
+|Operating expenses estimate, p.a.              |<span id="d-yearly"></span>                              |
+|Reserve, 1.5a                                  |<span id="d-reserve"></span>                             |
+|Last update                                    |<span id="d-updated"></span>                             |

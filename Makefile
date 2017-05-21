@@ -41,11 +41,11 @@ GALLERY_HEADER              = include/index/gallery.html
 GALLERY_NOSCRIPT_HEADER     = include/index/gallery_noscript.html
 GALLERY_INDEX               = src/gallery.json
 
-DONATION_REPORT             = include/donation-report.mkd
+DONATION_JSON               = dst/donations.json
 DONATION_INTERMEDIATE       = src/donations.intermediate.mkd
 DONATION_DATA               = config/donations.csv
 
-TARGETS                     = $(patsubst %.mkd,%.html,$(wildcard src/*.mkd))
+TARGETS                     = $(patsubst %.mkd,%.html,$(wildcard src/*.mkd)) $(DONATION_JSON)
 ASSETS                      = $(TARGETS) src/bundle src/js src/img src/css src/robots.txt src/bitcoinaddress.txt $(GALLERY_INDEX)
 
 THUMB_DIM                   = 750x
@@ -114,7 +114,6 @@ clean:
 	@rm -f $(FAVICON_HEADER)
 	@rm -f $(GALLERY_NOSCRIPT_HEADER)
 	@rm -f $(GALLERY_HEADER)
-	@rm -f $(DONATION_REPORT) $(DONATION_INTERMEDIATE)
 	@rm -f $(GALLERY_INDEX)
 	@rm -f $(RECENT_NEWS_HEADER)
 	@rm -fr dst/*
@@ -168,18 +167,16 @@ src/news.html: src/news.mkd $(TEMPLATE) $(wildcard include/news/*.html) $(FAVICO
 		-o $@ $<
 	@./libexec/postproc $@
 
-src/donations.html: $(DONATION_INTERMEDIATE)
+src/donations.html: src/donations.mkd $(TEMPLATE) $(wildcard include/news/*.html) $(FAVICON_HEADER)
 	$(call LOG_STATUS,PANDOC,$(notdir $@))
 	@pandoc $(ARGV) $(PANDOC_VARS) \
+		-A include/donations/after.html \
 		-o $@ $<
 	@./libexec/postproc $@
 
-$(DONATION_INTERMEDIATE): src/donations.mkd $(DONATION_REPORT)
-	@cat $^ > $@
-
-$(DONATION_REPORT): $(DONATION_DATA) ./libexec/donation-report $(SETTINGS)
+$(DONATION_JSON): $(DONATION_DATA) ./libexec/donation-report
 	$(call LOG_STATUS,REPORT,$(notdir $@))
-	@./libexec/donation-report $< $(SETTINGS) > $@
+	@./libexec/donation-report $< > $@
 
 $(GALLERY_HEADER): $(SETTINGS)
 	$(call LOG_STATUS,GALLERY,$(notdir $@))
