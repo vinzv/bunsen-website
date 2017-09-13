@@ -229,6 +229,7 @@ table {
   border-collapse: collapse;
   border-bottom: 2pt solid #272822;
   border-top: 2pt solid #272822;
+  margin-bottom:2ex;
   margin-left: auto;
   margin-right: auto;
   width:100%;
@@ -394,10 +395,10 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
 }
 
 .news-updated {
-  position:absolute;
-  left:0;
-  transform:translate(-120%, -0);
   color:#272822;
+  display:block;
+  float:right;
+  margin-left:1ex;
 }
 
 .news-archive a, .news-archive a:visited {
@@ -448,4 +449,16 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   }
 }
 
+.progress > svg{
+  height:30px;
+  border: 1px solid #00aa00;
+}
 
+.progress {
+  margin:2ex 0 2ex 0;
+}
+
+.progress .progressbar-text {
+  color: #272822!important;
+  font-family: "Roboto Sans";
+}

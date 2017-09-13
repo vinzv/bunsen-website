@@ -2,38 +2,74 @@
 
 import sys
 import csv
-from datetime import datetime
-import yaml
+import time
+import json
 
 def main():
-    with open(sys.argv[2], "r") as FILE:
-        config = yaml.load(FILE)
-    FUNDS=0.0
-    STATUST="""
-## Funding status
-|                               | US$       |
-|:------------------------------|:----------|
-| **Yearly funding goals**      |           |
-| Operating expenses            | ~400 p.a. |
-| Reserve (1.5a)                | 600       |
-"""
-    GOALS={ 2016:1000, 2017:400, 2018:450 }
-    with open(sys.argv[1], "r", encoding='ISO-8859-15') as FILE:
-        d = csv.reader(FILE)
-        next(d, None)
-        for r in d:
-            if "Received" in r[4]:
-                FUNDS+=float(r[7])
-        for y in GOALS:
-            FUNDS-=GOALS[y]
-            if abs(FUNDS)>GOALS[y]:
-                break
-            STATUST+="""|**{} funding goal**|**{:,}**|
-|Shortfall|{:,.2f}|\n""".format(y, GOALS[y],  0.0 if FUNDS>=0 else abs(FUNDS))
-        STATUST+="""\nAs of {}. This table is updated at irregular
-intervals. Depending on how the infrastructure and requirements
-change the funding goals may be adjusted.""".format(config['donation-report']['last-update'])
-        print(STATUST)
+    records = {}
+    headermap = {}
+
+    with open(sys.argv[1], "r", encoding='utf-8-sig') as FILE:
+        tid = -1
+        data = csv.reader(FILE)
+        header = True
+        for row in data:
+            if header:
+                header = not header
+                coli = 0
+                for c in row:
+                    headermap[coli] = c
+                    if c == "Transaction ID":
+                        tid = coli
+                    coli += 1
+            else:
+                rowdata = {}
+                for i in range(0, len(row)):
+                    rowdata[headermap[i]] = row[i]
+                records[row[tid]] = rowdata
+
+    fee       = 0.0
+    gross     = 0.0
+    net       = 0.0
+    net_ex    = 0.0
+    net_in    = 0.0
+
+    shortfall = 0
+    yearly    = 500
+    reserve   = yearly * 1.5
+    yearzero  = 2016
+    year = yearzero
+
+    for tid in records:
+        r = records[tid]
+        if r["Currency"] == "USD":
+            gross += float(r["Gross"])
+            fee += float(r["Fee"])
+
+            n = float(r["Net"])
+            net += n
+            if n < 0.0:
+                net_ex += n
+            elif n > 0.0:
+                net_in += n
+
+    shortfall = net_in
+    while shortfall >= 0:
+        want = 0
+        if year == yearzero:
+            want += reserve
+        want += yearly
+        shortfall -= want
+        year += 1
+
+    print(json.dumps({
+        "short_year": year,
+        "short_pct": round(abs(shortfall)/yearly, 2),
+        "want_pa": yearly,
+        "reserve": reserve,
+        "last_update": time.strftime("%Y-%m-%d")
+        }))
+
     return 0
 
 if __name__ == "__main__":

@@ -17,7 +17,6 @@ if __name__=="__main__":
     lbuf.append(f"""
 <div class="news-section">
   <h2 class="news-heading"><span class="news-updated">{date}</span><a href="{link}">{title}</a></h2>
-  {text}
 </div>""")
   lbuf.append("""<h2 class="news-archive"><a href="https://forums.bunsenlabs.org/viewforum.php?id=12">Older entries…</a></h2></noscript></div>""")
   with open(sys.argv[1],"w") as FILE:

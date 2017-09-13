@@ -14,7 +14,7 @@ Thank you!
 
 ## Paypal
 
-<div class="center marginbox">
+<div class="emph center">
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="TCKVK4VGRWQSG">
@@ -28,11 +28,8 @@ Thank you!
 Bitcoin donations may be made to the following address:
 
 <div class="emph">
-<center><monospace>1Cx6R3QVR7VfkXsfEDfyFVxSchGS85TE9W</monospace></center>
+<center>[<monospace>1Cx6R3QVR7VfkXsfEDfyFVxSchGS85TE9W</monospace>](bitcoinaddress.txt)</center>
 </div>
-
-A version of the address signed with our [release key](https://pkg.bunsenlabs.org/BunsenLabs-RELEASE.asc) is available
-[here](bitcoinaddress.txt).
 
 ## DigitalOcean referral
 
@@ -41,5 +38,15 @@ DigitalOcean's hosting service, you can also make use of our referral
 link in order to support our hosting expenses directly:
 
 <div class="emph">
-<center> [https://m.do.co/c/f8d7dfb87c4f](https://m.do.co/c/f8d7dfb87c4f) </center>
+<center> [Referral link](https://m.do.co/c/f8d7dfb87c4f) </center>
 </div>
+
+## Funding status
+
+<div class="progress" id="shortfall"></div>
+
+|                                               | USD                                                     |
+|:----------------------------------------------|:-------------------------------------------------------:|
+|Operating expenses estimate, p.a.              |<span id="d-yearly"></span>                              |
+|Reserve, 1.5a                                  |<span id="d-reserve"></span>                             |
+|Last update                                    |<span id="d-updated"></span>                             |

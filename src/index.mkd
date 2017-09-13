@@ -12,8 +12,8 @@ Jessie. The project is a [community continuation][bunsenintro] of
 CrunchBang Linux.
 
 [^1]: Released on \@\@RELEASE\_DATE\@\@. Read the announcement
-[here][releaseurl]. A refreshed ISO was released on 2016-07-10, the
-announcement is [here](https://forums.bunsenlabs.org/viewtopic.php?id=2318).
+[here][releaseurl]. This is a refresh of the earlier **Hydrogen**
+release, which was also based on Debian Jessie.
 
 \@\@GALLERY\@\@
 <noscript>
@@ -71,7 +71,10 @@ There are a few independent communities, see [here for a list](https://www.bunse
 
 ## In the press
 
+* 2017-04-28: ghacks.net, *[A look at Desktop Environments: Openbox Window Manager](https://www.ghacks.net/2017/04/28/a-look-at-desktop-environments-openbox-window-manager/)*
+* 2017-03-28: Video review in Portuguese: *[BunsenLabs Linux - Apresentação e Configurações iniciais](https://www.youtube.com/watch?v=HoNKPopVpbw)*
 * 2017-01: Linux Format, printed issue 219, there is a review of several lightweight distros including BunsenLabs on [pages 29f](https://www.myfavouritemagazines.co.uk/computer/linux-format-magazine-back-issues/linux-format-january-2017-issue-219/).
+* 2017: DistroWatch, *[Reader supplied reviews for BunsenLabs Linux](https://distrowatch.com/dwres.php?resource=ratings&distro=bunsenlabs)*
 * 2016-10/11: LinuxWelt, printed edition 10-11/2016, there is a one-page review on page 34
 * 2016-07-29: LinuxWelt, 5/2016: [BunsenLabs is featured on the accompanying DVD](http://www.pcwelt.de/news/LinuxWelt-5-2016-jetzt-am-Kiosk-10016907.html)
 * 2016-06-13: DistroWatch Weekly, Issue 665: *[Review: BunsenLabs Linux](https://distrowatch.com/weekly.php?issue=20160613#bunsen)*
@@ -79,7 +82,6 @@ There are a few independent communities, see [here for a list](https://www.bunse
 * 2016-02-19: LINUX.COM: *[5 Linux Desktop Distributions You Should Kow](http://www.linux.com/learn/tutorials/886407-5-live-linux-desktop-distributions-you-should-know)*
 * 2016-01: Ubuntu User, Spring 2016: *[BunsenLabs Hydrogen – CrunchBang's lightweight successor](https://www.ubuntu-user.com/Magazine/Archive/2016/28/BunsenLabs-Hydrogen-CrunchBang-s-lightweight-successor)*
 * 2016-01-21: LinuxUser 02/2016: *[Bunsenbrenner: BunsenLabs "Hydrogen" auch für ältere Hardware](http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2016/02/Bunsenbrenner)*
-* 2016-01-21: skipolivia: *[A Deep Look at BunsenLabs](https://web.archive.org/web/20160329074841/http://opensource.skipoliva.com/2016/01/21/a-deep-look-at-bunsenlabs)*
 * 2015-12-07: Linux Insider: *[Hot New BunsenLabs Linux Eases Pain of CrunchBang Loss](http://www.linuxinsider.com/story/82837.html?rss=1)*
 * 2015-11-15: Sunday Morning Linux Review, Episode 167: *[BunsenLabs Linux](http://smlr.us/?p=4833/)*
 * 2015-09-21: DistroWatch Weekly, Issue 628: *[New Linux distributions](http://distrowatch.com/weekly.php?issue=20150921#waiting)*

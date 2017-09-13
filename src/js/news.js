@@ -14,10 +14,11 @@ function update_news() {
 
         let h2 = document.createElement("h2");
         h2.setAttribute("class", "news-heading");
+        h2.setAttribute("id", e.link.split("=")[1]);
 
         let span = document.createElement("span");
         span.setAttribute("class", "news-updated");
-        span.textContent = e.date;
+        span.textContent = e.updated.split("T")[0];
         h2.appendChild(span);
 
         let a = document.createElement("a");
