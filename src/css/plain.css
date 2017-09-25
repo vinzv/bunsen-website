@@ -462,3 +462,7 @@ span.pkg-version, span.pkg-count, span.distro-modification-date {
   color: #272822!important;
   font-family: "Roboto Sans";
 }
+
+form#package-search {
+  margin-top:20px;
+}
