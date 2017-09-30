@@ -4,7 +4,7 @@
 [DebianTree]: <https://pkg.bunsenlabs.org/debian/>
 
 <form id="package-search" action="/repoidx.html" method="get" style="text-align:center">
-<input id="filter-value" style="width:75%;display:inline;" type="text" placeholder="Package search…" name="v" minlength="1">
+<input id="filter-value" style="width:75%;display:inline;" type="text" autofocus="true" placeholder="Search package…" name="v" minlength="1">
 <select id="filter-key" title="Select the package property to filter by" name="k" style="width:20%;display:inline;">
   <option value="any">Any metadata field</option>
   <option value="depends">Depends</option>
