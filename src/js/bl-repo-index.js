@@ -30,7 +30,11 @@ const BLDIST = {
     "https://eu.pkg.bunsenlabs.org/debian/dists/jessie-backports/main/binary-armhf/Packages"],
   unstable: [
     "https://eu.pkg.bunsenlabs.org/debian/dists/unstable/main/binary-amd64/Packages",
-    "https://eu.pkg.bunsenlabs.org/debian/dists/unstable/main/binary-i386/Packages"]
+    "https://eu.pkg.bunsenlabs.org/debian/dists/unstable/main/binary-i386/Packages"],
+  stretch_backports: [
+    "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-amd64/Packages",
+    "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-i386/Packages"
+  ]
 };
 
 var DIST_TOC_ENTRIES = {};            /* Global ToC DOM nodes */
