@@ -60,6 +60,19 @@ Subsequent package upgrades will be installed from the backports repo or
 the regular repository, whichever package version is
 higher.
 
+### stretch-backports
+
+This is an auxiliary repository containing packages backported from
+Debian Testing and Unstable. It should be used only with BL Helium or
+Debian Stretch.
+
+Set up `/etc/apt/sources.list.d/bunsen-stretch-backports.list` with the
+following [contents][AptSourcesBp]:
+
+~~~
+deb http://pkg.bunsenlabs.org/debian stretch-backports main
+~~~
+
 ### unstable
 
 This repository contains some packages built for Debian testing and
@@ -69,13 +82,6 @@ unstable and is not part of BunsenLabs. See the package list
 ~~~
 deb http://pkg.bunsenlabs.org/debian unstable main
 ~~~
-
-### Source archives
-
-Package sources may be retrieved using the `apt-get source` command. To
-be able to do so, duplicate the lines in your `.list` files and
-change the archive type to [`deb-src`](https://wiki.debian.org/SourcesList#Archive_type).
-
 
 ## Mirrors
 
@@ -95,7 +101,7 @@ ISP has a faster route to the EU server than the Singapore one, put
 from the redirect. Similarly, users in Europe, the Americas or Africa
 for whom `asia.pkg.bunsenlabs.org` is faster should switch to that mirror.
 
-### Access via HTTPS
+**Access via HTTPS**
 
 You may change the `http://` prefix in your BL repository URLs to
 `https://` in order to access the repositories using an encrypted
