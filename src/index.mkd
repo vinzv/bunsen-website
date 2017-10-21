@@ -71,6 +71,7 @@ There are a few independent communities, see [here for a list](https://www.bunse
 
 ## In the press
 
+* 2017-07-25: PC-Welt, *[Openbox/Bunsenlabs vorgestellt: Desktop für Puristen](https://www.pcwelt.de/a/openbox-bunsenlabs-vorgestellt-desktop-fuer-puristen,3447522)*
 * 2017-04-28: ghacks.net, *[A look at Desktop Environments: Openbox Window Manager](https://www.ghacks.net/2017/04/28/a-look-at-desktop-environments-openbox-window-manager/)*
 * 2017-03-28: Video review in Portuguese: *[BunsenLabs Linux - Apresentação e Configurações iniciais](https://www.youtube.com/watch?v=HoNKPopVpbw)*
 * 2017-01: Linux Format, printed issue 219, there is a review of several lightweight distros including BunsenLabs on [pages 29f](https://www.myfavouritemagazines.co.uk/computer/linux-format-magazine-back-issues/linux-format-january-2017-issue-219/).
