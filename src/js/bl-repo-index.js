@@ -54,7 +54,8 @@ String.prototype.cfl = function() {
 }
 
 function search_params() {
-  let sp = new URL(window.location)).searchParams;
+  let url = new URL(window.location);
+  let sp = url.searchParams;
   if(!sp.has("k") || !sp.has("v")) return false;
   return sp;
 }
