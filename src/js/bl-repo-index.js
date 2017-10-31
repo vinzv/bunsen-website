@@ -1,6 +1,6 @@
 /*
   bl-repo-index -- package index generator for Debian APT repositories
-  Copyright (C) 2015-2016 Jens John <dev@2ion.de>
+  Copyright (C) 2015-2017 Jens John <dev@2ion.de>
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -34,6 +34,10 @@ const BLDIST = {
   stretch_backports: [
     "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-amd64/Packages",
     "https://eu.pkg.bunsenlabs.org/debian/dists/stretch-backports/main/binary-i386/Packages"
+  ],
+  helium: [
+    "https://kelaino.bunsenlabs.org/~johnraff/debian/dists/helium/main/binary-amd64/Packages",
+    "https://kelaino.bunsenlabs.org/~johnraff/debian/dists/helium/main/binary-i386/Packages"
   ]
 };
 
@@ -49,41 +53,34 @@ String.prototype.cfl = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
-/* It's a fucking embarrassment that there is no standard API for
- * parsing query strings. Toy languages... */
-function parse_query_string() {
-  let seg = window.location.search.substring(1).split('&');
-  let pairs = {};
-  seg.forEach((e) => {
-    let [ k, v ] = e.split('=' , 2);
-    pairs[k] = decodeURIComponent(v).replace("+", " ");
-  });
-  return pairs;
+function search_params() {
+  let sp = new URL(window.location)).searchParams;
+  if(!sp.has("k") || !sp.has("v")) return false;
+  return sp;
 }
 
 function fill_in_form() {
-  let pairs = parse_query_string();
-  if(pairs.k && pairs.k.length>0 && pairs.v && pairs.v.length > 0) {
-    let select = document.querySelector("#filter-key");
-    let input = document.querySelector("#filter-value");
-    select.value = pairs.k;
-    input.value = pairs.v;
-  }
+  let sp = search_params() || return;
+
+  let select = document.querySelector("#filter-key");
+  let input = document.querySelector("#filter-value");
+
+  select.value = sp.get("k");
+  input.value = sp.get("v");
 }
 
 function apply_filter(pkgmap) {
-  let pairs = parse_query_string();
-  if(!pairs.k||!pairs.v) return pkgmap;
+  let sp = search_params() || return pkgmap;
 
-  let test = new RegExp(pairs.v, "i");
+  let test = new RegExp(sp.get("v"), "i");
   let regex = null;
 
-  switch(pairs.k) {
+  switch(sp.get("k")) {
     case "any":
       regex = /^.*$/;
       break;
     default:
-      regex = new RegExp(`^${pairs.k.replace("-", "|")}$`, "i");
+      regex = new RegExp(`^${sp.get("k").replace("-", "|")}$`, "i");
       break;
   }
 
