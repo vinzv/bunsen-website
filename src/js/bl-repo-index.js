@@ -483,8 +483,7 @@ function main(node) {
   render_main_toc();
 
   /* Always list distros in alphabetical order */
-  let distro_keys = [];
-  for(let d in BLDIST) distro_keys.push(d);
+  let distro_keys = Object.keys(BLDIST);
   distro_keys.sort();
 
   distro_keys.forEach((distro) => {
