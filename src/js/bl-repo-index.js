@@ -61,7 +61,9 @@ function search_params() {
 }
 
 function fill_in_form() {
-  let sp = search_params() || return;
+  let sp = search_params();
+  
+  if(!sp) return;
 
   let select = document.querySelector("#filter-key");
   let input = document.querySelector("#filter-value");
@@ -71,7 +73,8 @@ function fill_in_form() {
 }
 
 function apply_filter(pkgmap) {
-  let sp = search_params() || return pkgmap;
+  let sp = search_params();
+  if(!sp) return pkgmap;
 
   let test = new RegExp(sp.get("v"), "i");
   let regex = null;
