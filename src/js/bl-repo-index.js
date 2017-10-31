@@ -18,7 +18,6 @@
 
 'use strict';
 
-const BASE_POOL_URL="https://eu.pkg.bunsenlabs.org/debian/";
 const BLDIST = {
   bunsen_hydrogen: [
     "https://eu.pkg.bunsenlabs.org/debian/dists/bunsen-hydrogen/main/binary-amd64/Packages",
@@ -46,6 +45,7 @@ var DIST_MOD_DATE = {};               /* Modification dates for each distro's Pa
 var DIST_PKG_CHANGE_PROMISES = [];    /* Promises for the asynchronous retrieveal of the individual
                                          package's Last-Modified HTTP headers via HEAD requests; there
                                          is no distinction by distro. */
+var DIST_BASE_URLS = {};
 var DIST_ALL_PKGS = {};
 
 /* Uppercase the first letter of a string. */
@@ -130,8 +130,8 @@ function parse_Packages(Packages, distro) {
   let pkgi = null;
 
   let finalize_package = function() {
-    pkgi.url = BASE_POOL_URL + pkgi.filename;
-    pkgi.source = BASE_POOL_URL + pkgi.filename.replace(/\/[^/]+$/, "");
+    pkgi.url = DIST_BASE_URLS[distro] + pkgi.filename;
+    pkgi.source = DIST_BASE_URLS[distro] + pkgi.filename.replace(/\/[^/]+$/, "");
     packages.set(pkgi.name, pkgi);
     DIST_ALL_PKGS[pkgi.name] = distro;
   };
@@ -487,21 +487,27 @@ function main(node) {
   for(let d in BLDIST) distro_keys.push(d);
   distro_keys.sort();
 
+  distro_keys.forEach((distro) => {
+    let url = BLDIST[distro][0];
+    DIST_BASE_URLS[distro] = url.slice(0, url.search("/debian/") + "/debian/".length);
+  });
+
   /* Fetch & render */
   distro_keys.forEach(function (distro) {
-    let promises = [];
-    for(let i = 0; i < BLDIST[distro].length; i++)
-      promises.push(fetch(BLDIST[distro][i], distro));
-      Promise.all(promises).then(
-        function (r) {
-          let distro = r[0][1];
-          let pmaps = [];
-          r.forEach(function (e) {
-            pmaps.push(e[0]);
-          });
-          let um = unify_package_maps(pmaps);
-          render_distro(p, distro, um);
+    let promises = BLDIST[distro].map((url) => {
+      return fetch(url, distro);
+    });
+
+    Promise.all(promises).then(
+      function (r) {
+        let distro = r[0][1];
+        let pmaps = [];
+        r.forEach(function (e) {
+          pmaps.push(e[0]);
         });
+        let um = unify_package_maps(pmaps);
+        render_distro(p, distro, um);
+    });
   });
 
   render_package_mod_dates();
