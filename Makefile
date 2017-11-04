@@ -207,6 +207,3 @@ $(THUMB_DIR)/%.thumb.jpg: $(THUMB_DIR)/../%.png
 	$(call LOG_STATUS,THUMBNAIL,$(notdir $@))
 	@convert $< -define jpeg:dct-method=float -strip -interlace Plane -sampling-factor 4:2:0 -resize $(THUMB_DIM) -quality $(THUMB_JPEG_QUALITY) $@
 	@convert $< -quality $(THUMB_FULLSIZE_JPEG_QUALITY) $(<:.png=.jpg)
-
-public: clean
-	rsync --recursive --update --exclude=donations.csv --delete api config doc include src libexec LICENSE.CC LICENSE.GPL3 Makefile template.html ../public/
