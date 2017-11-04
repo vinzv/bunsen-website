@@ -18,7 +18,7 @@ function update_news() {
 
         let span = document.createElement("span");
         span.setAttribute("class", "news-updated");
-        span.textContent = e.updated.split("T")[0];
+        span.textContent = e.date;
         h2.appendChild(span);
 
         let a = document.createElement("a");
