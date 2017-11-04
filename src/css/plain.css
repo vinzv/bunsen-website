@@ -163,6 +163,7 @@ footer {
 .footer-row {
   margin-bottom:1ex;
   font-family:"Roboto",sans-serif;
+  font-weight: 500;
 }
 
 .footer-row a, .footer-row a:visited {
