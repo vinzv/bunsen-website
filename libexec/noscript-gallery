@@ -20,7 +20,7 @@ def main():
             cells.append(cell(imgurl, thumb, imgtext))
     print("""<table class="plain">""")
     for triplet in zip(*[iter(cells)]*4):
-        print("<tr>", "".join(triplet), "</tr>")
+        print("<tr>\n", "\n".join(triplet), "</tr>")
     print("</table>")
 
 if __name__ == "__main__":
