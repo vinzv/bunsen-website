@@ -54,16 +54,15 @@ THUMB_FULLSIZE_JPEG_QUALITY = 90
 THUMB_JPEG_QUALITY          = 90
 THUMB_OBJ                   = $(subst frontpage-gallery/,frontpage-gallery/thumbs/,$(patsubst %.png,%.thumb.jpg,$(wildcard src/img/frontpage-gallery/*.png)))
 
-ARGV=                                                                            \
-	--email-obfuscation=javascript                                                 \
-	--smart                                                                        \
-	--template=$(TEMPLATE)                                                         \
-	-f markdown+footnotes+fenced_code_attributes+auto_identifiers+definition_lists \
-	-s                                                                             \
-	-c $(STYLE)                                                                    \
-	--highlight-style monochrome                                                   \
-	--include-before-body=$(NAVIGATION_HTML)                                       \
-	--toc                                                                          \
+ARGV=                                                                                  \
+	--email-obfuscation=javascript                                                       \
+	--template=$(TEMPLATE)                                                               \
+	-f markdown+footnotes+fenced_code_attributes+auto_identifiers+definition_lists+smart \
+	-s                                                                                   \
+	-c $(STYLE)                                                                          \
+	--highlight-style monochrome                                                         \
+	--include-before-body=$(NAVIGATION_HTML)                                             \
+	--toc                                                                                \
 	-H $(FAVICON_HEADER)
 
 PANDOC_VARS=                                   \
